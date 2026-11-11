@@ -2,7 +2,7 @@
 
 Plik zawiera terminy, które Claude (model językowy firmy Anthropic) utworzył w projekcie „Samowystarczalny system do życia”. Projekt opisuje gospodarstwo o powierzchni 4,27 ha w Olsztynie i stosuje PK 0.1. Właścicielem projektu jest Maciej Szulia. Data projektu: 2026-11-11. Repozytorium projektu: [samowystarczalny-system-do-zycia](https://github.com/maciejszulia/samowystarczalny-system-do-zycia).
 
-> Legenda: znacznik w nawiasie kwadratowym podaje źródło informacji według modułu F. Znacznik `[DO USTALENIA: …]` oznacza brak danych. „Lub” znaczy co najmniej 1 z członów. „Albo” znaczy dokładnie 1 z członów.
+> Legenda: znacznik w nawiasie kwadratowym podaje źródło informacji według modułu F. „Lub” znaczy co najmniej 1 z członów. „Albo” znaczy dokładnie 1 z członów.
 
 ## Słownik
 
