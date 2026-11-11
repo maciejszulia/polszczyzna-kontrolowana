@@ -1,6 +1,6 @@
 # Terminy utworzone w projekcie gospodarstwa samowystarczalnego
 
-Plik zawiera terminy, które Claude (model językowy firmy Anthropic) utworzył w projekcie „Samowystarczalny system do życia”. Projekt opisuje gospodarstwo o powierzchni 4,27 ha w Olsztynie i stosuje PK 0.1. Właścicielem projektu jest Maciej Szulia. Data projektu: 2026-11-11.
+Plik zawiera terminy, które Claude (model językowy firmy Anthropic) utworzył w projekcie „Samowystarczalny system do życia”. Projekt opisuje gospodarstwo o powierzchni 4,27 ha w Olsztynie i stosuje PK 0.1. Właścicielem projektu jest Maciej Szulia. Data projektu: 2026-11-11. Repozytorium projektu: [samowystarczalny-system-do-zycia](https://github.com/maciejszulia/samowystarczalny-system-do-zycia).
 
 > Legenda: znacznik w nawiasie kwadratowym podaje źródło informacji według modułu F. Znacznik `[DO USTALENIA: …]` oznacza brak danych. „Lub” znaczy co najmniej 1 z członów. „Albo” znaczy dokładnie 1 z członów.
 
@@ -97,11 +97,10 @@ Wykonaj każdy krok w tej kolejności przed pierwszym użyciem nowego terminu:
 | 1 | „wyrazy, które nie występują w zwykłym języku polskim” | A5 | Brak kryterium sprawdzenia. | Kryterium: wyszukiwanie w sieci z 2026-11-11 nie znalazło terminu w znaczeniu z projektu. Brak wyniku nie dowodzi, że termin nie istnieje. |
 | 2 | „wyrazy” | A4 | 2 znaczenia: pojedyncze słowo; termin z 2 albo 3 słów. | Termin z 2 albo 3 słów. Projekt nie utworzył żadnego pojedynczego słowa. |
 | 3 | „dobry przykład” | A5 | Brak kryterium. | Kryterium: termin zastąpił słowo nieostre i dał liczbę, której użyło obliczenie albo decyzja. |
-| 4 | Adres projektu | F | Projekt nie ma publicznego adresu w dniu 2026-11-11. | `[DO USTALENIA: adres repozytorium projektu]` |
 
 ## Źródła
 
-- Dokument projektu: „Projekt samowystarczalnego gospodarstwa – Młodzieżowa 1, Olsztyn”, wersja z 2026-11-11, sekcje „Słownik” oraz „Decyzje i braki”.
+- Dokument projektu: [„Projekt samowystarczalnego gospodarstwa – Młodzieżowa 1, Olsztyn”](https://github.com/maciejszulia/samowystarczalny-system-do-zycia/blob/main/projekt/PROJEKT.md), wersja z 2026-11-11, sekcje „Słownik” oraz „Decyzje i braki”.
 - Dni puste: Komisja Europejska, Joint Research Centre, [PVGIS 5.3](https://re.jrc.ec.europa.eu/pvg_tools/en/), usługa SHScalc.
 - Słowo „wykot”: FAO, tezaurus [AGROVOC, pojęcie c_5604](https://agrovoc.fao.org/skosmosAsfa/asfa/zh/page/c_5604?clang=nl).
 - Klasy ochronności: Lena Lighting, baza wiedzy, [„Klasa ochronności”](https://lenalighting.pl/o-nas/baza-wiedzy/2106-klasa-ochronnosci) (klasy 0, I, II i III według normy PN-EN 61140).
