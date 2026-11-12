@@ -1,0 +1,35 @@
+id,group,name,operator,ambiguity,checker,lint,mechanism,readings_std
+A1,A,Jeden termin jedno znaczenie,R,leksykalna,semantyka,,M1+M3,
+A2,A,Nazwy obiektów,R,odniesienie,semantyka,A2,M1+M3,2
+A3,A,Zaimki,R,odniesienie,automat,A3,M1+M3,2
+A4,A,Definicje,RK,leksykalna,semantyka,A4,M1,2
+A5,A,Słowa nieostre,R,nieostrość,automat,A5,M1,
+A6,A,Wyliczenia,R,lista otwarta,automat,A6,M1,
+A7,A,Skróty,R,leksykalna,składnia,,M1+M3,
+B1,B,Wykonawca,R,rola,składnia,B1,M1,3
+B2,B,Szyk,RK,rola,składnia,,M1,2
+B3,B,Instrukcja,R,tryb,składnia,,M1+M2,
+B4,B,Czynność jako czasownik,R,rola,składnia,,M1+M2,2
+B5,B,Imiesłowy,R,rola,automat,B5,M1,
+B6,B,Zasięg określenia,R,zasięg,składnia,,M1,2
+B7,B,Słowo „tylko”,RK,zasięg,składnia,,M1,2
+B8,B,Długość,R,długość,automat,B8,M2,
+C1,C,„Lub” i „albo”,RK,spójnik,automat,C1,M1,2
+C2,C,„I” razem z „lub”,R,zasięg,automat,C2,M1+M2,2
+C3,C,Warunki,RK,warunek,automat,C3,M1,
+C4,C,Przeczenie i „wszystkie”,R,zasięg,automat,C4,M1,2
+C5,C,Jedno przeczenie,R,przeczenie,automat,C5,M2,
+D1,D,Wielkość,R,wielkość,automat,D1,M1,
+D2,D,Granice i ilości,RK,granica,automat,D2,M1,2
+D3,D,Daty i godziny,RK,deiksa,automat,D3,M1+M3,2
+D4,D,Terminy i częstość,RK,granica,automat,D4,M1,
+D5,D,Zmiany i porównania,R,wielkość,semantyka,,M1,
+D6,D,Duże liczby i przybliżenia,RK,wielkość,automat,D6,M1,2
+E1,E,Kroki,R,struktura,składnia,,M2,
+E2,E,Listy,RK,spójnik,składnia,,M1+M2,
+E3,E,Ostrzeżenia,R,struktura,składnia,,M3,
+E4,E,Odesłania,R,odniesienie,automat,E4,M3,
+E5,E,Wzory,R,struktura,składnia,,M1,
+E6,E,Legenda,K,konwencja,semantyka,,M1,
+F,F,Źródło informacji,RK,źródło,automat,F,M1,
+KW,KW,Słowa kluczowe wymagań,RK,tryb,automat,KW,M1,2

@@ -1,0 +1,29 @@
+stages:
+  - verify
+  - paper
+
+verify:
+  stage: verify
+  image: python:3.12-slim
+  script:
+    - apt-get update -qq && apt-get install -y -qq git >/dev/null
+    - pip install --no-cache-dir -r requirements.txt
+    - python -m pytest -q
+    - python scripts/measure.py --offline
+    - git diff --exit-code -- paper/data results/summary.json results/p4_summary.json
+    - python -m src.pklint --tex paper/abstract.tex paper/body_*.tex paper/measurement_report_pl.tex paper/report_*.tex
+
+paper:
+  stage: paper
+  image: texlive/texlive:latest
+  script:
+    - cd paper
+    - pdflatex -interaction=nonstopmode pk_complexity_pl.tex >/dev/null
+    - pdflatex -interaction=nonstopmode pk_complexity_pl.tex >/dev/null
+    - pdflatex -interaction=nonstopmode measurement_report_pl.tex >/dev/null
+    - pdflatex -interaction=nonstopmode measurement_report_pl.tex >/dev/null
+  artifacts:
+    paths:
+      - paper/pk_complexity_pl.pdf
+      - paper/measurement_report_pl.pdf
+    expire_in: 30 days

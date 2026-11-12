@@ -1,0 +1,185 @@
+{
+ "attachment": [
+  {
+   "k": 0,
+   "readings": 1
+  },
+  {
+   "k": 1,
+   "readings": 2
+  },
+  {
+   "k": 2,
+   "readings": 5
+  },
+  {
+   "k": 3,
+   "readings": 14
+  },
+  {
+   "k": 4,
+   "readings": 42
+  },
+  {
+   "k": 5,
+   "readings": 132
+  },
+  {
+   "k": 6,
+   "readings": 429
+  },
+  {
+   "k": 7,
+   "readings": 1430
+  },
+  {
+   "k": 8,
+   "readings": 4862
+  },
+  {
+   "k": 9,
+   "readings": 16796
+  },
+  {
+   "k": 10,
+   "readings": 58786
+  }
+ ],
+ "bracketing": [
+  {
+   "n": 2,
+   "bracketings": 1,
+   "functions": 1
+  },
+  {
+   "n": 3,
+   "bracketings": 2,
+   "functions": 2
+  },
+  {
+   "n": 4,
+   "bracketings": 5,
+   "functions": 4
+  },
+  {
+   "n": 5,
+   "bracketings": 14,
+   "functions": 10
+  },
+  {
+   "n": 6,
+   "bracketings": 42,
+   "functions": 24
+  },
+  {
+   "n": 7,
+   "bracketings": 132,
+   "functions": 66
+  },
+  {
+   "n": 8,
+   "bracketings": 429,
+   "functions": 172
+  },
+  {
+   "n": 9,
+   "bracketings": 1430,
+   "functions": 498
+  },
+  {
+   "n": 10,
+   "bracketings": 4862,
+   "functions": 1360
+  },
+  {
+   "n": 11,
+   "bracketings": 16796,
+   "functions": 4066
+  }
+ ],
+ "scope": [
+  {
+   "n": 2,
+   "orders": 2,
+   "distinct": 2
+  },
+  {
+   "n": 3,
+   "orders": 6,
+   "distinct": 4
+  },
+  {
+   "n": 4,
+   "orders": 24,
+   "distinct": 14
+  },
+  {
+   "n": 5,
+   "orders": 120,
+   "distinct": 46
+  },
+  {
+   "n": 6,
+   "orders": 720,
+   "distinct": 230
+  },
+  {
+   "n": 7,
+   "orders": 5040,
+   "distinct": 1066
+  }
+ ],
+ "binary": [
+  {
+   "k": 0,
+   "readings": 1
+  },
+  {
+   "k": 1,
+   "readings": 2
+  },
+  {
+   "k": 2,
+   "readings": 4
+  },
+  {
+   "k": 3,
+   "readings": 8
+  },
+  {
+   "k": 4,
+   "readings": 16
+  },
+  {
+   "k": 5,
+   "readings": 32
+  },
+  {
+   "k": 6,
+   "readings": 64
+  },
+  {
+   "k": 7,
+   "readings": 128
+  },
+  {
+   "k": 8,
+   "readings": 256
+  },
+  {
+   "k": 9,
+   "readings": 512
+  },
+  {
+   "k": 10,
+   "readings": 1024
+  }
+ ],
+ "catalan_19": 1767263190,
+ "catalan_24": 1289904147324,
+ "open_list": {
+  "universe": 10,
+  "listed": 2,
+  "readings": 256
+ }
+}

@@ -1,0 +1,40 @@
+START llama3.2:3b 17:57:29
+ollama llama3.2:3b: 420 probes, 6 cached, 402 to ask
+progress 25/402  3.5 s/call  eta 22 min
+progress 50/402  3.2 s/call  eta 19 min
+progress 75/402  3.5 s/call  eta 19 min
+progress 100/402  3.4 s/call  eta 17 min
+progress 125/402  3.4 s/call  eta 16 min
+progress 150/402  3.3 s/call  eta 14 min
+progress 175/402  3.4 s/call  eta 13 min
+progress 200/402  3.5 s/call  eta 12 min
+progress 225/402  3.6 s/call  eta 11 min
+progress 250/402  3.7 s/call  eta 9 min
+progress 275/402  3.8 s/call  eta 8 min
+progress 300/402  3.8 s/call  eta 7 min
+progress 325/402  4.0 s/call  eta 5 min
+progress 350/402  4.0 s/call  eta 3 min
+progress 375/402  3.9 s/call  eta 2 min
+progress 400/402  3.9 s/call  eta 0 min
+FINISHED ollama llama3.2:3b: 402 new calls in 26.3 min
+END llama3.2:3b rc=0 18:23:47
+START SpeakLeash/bielik-1.5b-v3.0-instruct:Q8_0 18:23:47
+ollama SpeakLeash/bielik-1.5b-v3.0-instruct:Q8_0: 420 probes, 0 cached, 408 to ask
+progress 25/408  2.4 s/call  eta 15 min
+progress 50/408  2.1 s/call  eta 12 min
+progress 75/408  2.1 s/call  eta 12 min
+progress 100/408  2.3 s/call  eta 12 min
+progress 125/408  2.2 s/call  eta 10 min
+progress 150/408  2.1 s/call  eta 9 min
+progress 175/408  2.1 s/call  eta 8 min
+progress 200/408  2.2 s/call  eta 7 min
+progress 225/408  2.2 s/call  eta 7 min
+progress 250/408  2.2 s/call  eta 6 min
+progress 275/408  2.2 s/call  eta 5 min
+progress 300/408  2.2 s/call  eta 4 min
+progress 325/408  2.2 s/call  eta 3 min
+progress 350/408  2.2 s/call  eta 2 min
+progress 375/408  2.2 s/call  eta 1 min
+progress 400/408  2.2 s/call  eta 0 min
+FINISHED ollama SpeakLeash/bielik-1.5b-v3.0-instruct:Q8_0: 408 new calls in 14.9 min
+END SpeakLeash/bielik-1.5b-v3.0-instruct:Q8_0 rc=0 18:38:38

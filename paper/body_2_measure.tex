@@ -1,0 +1,215 @@
+\section{Metoda pomiarów}
+\label{sec:method}
+
+Praca zawiera 5 pomiarów. Pomiary P1 i P2 są obliczeniami na modelu formalnym. Pomiary P3
+i P4 korzystają ze zbioru pozycji testowych. Pomiar P5 korzysta z korpusu tekstów.
+
+\subsection{Zbiór pozycji testowych}
+\label{sec:items}
+
+Zbiór ma \pkItems{} pozycji (plik \texttt{data/items.csv}, dodatek \ref{app:items}).
+Pozycja zawiera 6 części: zdanie zwykłe, opis 2 odczytań, zdanie PK dla odczytania 1,
+zdanie PK dla odczytania 2 oraz 3 sondy. Sonda to sytuacja z pytaniem, na które
+odpowiedzią jest \pkq{Tak} albo \pkq{Nie}. Pierwsza sonda leży w strefie szarej: odczytanie
+1 daje jedną odpowiedź, a odczytanie 2 daje odpowiedź przeciwną. Sondy druga i trzecia są
+kotwicami: oba odczytania dają odpowiedź \pkq{Tak} w kotwicy drugiej i odpowiedź \pkq{Nie}
+w kotwicy trzeciej. Kotwice sprawdzają, czy model rozumie zadanie.
+
+Zdanie zwykłe w \pkItemsStd{} pozycjach pochodzi z przykładów standardu PK 0.1. Standard
+powstał przed tą pracą, więc autor nie dobierał tych zdań pod wynik pomiaru. Pozostałe
+\pkItemsAuthor{} pozycji napisał autor. Zbiór ma 3 rodzaje pozycji.
+\begin{itemize}[leftmargin=1.6em]
+  \item \textbf{Przeredagowanie} (\pkItemsRewrite{} pozycji): zdanie PK jest innym ciągiem
+  słów niż zdanie zwykłe.
+  \item \textbf{Konwencja} (\pkItemsConv{} pozycje, reguły B2 i C1): zdanie PK dla odczytania
+  1 jest tym samym ciągiem słów co zdanie zwykłe. Odczytanie ustala konwencja, więc
+  pozycja ma dodatkowy wariant z legendą.
+  \item \textbf{Luka} (\pkItemsGap{} pozycje): zdanie zwykłe spełnia numerowane reguły PK
+  i ma 2 odczytania (uwaga \ref{rem:gap}).
+\end{itemize}
+Każde zdanie PK w zbiorze przechodzi sprawdzarkę z sekcji \ref{sec:check}. Zdanie PK
+o największej liczbie słów ma \pkLintPkLongest{} słów.
+
+\subsection{Pomiary P1 i P2}
+
+Pomiar P1 liczy odczytania dokładnie. Funkcja \texttt{count\_parses} liczy drzewa rozbioru
+zdania z $k$ frazami przyimkowymi. Funkcja \texttt{bracketings} wylicza nawiasowania ciągu
+członów połączonych na przemian słowami \pkq{i} oraz \pkq{lub} i liczy różne funkcje
+logiczne. Funkcja \texttt{scope\_orders} liczy różne porządki zasięgu kwantyfikatorów
+\pkq{każdy} i \pkq{pewien} ustawionych na przemian. Dla co najwyżej 4 kwantyfikatorów test
+sprawdza wynik semantycznie: wylicza każdą relację na dziedzinie o 2 elementach.
+
+Pomiar P2 uruchamia parser Earleya na zdaniach o budowie: rzeczownik, czasownik,
+rzeczownik oraz $k$ fraz przyimkowych, dla $k$ od 0 do 40 włącznie. Zdanie ma wtedy
+od 3 do \pkParseWordsMax{} słów włącznie. Operacją jest 1 próba wpisania stanu do tablicy
+parsera. Parser nie zawiera poprawki Leo \cite{leo1991}. Wykładnik wzrostu pochodzi
+z regresji liniowej logarytmu liczby operacji względem logarytmu liczby słów, dla zdań,
+które mają co najmniej 21 słów.
+
+\subsection{Pomiar P3: długość}
+
+Pomiar P3 liczy długość zdania zwykłego i 2 zdań PK w 6 miarach: słowa, znaki oraz tokeny
+\pkTokTokenizers{} tokenizerów. Tokenizery \texttt{o200k\_base} i \texttt{cl100k\_base}
+pochodzą z biblioteki \texttt{tiktoken}; tokenizery modeli \texttt{Llama 3.2} i \texttt{Gemma 3} pochodzą
+z plików modeli. Tokenizery modeli Bielik wymagają zgody licencyjnej w serwisie
+Hugging Face, więc pomiar pomija tokenizery modeli Bielik. Narzut pozycji to iloraz: średnia długość
+2 zdań PK podzielona przez długość zdania zwykłego, minus 1. Pomiar obejmuje \pkTokItems{} pozycji:
+przeredagowania i luki. Pozycje typu konwencja mają narzut 0 z definicji; kosztem
+konwencji jest legenda. Dla mediany narzutu skrypt liczy przedział ufności 95 \% metodą
+bootstrap z 10\,000 losowań.
+
+\subsection{Pomiar P4: sonda strefy szarej}
+\label{sec:probemethod}
+
+Model językowy dostaje instrukcję systemową: \pkq{Odpowiadasz na pytania o znaczenie
+tekstu. Odpowiedz jednym słowem: Tak albo Nie.} Wiadomość zawiera tekst, sondę i powtórzone
+polecenie odpowiedzi 1 słowem. Tekstem jest zdanie zwykłe, zdanie PK dla odczytania 1 albo
+zdanie PK dla odczytania 2. Pozycja typu konwencja ma także 2 warianty z legendą. Razem
+pomiar ma \pkProbes{} sond, czyli \pkProbesUnique{} różnych zapytań na model.
+
+Pomiar ma 2 wykonane tory.
+\begin{itemize}[leftmargin=1.6em]
+  \item \textbf{Tor lokalny.} Program \texttt{ollama} uruchamia model na procesorze
+  komputera autora, z temperaturą 0. Skrypt odczytuje prawdopodobieństwa 20 najbardziej
+  prawdopodobnych tokenów na pierwszej pozycji odpowiedzi. Wielkość $P(\text{Tak})$ to
+  masa tokenów słowa \pkq{Tak} podzielona przez sumę mas tokenów słów \pkq{Tak}
+  i \pkq{Nie}. Tor lokalny obejmuje każdą z \pkProbesUnique{} sond.
+  \item \textbf{Tor Claude.} Polecenie \texttt{claude -p} wywołuje modele Haiku i Sonnet
+  bez narzędzi, bez plików reguł autora i bez pamięci sesji; mediana zużycia to
+  \pkClaudeTokMedian{} tokenów wejściowych na wywołanie. Interfejs nie podaje prawdopodobieństw tokenów. Skrypt zadaje
+  więc każdą sondę 2 razy i liczy udział odpowiedzi \pkq{Tak}. Tor Claude obejmuje tylko
+  sondy strefy szarej: \pkProbesGrayUnique{} zapytań i \pkClaudeCalls{} wywołania na model.
+\end{itemize}
+Plan przewidywał tor trzeci, przez serwis OpenRouter. Tor trzeci nie powstał. Zabezpieczenie
+komputera autora zablokowało odczyt klucza dostępu, a autor zostawił blokadę na czas
+pomiaru.
+
+Niech $q$ oznacza prawdopodobieństwo odczytania 1 w strefie szarej. Skrypt liczy 5 miar.
+\begin{itemize}[leftmargin=1.6em]
+  \item \textbf{Niepewność} $H_2(q)=-q\log_2q-(1-q)\log_2(1-q)$, w bitach, dla zdania
+  zwykłego i średnio dla 2 zdań PK. Miara wymaga prawdopodobieństw, więc dotyczy toru
+  lokalnego.
+  \item \textbf{Sterowalność}: różnica $q$ dla zdania PK odczytania 1 i $q$ dla zdania PK
+  odczytania 2. Wartość 1 oznacza pełne sterowanie; wartość 0 oznacza brak wpływu.
+  \item \textbf{Trafność PK}: udział zdań PK, dla których model wybiera odczytanie
+  zamierzone, czyli $q>0{,}5$ dla odczytania 1 i $q<0{,}5$ dla odczytania 2. Poziom
+  przypadku wynosi 50 \%.
+  \item \textbf{Trafność kotwic}: udział kotwic z odpowiedzią zgodną z kluczem.
+  \item \textbf{Rozbieżność czytelników}: udział pozycji, w których modele wybierają różne
+  odczytania zdania zwykłego.
+\end{itemize}
+Dla niepewności skrypt wykonuje dokładny test znaków na pozycjach typu przeredagowanie.
+Test nie ma poprawki na liczbę modeli.
+
+\subsection{Pomiar P5: korpus}
+
+Korpus zawiera \pkCorpusActs{} aktów prawnych i 3 teksty pisane w PK. Akty prawne pochodzą
+z serwisu \texttt{api.sejm.gov.pl}: Konstytucja RP oraz teksty jednolite Kodeksu cywilnego,
+Kodeksu pracy, Prawa o ruchu drogowym i \pkq{Zasad techniki prawodawczej}. Akty prawne
+nie są przedmiotem prawa autorskiego; repozytorium zapisuje adresy, sumy SHA-256 i wyniki
+zliczeń. Teksty PK to: standard PK 0.1, praca \pkq{Rachunek generatorów} tego samego autora
+oraz niniejsza praca.
+
+Skrypt usuwa z aktu nagłówki stron i numery jednostek redakcyjnych. Sprawdzarka liczy
+trafienia każdej z \pkLintChecks{} kontroli; miarą jest liczba trafień na 1000 słów.
+Trafienie wskazuje konstrukcję objętą regułą PK. Trafienie nie dowodzi, że zdanie ma
+2 odczytania w kontekście aktu. Autor ocenił ręcznie losową próbę \pkPrecN{} trafień
+z aktów prawnych; próba nie obejmuje kontroli długości zdania. Ocenę wykonał 1 oceniający.
+
+\subsection{Powtarzalność}
+
+Polecenie \texttt{make all} uruchamia testy, pomiary P1, P2, P3 i P5, rysunki i budowę
+pliku PDF. Surowe odpowiedzi modeli leżą w plikach \texttt{results/probe\_*.jsonl};
+skrypt \texttt{scripts/measure.py} przelicza z tych plików każdą liczbę pomiaru P4. Ciągła
+integracja nie wywołuje modeli. Wagi modeli lokalnych identyfikuje nazwa z rejestru
+programu \texttt{ollama}; modele Claude nie są dostępne bez konta, więc tor Claude
+odtwarza tylko posiadacz konta.
+
+\section{Wyniki}
+\label{sec:results}
+
+\subsection{P1: liczba odczytań}
+
+Tabela \ref{tab:counts} i rysunek \ref{fig:growth} podają liczbę odczytań dla 3 konstrukcji.
+Zdanie z 8 frazami przyimkowymi ma \pkAttachEight{} odczytania. Ciąg 11 członów połączonych
+na przemian słowami \pkq{i} oraz \pkq{lub} ma \pkBracketElevenAll{} nawiasowań, które dają
+\pkBracketEleven{} różnych funkcji logicznych. Zdanie z 4 kwantyfikatorami ma
+\pkScopeFourAll{} porządki zasięgu, w tym \pkScopeFour{} logicznie różnych. Wzrost jest
+wykładniczy w każdej z 3 konstrukcji. Zdanie PK ma 1 odczytanie przy każdej liczbie
+miejsc wyboru.
+
+\begin{table}[tp]
+\centering
+\caption{P1: liczba logicznie różnych odczytań zdania. Kolumna 2: $k$ fraz przyimkowych po
+dopełnieniu. Kolumna 3: $k$ spójników \pkq{i} oraz \pkq{lub} na przemian. Kolumna 4:
+$k+1$ kwantyfikatorów \pkq{każdy} i \pkq{pewien} na przemian.}
+\label{tab:counts}
+\begin{tabular}{rrrr}
+\toprule
+$k$ & frazy przyimkowe & spójniki & kwantyfikatory\\
+\midrule
+\wiersze{data/table_counts.tex}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\rysunek{growth}{Kombinatoryka: wzrost liczby odczytań z liczbą miejsc wyboru.}{fig:growth}
+
+\subsection{P2: operacje parsera}
+\label{sec:resparse}
+
+Rysunek \ref{fig:parser} pokazuje liczbę operacji parsera. Dla zdania o 21 słowach parser
+wykonuje \pkParseOpsNatTwenty{} operacji z gramatyką niejednoznaczną i \pkParseOpsPkTwenty{}
+operacji z gramatyką PK. To samo zdanie ma \pkParseTreesTwenty{} drzew rozbioru
+w gramatyce niejednoznacznej i 1 drzewo w gramatyce PK. Dla zdania
+o \pkParseWordsMax{} słowach liczby operacji wynoszą \pkParseOpsNatMax{}
+oraz \pkParseOpsPkMax{}; iloraz to \pkParseRatioMax.
+
+Dopasowany wykładnik wzrostu wynosi \pkParseExpNat{} dla gramatyki niejednoznacznej
+i \pkParseExpPk{} dla gramatyki PK. Oba wykładniki są mniejsze niż granice teoretyczne
+3 i 2, bo zdania pomiaru mają co najwyżej \pkParseWordsMax{} słów. Gramatyka PK jest
+jednoznaczna i ma rekursję prawostronną. Parser Earleya bez poprawki Leo przetwarza taką
+gramatykę w czasie kwadratowym; z poprawką Leo czas jest liniowy \cite{leo1991}. Pomiar
+potwierdza kierunek zmiany i nie potwierdza czasu liniowego.
+
+W zakresie reguły B8 przewaga gramatyki PK w liczbie operacji jest umiarkowana: dla zdania
+o 25 słowach iloraz wynosi \pkParseRatioTwentyFive. Główną korzyścią w tym zakresie jest
+liczba drzew: 1 drzewo zamiast \pkParseTreesTwentyFive{} drzew.
+
+\rysunek{parser}{Teoria złożoności: zmierzona liczba operacji parsera Earleya dla
+gramatyki niejednoznacznej i dla gramatyki PK.}{fig:parser}
+
+\subsection{P3: narzut długości}
+\label{sec:restokens}
+
+PK wydłuża tekst. Tabela \ref{tab:tokens} i rysunek \ref{fig:tokens} podają narzut
+w 6 miarach. W tokenach \pkTokUnit{} mediana narzutu wynosi \pkTokMedian{} \%, a kwartyle
+wynoszą \pkTokQone{} \% i \pkTokQthree{} \%. Przedział ufności 95 \% dla mediany to
+od \pkTokCiLo{} \% do \pkTokCiHi{} \% włącznie. Średnia narzutu wynosi \pkTokMean{} \%.
+Zdanie PK jest dłuższe niż zdanie zwykłe w \pkTokShareLonger{} \% przypadków. Wynik jest
+zgodny w 6 miarach: mediany leżą w przedziale od \pkTokMedMin{} \% do \pkTokMedMax{} \% włącznie.
+
+Najwyższy narzut mają pozycje o terminach liczonych w dniach (reguła D4) oraz pozycja
+o mieszaniu spójników (reguła C2). Zdanie PK podaje tam dane, których zdanie zwykłe
+nie zawiera: dzień numer 1 albo strukturę listy. Narzut bliski 0 mają pozycje, w których
+PK zamienia 1 słowo, na przykład słowo \pkq{wszystkie} z przeczeniem na słowo \pkq{żaden}.
+
+Pozycje typu konwencja nie zmieniają zdania. Kosztem jest legenda, którą autor podaje
+1 raz w tekście; legendy zbioru mają co najwyżej \pkLegendTokMax{} tokenów.
+
+\begin{table}[tp]
+\centering
+\caption{P3: narzut długości PK w procentach długości zdania zwykłego; \pkTokItems{} pozycji.
+Kolumna końcowa: udział zdań PK dłuższych niż zdanie zwykłe.}
+\label{tab:tokens}
+\begin{tabular}{lrrrrrr}
+\toprule
+Miara & mediana & kwartyl 1 & kwartyl 3 & minimum & maksimum & dłuższe (\%)\\
+\midrule
+\wiersze{data/table_tokens.tex}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\rysunek{tokens}{Lingwistyka korpusowa: długość zdania zwykłego i zdania PK oraz rozkład
+narzutu w 6 miarach.}{fig:tokens}

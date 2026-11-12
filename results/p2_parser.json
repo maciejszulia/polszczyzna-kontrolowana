@@ -1,0 +1,335 @@
+{
+ "rows": [
+  {
+   "k": 0,
+   "words": 3,
+   "ops_nat": 25,
+   "ops_pk": 16,
+   "parses_nat": 1,
+   "parses_pk": 1
+  },
+  {
+   "k": 1,
+   "words": 5,
+   "ops_nat": 44,
+   "ops_pk": 26,
+   "parses_nat": 2,
+   "parses_pk": 1
+  },
+  {
+   "k": 2,
+   "words": 7,
+   "ops_nat": 69,
+   "ops_pk": 38,
+   "parses_nat": 5,
+   "parses_pk": 1
+  },
+  {
+   "k": 3,
+   "words": 9,
+   "ops_nat": 101,
+   "ops_pk": 52,
+   "parses_nat": 14,
+   "parses_pk": 1
+  },
+  {
+   "k": 4,
+   "words": 11,
+   "ops_nat": 141,
+   "ops_pk": 68,
+   "parses_nat": 42,
+   "parses_pk": 1
+  },
+  {
+   "k": 5,
+   "words": 13,
+   "ops_nat": 190,
+   "ops_pk": 86,
+   "parses_nat": 132,
+   "parses_pk": 1
+  },
+  {
+   "k": 6,
+   "words": 15,
+   "ops_nat": 249,
+   "ops_pk": 106,
+   "parses_nat": 429,
+   "parses_pk": 1
+  },
+  {
+   "k": 7,
+   "words": 17,
+   "ops_nat": 319,
+   "ops_pk": 128,
+   "parses_nat": 1430,
+   "parses_pk": 1
+  },
+  {
+   "k": 8,
+   "words": 19,
+   "ops_nat": 401,
+   "ops_pk": 152,
+   "parses_nat": 4862,
+   "parses_pk": 1
+  },
+  {
+   "k": 9,
+   "words": 21,
+   "ops_nat": 496,
+   "ops_pk": 178,
+   "parses_nat": 16796,
+   "parses_pk": 1
+  },
+  {
+   "k": 10,
+   "words": 23,
+   "ops_nat": 605,
+   "ops_pk": 206,
+   "parses_nat": 58786,
+   "parses_pk": 1
+  },
+  {
+   "k": 11,
+   "words": 25,
+   "ops_nat": 729,
+   "ops_pk": 236,
+   "parses_nat": 208012,
+   "parses_pk": 1
+  },
+  {
+   "k": 12,
+   "words": 27,
+   "ops_nat": 869,
+   "ops_pk": 268,
+   "parses_nat": 742900,
+   "parses_pk": 1
+  },
+  {
+   "k": 13,
+   "words": 29,
+   "ops_nat": 1026,
+   "ops_pk": 302,
+   "parses_nat": 2674440,
+   "parses_pk": 1
+  },
+  {
+   "k": 14,
+   "words": 31,
+   "ops_nat": 1201,
+   "ops_pk": 338,
+   "parses_nat": 9694845,
+   "parses_pk": 1
+  },
+  {
+   "k": 15,
+   "words": 33,
+   "ops_nat": 1395,
+   "ops_pk": 376,
+   "parses_nat": 35357670,
+   "parses_pk": 1
+  },
+  {
+   "k": 16,
+   "words": 35,
+   "ops_nat": 1609,
+   "ops_pk": 416,
+   "parses_nat": 129644790,
+   "parses_pk": 1
+  },
+  {
+   "k": 17,
+   "words": 37,
+   "ops_nat": 1844,
+   "ops_pk": 458,
+   "parses_nat": 477638700,
+   "parses_pk": 1
+  },
+  {
+   "k": 18,
+   "words": 39,
+   "ops_nat": 2101,
+   "ops_pk": 502,
+   "parses_nat": 1767263190,
+   "parses_pk": 1
+  },
+  {
+   "k": 19,
+   "words": 41,
+   "ops_nat": 2381,
+   "ops_pk": 548,
+   "parses_nat": 6564120420,
+   "parses_pk": 1
+  },
+  {
+   "k": 20,
+   "words": 43,
+   "ops_nat": 2685,
+   "ops_pk": 596,
+   "parses_nat": 24466267020,
+   "parses_pk": 1
+  },
+  {
+   "k": 21,
+   "words": 45,
+   "ops_nat": 3014,
+   "ops_pk": 646,
+   "parses_nat": 91482563640,
+   "parses_pk": 1
+  },
+  {
+   "k": 22,
+   "words": 47,
+   "ops_nat": 3369,
+   "ops_pk": 698,
+   "parses_nat": 343059613650,
+   "parses_pk": 1
+  },
+  {
+   "k": 23,
+   "words": 49,
+   "ops_nat": 3751,
+   "ops_pk": 752,
+   "parses_nat": 1289904147324,
+   "parses_pk": 1
+  },
+  {
+   "k": 24,
+   "words": 51,
+   "ops_nat": 4161,
+   "ops_pk": 808,
+   "parses_nat": 4861946401452,
+   "parses_pk": 1
+  },
+  {
+   "k": 25,
+   "words": 53,
+   "ops_nat": 4600,
+   "ops_pk": 866,
+   "parses_nat": 18367353072152,
+   "parses_pk": 1
+  },
+  {
+   "k": 26,
+   "words": 55,
+   "ops_nat": 5069,
+   "ops_pk": 926,
+   "parses_nat": 69533550916004,
+   "parses_pk": 1
+  },
+  {
+   "k": 27,
+   "words": 57,
+   "ops_nat": 5569,
+   "ops_pk": 988,
+   "parses_nat": 263747951750360,
+   "parses_pk": 1
+  },
+  {
+   "k": 28,
+   "words": 59,
+   "ops_nat": 6101,
+   "ops_pk": 1052,
+   "parses_nat": 1002242216651368,
+   "parses_pk": 1
+  },
+  {
+   "k": 29,
+   "words": 61,
+   "ops_nat": 6666,
+   "ops_pk": 1118,
+   "parses_nat": 3814986502092304,
+   "parses_pk": 1
+  },
+  {
+   "k": 30,
+   "words": 63,
+   "ops_nat": 7265,
+   "ops_pk": 1186,
+   "parses_nat": 14544636039226909,
+   "parses_pk": 1
+  },
+  {
+   "k": 31,
+   "words": 65,
+   "ops_nat": 7899,
+   "ops_pk": 1256,
+   "parses_nat": 55534064877048198,
+   "parses_pk": 1
+  },
+  {
+   "k": 32,
+   "words": 67,
+   "ops_nat": 8569,
+   "ops_pk": 1328,
+   "parses_nat": 212336130412243110,
+   "parses_pk": 1
+  },
+  {
+   "k": 33,
+   "words": 69,
+   "ops_nat": 9276,
+   "ops_pk": 1402,
+   "parses_nat": 812944042149730764,
+   "parses_pk": 1
+  },
+  {
+   "k": 34,
+   "words": 71,
+   "ops_nat": 10021,
+   "ops_pk": 1478,
+   "parses_nat": 3116285494907301262,
+   "parses_pk": 1
+  },
+  {
+   "k": 35,
+   "words": 73,
+   "ops_nat": 10805,
+   "ops_pk": 1556,
+   "parses_nat": 11959798385860453492,
+   "parses_pk": 1
+  },
+  {
+   "k": 36,
+   "words": 75,
+   "ops_nat": 11629,
+   "ops_pk": 1636,
+   "parses_nat": 45950804324621742364,
+   "parses_pk": 1
+  },
+  {
+   "k": 37,
+   "words": 77,
+   "ops_nat": 12494,
+   "ops_pk": 1718,
+   "parses_nat": 176733862787006701400,
+   "parses_pk": 1
+  },
+  {
+   "k": 38,
+   "words": 79,
+   "ops_nat": 13401,
+   "ops_pk": 1802,
+   "parses_nat": 680425371729975800390,
+   "parses_pk": 1
+  },
+  {
+   "k": 39,
+   "words": 81,
+   "ops_nat": 14351,
+   "ops_pk": 1888,
+   "parses_nat": 2622127042276492108820,
+   "parses_pk": 1
+  },
+  {
+   "k": 40,
+   "words": 83,
+   "ops_nat": 15345,
+   "ops_pk": 1976,
+   "parses_nat": 10113918591637898134020,
+   "parses_pk": 1
+  }
+ ],
+ "exp_nat": 2.52714466308379,
+ "exp_pk": 1.765207790759199,
+ "fit_from_words": 21
+}

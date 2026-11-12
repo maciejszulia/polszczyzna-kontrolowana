@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Recompute every number from the stored measurements
+        run: python scripts/measure.py --offline
+      - name: The generated numbers match the committed ones
+        run: git diff --exit-code -- paper/data results/summary.json results/p4_summary.json
+      - name: PK checker on the text of the paper
+        run: python -m src.pklint --tex paper/abstract.tex paper/body_*.tex paper/measurement_report_pl.tex paper/report_*.tex
+
+  paper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the paper
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: pk_complexity_pl.tex
+          working_directory: paper
+      - name: Build the measurement report
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: measurement_report_pl.tex
+          working_directory: paper
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdf
+          path: |
+            paper/pk_complexity_pl.pdf
+            paper/measurement_report_pl.pdf

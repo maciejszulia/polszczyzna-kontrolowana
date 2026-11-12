@@ -1,0 +1,177 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{pkpaper}
+\input{data/numbers}
+
+\title{\textbf{Sprawozdanie z pomiarów}\\[4pt]
+\large do pracy \pkq{Polszczyzna kontrolowana jako metoda redukcji\\ złożoności obliczeniowej w AI}}
+\author{Maciej Szulia\\[2pt]\normalsize\texttt{maciej.szulia@gmail.com}}
+\date{2026-11-12}
+
+\begin{document}
+\maketitle
+
+\section{Zakres}
+
+Sprawozdanie opisuje 5 pomiarów pracy: warunki, wyniki, odstępstwa od planu i sposób
+odtworzenia. Autor napisał sprawozdanie w PK. Legenda: \pkq{lub} znaczy co najmniej 1
+z członów; \pkq{albo} znaczy dokładnie 1 z członów. Znacznik w nawiasie kwadratowym podaje
+źródło faktu. Każda liczba w tabelach pochodzi z plików katalogu \texttt{results}
+\pkq{[obliczenie: scripts/measure.py]}.
+
+\section{Środowisko}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Element & Wartość\\
+\midrule
+Data pomiarów & 2026-11-12\\
+Komputer & procesor Intel Core i7-7700HQ, 8 wątków, 31 GB pamięci\\
+System & Linux 7.2.9, dystrybucja Artix\\
+Python & 3.13.14\\
+Program \texttt{ollama} & 0.34.1, obliczenia na procesorze\\
+Polecenie \texttt{claude} & 2.1.322\\
+Przedmiot badania & standard PK 0.1, wersja \texttt{15503a4}\\
+\bottomrule
+\end{tabular}
+\end{center}
+Źródło danych tabeli: \pkq{[obserwacja: 2026-11-12, 18:31]}.
+
+\section{Wyniki zbiorcze}
+
+\begin{center}
+\small
+\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.35\textwidth}l@{}}
+\toprule
+Pomiar & Wielkość & Wynik & Plik wyników\\
+\midrule
+P1 & liczba odczytań zdania z 8 frazami przyimkowymi & \pkAttachEight{} odczytania; zdanie PK: 1 & \texttt{p1\_counts.json}\\
+P2 & wykładnik wzrostu liczby operacji parsera & \pkParseExpNat{} bez reguł PK; \pkParseExpPk{} z regułą B6 & \texttt{p2\_parser.json}\\
+P3 & narzut długości PK w tokenach \pkTokUnit & mediana \pkTokMedian{} \%; kwartyle \pkTokQone{} \% i \pkTokQthree{} \% & \texttt{p3\_tokens.json}\\
+P4 & trafność odczytania zdań PK przez model & od \pkAccPkQMin{} \% do \pkAccPkQMax{} \% włącznie (modele po kontroli kotwic) & \texttt{p4\_summary.json}\\
+P4 & rozbieżność modeli na zdaniu zwykłym & \pkNatSplitCount{} z \pkAgreeItems{} pozycji & \texttt{p4\_summary.json}\\
+P5 & trafienia sprawdzarki na 1000 słów & akty prawne: od \pkCorpusActMin{} do \pkCorpusActMax{} włącznie; teksty PK: od \pkCorpusPkMin{} do \pkCorpusPkMax{} włącznie & \texttt{p5\_corpus.json}\\
+P5 & precyzja sprawdzarki & \pkPrecValid{} z \pkPrecN{} trafień, czyli \pkPrec{} \% & \texttt{summary.json}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Kontrole poprawności: test redukcji z problemu 3-SAT przeszedł \pkRedInstances{} z
+\pkRedInstances{} formuł. Sprawdzarka wykrywa \pkLintDetected{} z \pkItems{} zdań zwykłych
+zbioru testowego i nie zgłasza żadnego z \pkItemsPkSentences{} zdań PK.
+
+\section{Pomiar P4: biegi i wyniki}
+
+Zbiór ma \pkItems{} pozycji: \pkItemsRewrite{} przeredagowań, \pkItemsConv{} konwencje
+i \pkItemsGap{} luki. Pełna sonda ma \pkProbesUnique{} różnych zapytań na model. Tor Claude
+obejmuje \pkProbesGrayUnique{} zapytań strefy szarej, każde w 2 próbach.
+
+\begin{table}[htp]
+\centering
+\caption{Biegi sondy. Czas obejmuje nowe wywołania 1 biegu; bieg wznowiony ma osobny wiersz.}
+\label{tab:runs}
+\small
+\begin{tabular}{llrr}
+\toprule
+Tor & Model & nowe zapytania & czas (min)\\
+\midrule
+\wiersze{data/table_runs.tex}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htp]
+\centering
+\caption{Wynik sondy. L: tor lokalny, C: tor Claude. $n$: liczba pozycji typu
+przeredagowanie. $H$: mediana niepewności w bitach. Znaki: liczba pozycji z niepewnością
+wyższą dla zdania zwykłego i liczba pozycji z niepewnością wyższą dla zdań PK; $p$: test
+znaków. Kotwice: trafność w procentach; próg kwalifikacji modelu wynosi 80 \%.}
+\label{tab:probe}
+\small
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}lrrrrrrrrr@{}}
+\toprule
+ & & \multicolumn{2}{c}{$H$ (bity)} & \multicolumn{2}{c}{test znaków} & & trafność & \multicolumn{2}{c}{kotwice (\%)}\\
+Model & $n$ & zwykłe & PK & znaki & $p$ & sterow. & PK (\%) & zwykłe & PK\\
+\midrule
+\wiersze{data/table_probe.tex}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htp]
+\centering
+\caption{Pozycje typu konwencja (\pkItemsConv{} pozycje, reguły B2 i C1): trafność
+w procentach i sterowalność bez legendy oraz z legendą.}
+\label{tab:conv}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Model & trafność & trafność & sterowalność & sterowalność\\
+ & bez legendy & z legendą & bez legendy & z legendą\\
+\midrule
+\wiersze{data/table_conv.tex}
+\bottomrule
+\end{tabular}
+\end{table}
+
+Kontrolę kotwic przeszło \pkProbeQualified{} z \pkProbeModels{} modeli; modele toru Claude
+nie mają kotwic i wchodzą do zestawienia na podstawie trafności PK. W \pkNatSplitCount{}
+z \pkAgreeItems{} pozycji modele po kontroli wybierają różne odczytania zdania zwykłego.
+W \pkPkAllCorrectCount{} z \pkAgreeItems{} pozycji każdy model po kontroli odczytuje oba
+zdania PK zgodnie z kluczem.
+
+\section{Pomiary P3 i P5}
+
+\begin{table}[htp]
+\centering
+\caption{P3: narzut długości PK w procentach długości zdania zwykłego; \pkTokItems{}
+pozycji.}
+\small
+\begin{tabular}{lrrrrrr}
+\toprule
+Miara & mediana & kwartyl 1 & kwartyl 3 & minimum & maksimum & dłuższe (\%)\\
+\midrule
+\wiersze{data/table_tokens.tex}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htp]
+\centering
+\caption{P5: wynik sprawdzarki na korpusie. Mediana: mediana długości zdania w słowach.
+Kolumna 4: udział zdań dłuższych niż 25 słów. Trafienia: liczba na 1000 słów. Kolumna końcowa:
+wystąpienia słowa \pkq{się} na 1000 słów, kandydat do oceny.}
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Tekst & słowa & mediana & ponad 25 (\%) & trafienia & \pkq{się}\\
+\midrule
+\wiersze{data/table_corpus.tex}
+\bottomrule
+\end{tabular}
+\end{table}
+
+Tokenizery modeli Bielik wymagają zgody licencyjnej w serwisie Hugging Face; żądanie pliku
+zwróciło błąd 401 \pkq{[obserwacja: 2026-11-12, 17:52]}. Pomiar P3 obejmuje więc
+\pkTokTokenizers{} tokenizery.
+
+\section{Odstępstwa od planu i problemy}
+
+\input{report_problems}
+
+\section{Odtworzenie}
+
+\begin{itemize}[leftmargin=1.6em,itemsep=1pt]
+  \item \texttt{make all}: testy, pomiary P1, P2, P3 i P5, agregaty pomiaru P4, rysunki
+  i pliki PDF. Pomiary P3 i P5 pobierają dane z sieci.
+  \item \texttt{make MEASURE\_FLAGS=-{}-offline all}: to samo bez sieci, z plików
+  \texttt{results/p3\_tokens.json} i \texttt{results/p5\_corpus.json}.
+  \item \texttt{python scripts/probe.py ollama MODEL}: pełna sonda na modelu lokalnym;
+  skrypt pomija zapytania, które plik wyników już zawiera.
+  \item \texttt{python scripts/probe.py claude MODEL -{}-subset gray -{}-samples 2}:\\ sonda toru Claude.
+\end{itemize}
+Surowe odpowiedzi modeli zawierają pliki \texttt{results/probe\_*.jsonl}, a dzienniki
+biegów zawiera katalog \texttt{results/logs}.
+
+\end{document}
