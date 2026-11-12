@@ -51,6 +51,11 @@ Claude Code wczyta skill w następnej sesji. Skill ma 3 tryby:
 | PRZEREDAGUJ | „usuń niejednoznaczności” | tekst w PK oraz tabela „Decyzje i braki” |
 | SPRAWDŹ | „sprawdź w PK” | tabela naruszeń, tekst źródłowy bez zmian |
 
+## Przykłady
+
+- [Terminy utworzone w projekcie gospodarstwa samowystarczalnego](przyklady/terminy-utworzone-gospodarstwo.md):
+  8 terminów utworzonych, 34 nazwy obiektów i 4 poprawione błędy z projektu, który stosuje PK 0.1.
+
 ## Praca badawcza
 
 Katalog `paper/` zawiera pracę „Polszczyzna kontrolowana jako metoda redukcji złożoności
