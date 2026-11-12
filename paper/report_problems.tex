@@ -22,8 +22,9 @@
   pomiar P3 pomija 2 tokenizery.
   \item \textbf{Pobieranie modeli.} Łącze dało prędkość 1,3 MB/s \pkq{[obserwacja:
   2026-11-12, 17:41]}. Program \texttt{ollama} zatrzymał pobieranie 1 raz; skrypt ponawia
-  pobieranie co 10 minut. Modele zajmują miejsce na partycji \texttt{/mnt/windows}, która
-  przed pobraniem miała 18 GB wolnego miejsca.
+  pobieranie co 10 minut. Modele zajęły 12 GB na partycji \texttt{/mnt/windows}. Autor usunął 4 modele po
+  pomiarze \pkq{[obserwacja: 2026-11-12, 20:41]}; surowe odpowiedzi modeli zostają
+  w katalogu \texttt{results}.
   \item \textbf{Stan modeli lokalnych.} \input{report_models}
   \item \textbf{Parser bez poprawki Leo.} Gramatyka PK w pomiarze P2 ma wykładnik
   \pkParseExpPk{}, a nie 1. Czas liniowy wymaga parsera z poprawką Leo.
