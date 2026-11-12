@@ -99,3 +99,30 @@ def test_every_reference_is_cited():
     cited = {k.strip() for group in re.findall(r"\\cite\{([^}]+)\}", text) for k in group.split(",")}
     assert keys and keys <= cited, sorted(keys - cited)
     assert cited <= keys, sorted(cited - keys)
+
+
+def test_claims_of_the_text_hold():
+    """Sentences of the paper that interpret the probe rest on these facts; a new model may break them."""
+    import json
+    with open(os.path.join(ROOT, "results", "p4_summary.json"), encoding="utf-8") as fh:
+        p4 = json.load(fh)
+    claude = [m for m in p4["models"] if m["backend"] == "claude"]
+    local = [m for m in p4["models"] if m["backend"] == "ollama"]
+    # "PK sentences steer the Claude models; the effect is weaker in the local models"
+    assert min(m["acc_pk"] for m in claude) > max(m["acc_pk"] for m in local)
+    assert min(m["steer_mean"] for m in claude) > max(m["steer_mean"] for m in local)
+    # "the measurement does not confirm lower uncertainty for PK in the local models"
+    assert not any(m["sign_p"] < 0.05 and m["sign_plus"] > m["sign_minus"] for m in local)
+    # "a convention against the habit needs the legend": rule C1 gains from the legend, rule B2 does not need it
+    ok = [m for m in p4["models"] if m["qualified"] is not False]
+    def hits(ids, a, b):
+        return sum(int(c[a] > 0.5) + int(c[b] < 0.5) for m in ok for c in m["conv"] if c["id"] in ids)
+    assert hits(("C1", "C1b"), "pk1L", "pk2L") > hits(("C1", "C1b"), "pk1", "pk2")
+    assert hits(("B2", "B2b"), "pk1", "pk2") > hits(("C1", "C1b"), "pk1", "pk2")
+    # "the Sonnet model read 'Napięcie wyłącza zabezpieczenie.' against the word order, with the legend by it"
+    b2b = next(c for m in claude if m["model"] == "sonnet" for c in m["conv"] if c["id"] == "B2b")
+    assert b2b["pk1"] < 0.5 < b2b["pk1L"]
+    # "both Claude models answered 'Nie' to the PK sentence of item K2"
+    for m in claude:
+        k2 = next(r for r in m["items"] if r["id"] == "K2")
+        assert k2["pk2"] > 0.5

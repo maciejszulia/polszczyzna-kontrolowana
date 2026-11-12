@@ -98,11 +98,10 @@ Zdanie G1, \pkq{Operatorowi NIE WOLNO włączyć pompy P1 i pompy P2.}, spełnia
 reguły PK. Odczytanie 1, czyli zakaz dla każdej pompy, wybiera \pkGapOneReadingOne{}
 z \pkProbeQualified{} modeli; pozostałe modele wybierają zakaz włączenia 2 pomp naraz.
 Zdanie G2, \pkq{Każdy operator obsługuje dokładnie 1 pompę.}, odczytuje jako zdanie
-o różnych pompach \pkGapTwoReadingOne{} z \pkProbeQualified{} modeli. Oba zdania PK luki G1
-odczytuje zgodnie z kluczem \pkGapOnePkOk{} modeli, a oba zdania PK luki G2
-\pkGapTwoPkOk{} modeli. Modele są w obu lukach zgodne między sobą, więc luka nie dzieli tych czytelników. Luka
-zostaje groźna dla autora: jeżeli autor zdania G1 zamierzył zakaz dla każdej pompy, to
-modele odczytały zdanie wbrew zamiarowi. Wynik potwierdza uwagę \ref{rem:gap}: zgodność
+o różnych pompach \pkGapTwoReadingOne{} z \pkProbeQualified{} modeli. Liczba modeli, które
+odczytują oba zdania PK zgodnie z kluczem, wynosi \pkGapOnePkOk{} dla luki G1
+i \pkGapTwoPkOk{} dla luki G2. Luka jest groźna dla autora. Jeżeli autor zdania G1 zamierzył zakaz dla każdej pompy, to
+każdy model, który wybrał odczytanie 2, odczytał zdanie wbrew zamiarowi. Wynik potwierdza uwagę \ref{rem:gap}: zgodność
 z regułami numerowanymi nie gwarantuje 1 odczytania.
 
 \paragraph{Pozycja ze spornym kluczem.}

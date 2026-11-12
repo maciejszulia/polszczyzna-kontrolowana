@@ -426,9 +426,9 @@ def fig_probe():
     if not models:
         print("figure probe skipped: no probe results")
         return
-    cols = min(4, len(models))
+    cols = len(models) if len(models) <= 4 else 3
     rows_n = math.ceil(len(models) / cols)
-    fig, axes = plt.subplots(rows_n, cols, figsize=(W, 3.3 * rows_n), squeeze=False, sharex=True)
+    fig, axes = plt.subplots(rows_n, cols, figsize=(W, 3.3 * rows_n), squeeze=False)
     for ax in axes.flat[len(models):]:
         ax.set_visible(False)
     for ax, m in zip(axes.flat, models):
@@ -447,14 +447,14 @@ def fig_probe():
         note = "kotwice poniżej progu" if m["qualified"] is False else f"trafność PK {pl(100 * m['acc_pk'], 0)} %"
         ax.set_title(f"{model_name(m)}\n{note}", fontsize=7.2, pad=3, linespacing=1.1,
                      color=MUTED if m["qualified"] is False else INK)
-    for ax in axes[-1]:
-        ax.set_xlabel("P(odczytanie 1)")
+    for ax in axes.flat[:len(models)]:
+        ax.set_xlabel("P(odczytanie 1)", fontsize=7.5, labelpad=1)
     handles = [plt.Line2D([], [], marker="o", color=NAT, ls="", ms=4, label="zdanie zwykłe"),
                plt.Line2D([], [], marker=">", color=PK, ls="", ms=4, label="zdanie PK dla odczytania 1 (cel: 1)"),
                plt.Line2D([], [], marker="<", color=PK, ls="", ms=4, label="zdanie PK dla odczytania 2 (cel: 0)")]
     hgt = fig.get_figheight()
     fig.legend(handles=handles, loc="upper left", ncol=3, bbox_to_anchor=(0.0, 1 + 0.02 / hgt), columnspacing=1.2, handletextpad=0.3)
-    fig.subplots_adjust(hspace=0.36, wspace=0.12, top=1 - 0.55 / hgt)
+    fig.subplots_adjust(hspace=0.42, wspace=0.12, top=1 - 0.55 / hgt)
     ok = [m for m in models if m["qualified"] is not False]
     acc = [m["acc_pk"] for m in ok] or [m["acc_pk"] for m in models]
     split = p.get("nat_split_share")

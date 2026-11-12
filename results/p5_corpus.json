@@ -531,7 +531,7 @@
    "register": "tekst w PK",
    "title": "Niniejsza praca",
    "sha256": "847ef5f914f5804bda3d44d833d1599d1716cd981cfbf8c6e3e36dcc991059fa",
-   "words": 7521,
+   "words": 7513,
    "sentences": 750,
    "sentence_median": 9.0,
    "share_over_25": 0.0,
@@ -581,7 +581,7 @@
     "E4": 0.0,
     "F": 0.0,
     "KW": 0.0,
-    "B1s": 2.659220848291451
+    "B1s": 2.662052442433116
    },
    "total_per_1000": 0.0,
    "example": {

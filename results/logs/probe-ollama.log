@@ -38,3 +38,23 @@ progress 375/408  2.2 s/call  eta 1 min
 progress 400/408  2.2 s/call  eta 0 min
 FINISHED ollama SpeakLeash/bielik-1.5b-v3.0-instruct:Q8_0: 408 new calls in 14.9 min
 END SpeakLeash/bielik-1.5b-v3.0-instruct:Q8_0 rc=0 18:38:38
+START gemma3:4b 18:57:00
+ollama gemma3:4b: 420 probes, 0 cached, 408 to ask
+progress 25/408  7.5 s/call  eta 48 min
+progress 50/408  6.7 s/call  eta 40 min
+progress 75/408  6.6 s/call  eta 37 min
+progress 100/408  6.5 s/call  eta 34 min
+progress 125/408  6.2 s/call  eta 29 min
+progress 150/408  6.0 s/call  eta 26 min
+progress 175/408  5.9 s/call  eta 23 min
+progress 200/408  5.9 s/call  eta 21 min
+progress 225/408  6.1 s/call  eta 19 min
+progress 250/408  6.1 s/call  eta 16 min
+progress 275/408  6.0 s/call  eta 13 min
+progress 300/408  6.0 s/call  eta 11 min
+progress 325/408  6.1 s/call  eta 8 min
+progress 350/408  6.1 s/call  eta 6 min
+progress 375/408  6.2 s/call  eta 3 min
+progress 400/408  6.2 s/call  eta 1 min
+FINISHED ollama gemma3:4b: 408 new calls in 42.5 min
+END gemma3:4b rc=0 19:39:29
