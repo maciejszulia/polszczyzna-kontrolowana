@@ -56,6 +56,42 @@ Claude Code wczyta skill w następnej sesji. Skill ma 3 tryby:
 - [Terminy utworzone w projekcie gospodarstwa samowystarczalnego](przyklady/terminy-utworzone-gospodarstwo.md):
   8 terminów utworzonych, 34 nazwy obiektów i 4 poprawione błędy z projektu, który stosuje PK 0.1.
 
+## Praca badawcza
+
+Katalog `paper/` zawiera pracę „Polszczyzna kontrolowana jako metoda redukcji złożoności
+obliczeniowej w AI. Ujęcie logiczno-mnogościowe oraz refleksja filozoficzna w świetle
+hipotezy Sapira-Whorfa” i sprawozdanie z pomiarów.
+
+| Plik | Zawartość |
+|---|---|
+| [`paper/pk_complexity_pl.pdf`](paper/pk_complexity_pl.pdf) | praca: model, twierdzenia, 5 pomiarów, 12 rysunków |
+| [`paper/measurement_report_pl.pdf`](paper/measurement_report_pl.pdf) | sprawozdanie z pomiarów: warunki, wyniki, problemy |
+| `data/items.csv` | 44 pozycje testowe: zdanie zwykłe, 2 odczytania, 2 zdania PK, 3 sondy |
+| `data/rules.csv` | klasyfikacja 32 reguł, modułu F i słów kluczowych |
+| `src/pkmodel.py` | model: odczytania, parser z licznikiem operacji, klauzule Horna, redukcja z 3-SAT |
+| `src/pklint.py` | sprawdzarka reguł mechanicznych PK |
+| `scripts/measure.py`, `scripts/probe.py`, `scripts/figures.py` | pomiary, sonda na modelach językowych, rysunki |
+| `results/` | wyniki pomiarów i surowe odpowiedzi modeli |
+
+Praca pokazuje 3 rzeczy. PK zostawia zdaniu 1 odczytanie. PK wydłuża tekst.
+Spójność zbioru wymagań bez przeczeń jest rozstrzygalna w czasie liniowym, a 1 przeczenie
+w zdaniu wystarcza do NP-zupełności.
+
+![Narzut długości PK](paper/figures/tokens.png)
+
+![Trafienia sprawdzarki w aktach prawnych i w tekstach PK](paper/figures/corpus.png)
+
+Odtworzenie wyników:
+
+```sh
+python -m venv .venv && .venv/bin/pip install -r requirements.txt
+make PY=.venv/bin/python MEASURE_FLAGS=--offline all
+```
+
+Polecenie bez flagi `--offline` pobiera tokenizery i akty prawne z sieci. Sprawdzarka
+działa także osobno: `python -m src.pklint PLIK` dla tekstu oraz
+`python -m src.pklint --tex PLIK` dla pliku LaTeX.
+
 ## Źródła
 
 Reguły opierają się między innymi na RFC 2119, ASD-STE100 Simplified Technical English,

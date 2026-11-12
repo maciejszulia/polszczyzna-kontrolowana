@@ -1,0 +1,1529 @@
+{
+ "units": [
+  "words",
+  "chars",
+  "o200k_base",
+  "cl100k_base",
+  "unsloth/Llama-3.2-3B-Instruct",
+  "unsloth/gemma-3-4b-it"
+ ],
+ "failed": [],
+ "rows": [
+  {
+   "id": "A1",
+   "kind": "restriction",
+   "words": {
+    "nat": 7,
+    "pk1": 9,
+    "pk2": 9
+   },
+   "chars": {
+    "nat": 48,
+    "pk1": 54,
+    "pk2": 54
+   },
+   "o200k_base": {
+    "nat": 19,
+    "pk1": 23,
+    "pk2": 23
+   },
+   "cl100k_base": {
+    "nat": 21,
+    "pk1": 24,
+    "pk2": 25
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 21,
+    "pk1": 24,
+    "pk2": 25
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 18,
+    "pk1": 22,
+    "pk2": 22
+   }
+  },
+  {
+   "id": "A2",
+   "kind": "restriction",
+   "words": {
+    "nat": 2,
+    "pk1": 5,
+    "pk2": 3
+   },
+   "chars": {
+    "nat": 13,
+    "pk1": 27,
+    "pk2": 19
+   },
+   "o200k_base": {
+    "nat": 5,
+    "pk1": 10,
+    "pk2": 6
+   },
+   "cl100k_base": {
+    "nat": 6,
+    "pk1": 12,
+    "pk2": 8
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 6,
+    "pk1": 12,
+    "pk2": 8
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 5,
+    "pk1": 10,
+    "pk2": 6
+   }
+  },
+  {
+   "id": "A2b",
+   "kind": "restriction",
+   "words": {
+    "nat": 6,
+    "pk1": 8,
+    "pk2": 10
+   },
+   "chars": {
+    "nat": 50,
+    "pk1": 59,
+    "pk2": 67
+   },
+   "o200k_base": {
+    "nat": 14,
+    "pk1": 17,
+    "pk2": 21
+   },
+   "cl100k_base": {
+    "nat": 15,
+    "pk1": 19,
+    "pk2": 23
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 15,
+    "pk1": 19,
+    "pk2": 23
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 12,
+    "pk1": 15,
+    "pk2": 19
+   }
+  },
+  {
+   "id": "A3",
+   "kind": "restriction",
+   "words": {
+    "nat": 7,
+    "pk1": 7,
+    "pk2": 7
+   },
+   "chars": {
+    "nat": 49,
+    "pk1": 49,
+    "pk2": 51
+   },
+   "o200k_base": {
+    "nat": 16,
+    "pk1": 16,
+    "pk2": 17
+   },
+   "cl100k_base": {
+    "nat": 18,
+    "pk1": 19,
+    "pk2": 20
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 18,
+    "pk1": 18,
+    "pk2": 20
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 13,
+    "pk1": 13,
+    "pk2": 14
+   }
+  },
+  {
+   "id": "A3b",
+   "kind": "restriction",
+   "words": {
+    "nat": 6,
+    "pk1": 6,
+    "pk2": 6
+   },
+   "chars": {
+    "nat": 57,
+    "pk1": 62,
+    "pk2": 61
+   },
+   "o200k_base": {
+    "nat": 15,
+    "pk1": 16,
+    "pk2": 16
+   },
+   "cl100k_base": {
+    "nat": 17,
+    "pk1": 19,
+    "pk2": 17
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 17,
+    "pk1": 19,
+    "pk2": 17
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 13,
+    "pk1": 14,
+    "pk2": 14
+   }
+  },
+  {
+   "id": "A3c",
+   "kind": "restriction",
+   "words": {
+    "nat": 9,
+    "pk1": 10,
+    "pk2": 10
+   },
+   "chars": {
+    "nat": 48,
+    "pk1": 54,
+    "pk2": 54
+   },
+   "o200k_base": {
+    "nat": 20,
+    "pk1": 23,
+    "pk2": 22
+   },
+   "cl100k_base": {
+    "nat": 22,
+    "pk1": 25,
+    "pk2": 24
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 22,
+    "pk1": 25,
+    "pk2": 24
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 19,
+    "pk1": 22,
+    "pk2": 21
+   }
+  },
+  {
+   "id": "A4",
+   "kind": "restriction",
+   "words": {
+    "nat": 3,
+    "pk1": 4,
+    "pk2": 3
+   },
+   "chars": {
+    "nat": 22,
+    "pk1": 31,
+    "pk2": 22
+   },
+   "o200k_base": {
+    "nat": 7,
+    "pk1": 11,
+    "pk2": 8
+   },
+   "cl100k_base": {
+    "nat": 8,
+    "pk1": 12,
+    "pk2": 10
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 8,
+    "pk1": 12,
+    "pk2": 10
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 7,
+    "pk1": 10,
+    "pk2": 8
+   }
+  },
+  {
+   "id": "A5a",
+   "kind": "restriction",
+   "words": {
+    "nat": 3,
+    "pk1": 6,
+    "pk2": 6
+   },
+   "chars": {
+    "nat": 31,
+    "pk1": 33,
+    "pk2": 32
+   },
+   "o200k_base": {
+    "nat": 9,
+    "pk1": 14,
+    "pk2": 14
+   },
+   "cl100k_base": {
+    "nat": 10,
+    "pk1": 15,
+    "pk2": 15
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 10,
+    "pk1": 15,
+    "pk2": 15
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 9,
+    "pk1": 15,
+    "pk2": 14
+   }
+  },
+  {
+   "id": "A5b",
+   "kind": "restriction",
+   "words": {
+    "nat": 3,
+    "pk1": 11,
+    "pk2": 11
+   },
+   "chars": {
+    "nat": 26,
+    "pk1": 61,
+    "pk2": 59
+   },
+   "o200k_base": {
+    "nat": 13,
+    "pk1": 23,
+    "pk2": 23
+   },
+   "cl100k_base": {
+    "nat": 13,
+    "pk1": 27,
+    "pk2": 27
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 13,
+    "pk1": 27,
+    "pk2": 27
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 12,
+    "pk1": 23,
+    "pk2": 23
+   }
+  },
+  {
+   "id": "A5c",
+   "kind": "restriction",
+   "words": {
+    "nat": 4,
+    "pk1": 8,
+    "pk2": 8
+   },
+   "chars": {
+    "nat": 25,
+    "pk1": 38,
+    "pk2": 38
+   },
+   "o200k_base": {
+    "nat": 8,
+    "pk1": 16,
+    "pk2": 16
+   },
+   "cl100k_base": {
+    "nat": 11,
+    "pk1": 18,
+    "pk2": 18
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 10,
+    "pk1": 17,
+    "pk2": 17
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 8,
+    "pk1": 15,
+    "pk2": 15
+   }
+  },
+  {
+   "id": "A6",
+   "kind": "restriction",
+   "words": {
+    "nat": 7,
+    "pk1": 6,
+    "pk2": 8
+   },
+   "chars": {
+    "nat": 44,
+    "pk1": 42,
+    "pk2": 63
+   },
+   "o200k_base": {
+    "nat": 18,
+    "pk1": 18,
+    "pk2": 28
+   },
+   "cl100k_base": {
+    "nat": 19,
+    "pk1": 20,
+    "pk2": 32
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 19,
+    "pk1": 20,
+    "pk2": 32
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 17,
+    "pk1": 17,
+    "pk2": 28
+   }
+  },
+  {
+   "id": "B1",
+   "kind": "restriction",
+   "words": {
+    "nat": 5,
+    "pk1": 7,
+    "pk2": 7
+   },
+   "chars": {
+    "nat": 26,
+    "pk1": 47,
+    "pk2": 46
+   },
+   "o200k_base": {
+    "nat": 10,
+    "pk1": 15,
+    "pk2": 14
+   },
+   "cl100k_base": {
+    "nat": 10,
+    "pk1": 18,
+    "pk2": 17
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 10,
+    "pk1": 18,
+    "pk2": 17
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 9,
+    "pk1": 14,
+    "pk2": 13
+   }
+  },
+  {
+   "id": "B2",
+   "kind": "convention",
+   "words": {
+    "nat": 3,
+    "pk1": 3,
+    "pk2": 3
+   },
+   "chars": {
+    "nat": 27,
+    "pk1": 27,
+    "pk2": 27
+   },
+   "o200k_base": {
+    "nat": 9,
+    "pk1": 9,
+    "pk2": 10
+   },
+   "cl100k_base": {
+    "nat": 11,
+    "pk1": 11,
+    "pk2": 12
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 11,
+    "pk1": 11,
+    "pk2": 12
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 8,
+    "pk1": 8,
+    "pk2": 9
+   }
+  },
+  {
+   "id": "B2b",
+   "kind": "convention",
+   "words": {
+    "nat": 3,
+    "pk1": 3,
+    "pk2": 3
+   },
+   "chars": {
+    "nat": 32,
+    "pk1": 32,
+    "pk2": 32
+   },
+   "o200k_base": {
+    "nat": 11,
+    "pk1": 11,
+    "pk2": 11
+   },
+   "cl100k_base": {
+    "nat": 14,
+    "pk1": 14,
+    "pk2": 14
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 14,
+    "pk1": 14,
+    "pk2": 14
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 9,
+    "pk1": 9,
+    "pk2": 10
+   }
+  },
+  {
+   "id": "B4",
+   "kind": "restriction",
+   "words": {
+    "nat": 5,
+    "pk1": 6,
+    "pk2": 6
+   },
+   "chars": {
+    "nat": 37,
+    "pk1": 39,
+    "pk2": 43
+   },
+   "o200k_base": {
+    "nat": 11,
+    "pk1": 13,
+    "pk2": 12
+   },
+   "cl100k_base": {
+    "nat": 16,
+    "pk1": 14,
+    "pk2": 14
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 15,
+    "pk1": 14,
+    "pk2": 14
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 10,
+    "pk1": 12,
+    "pk2": 14
+   }
+  },
+  {
+   "id": "B4b",
+   "kind": "restriction",
+   "words": {
+    "nat": 5,
+    "pk1": 6,
+    "pk2": 6
+   },
+   "chars": {
+    "nat": 26,
+    "pk1": 35,
+    "pk2": 40
+   },
+   "o200k_base": {
+    "nat": 10,
+    "pk1": 13,
+    "pk2": 15
+   },
+   "cl100k_base": {
+    "nat": 12,
+    "pk1": 14,
+    "pk2": 17
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 12,
+    "pk1": 14,
+    "pk2": 17
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 9,
+    "pk1": 12,
+    "pk2": 13
+   }
+  },
+  {
+   "id": "B5",
+   "kind": "restriction",
+   "words": {
+    "nat": 6,
+    "pk1": 11,
+    "pk2": 11
+   },
+   "chars": {
+    "nat": 47,
+    "pk1": 76,
+    "pk2": 75
+   },
+   "o200k_base": {
+    "nat": 16,
+    "pk1": 23,
+    "pk2": 21
+   },
+   "cl100k_base": {
+    "nat": 20,
+    "pk1": 28,
+    "pk2": 26
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 20,
+    "pk1": 28,
+    "pk2": 26
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 16,
+    "pk1": 22,
+    "pk2": 20
+   }
+  },
+  {
+   "id": "B6a",
+   "kind": "restriction",
+   "words": {
+    "nat": 5,
+    "pk1": 6,
+    "pk2": 6
+   },
+   "chars": {
+    "nat": 30,
+    "pk1": 35,
+    "pk2": 36
+   },
+   "o200k_base": {
+    "nat": 10,
+    "pk1": 11,
+    "pk2": 11
+   },
+   "cl100k_base": {
+    "nat": 12,
+    "pk1": 14,
+    "pk2": 13
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 12,
+    "pk1": 14,
+    "pk2": 13
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 10,
+    "pk1": 11,
+    "pk2": 11
+   }
+  },
+  {
+   "id": "B6b",
+   "kind": "restriction",
+   "words": {
+    "nat": 7,
+    "pk1": 9,
+    "pk2": 12
+   },
+   "chars": {
+    "nat": 49,
+    "pk1": 67,
+    "pk2": 96
+   },
+   "o200k_base": {
+    "nat": 17,
+    "pk1": 22,
+    "pk2": 29
+   },
+   "cl100k_base": {
+    "nat": 18,
+    "pk1": 25,
+    "pk2": 32
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 18,
+    "pk1": 25,
+    "pk2": 32
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 17,
+    "pk1": 22,
+    "pk2": 28
+   }
+  },
+  {
+   "id": "B6c",
+   "kind": "restriction",
+   "words": {
+    "nat": 5,
+    "pk1": 6,
+    "pk2": 6
+   },
+   "chars": {
+    "nat": 25,
+    "pk1": 31,
+    "pk2": 27
+   },
+   "o200k_base": {
+    "nat": 11,
+    "pk1": 14,
+    "pk2": 13
+   },
+   "cl100k_base": {
+    "nat": 12,
+    "pk1": 15,
+    "pk2": 14
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 12,
+    "pk1": 15,
+    "pk2": 14
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 11,
+    "pk1": 13,
+    "pk2": 13
+   }
+  },
+  {
+   "id": "B7",
+   "kind": "restriction",
+   "words": {
+    "nat": 5,
+    "pk1": 12,
+    "pk2": 5
+   },
+   "chars": {
+    "nat": 32,
+    "pk1": 79,
+    "pk2": 32
+   },
+   "o200k_base": {
+    "nat": 10,
+    "pk1": 24,
+    "pk2": 10
+   },
+   "cl100k_base": {
+    "nat": 11,
+    "pk1": 28,
+    "pk2": 11
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 11,
+    "pk1": 28,
+    "pk2": 11
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 10,
+    "pk1": 23,
+    "pk2": 10
+   }
+  },
+  {
+   "id": "C1",
+   "kind": "convention",
+   "words": {
+    "nat": 4,
+    "pk1": 4,
+    "pk2": 4
+   },
+   "chars": {
+    "nat": 25,
+    "pk1": 25,
+    "pk2": 26
+   },
+   "o200k_base": {
+    "nat": 10,
+    "pk1": 10,
+    "pk2": 10
+   },
+   "cl100k_base": {
+    "nat": 12,
+    "pk1": 12,
+    "pk2": 13
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 12,
+    "pk1": 12,
+    "pk2": 13
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 10,
+    "pk1": 10,
+    "pk2": 10
+   }
+  },
+  {
+   "id": "C1b",
+   "kind": "convention",
+   "words": {
+    "nat": 13,
+    "pk1": 13,
+    "pk2": 13
+   },
+   "chars": {
+    "nat": 78,
+    "pk1": 78,
+    "pk2": 79
+   },
+   "o200k_base": {
+    "nat": 29,
+    "pk1": 29,
+    "pk2": 29
+   },
+   "cl100k_base": {
+    "nat": 32,
+    "pk1": 32,
+    "pk2": 33
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 32,
+    "pk1": 32,
+    "pk2": 33
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 30,
+    "pk1": 30,
+    "pk2": 30
+   }
+  },
+  {
+   "id": "C2",
+   "kind": "restriction",
+   "words": {
+    "nat": 9,
+    "pk1": 18,
+    "pk2": 15
+   },
+   "chars": {
+    "nat": 39,
+    "pk1": 95,
+    "pk2": 76
+   },
+   "o200k_base": {
+    "nat": 17,
+    "pk1": 40,
+    "pk2": 31
+   },
+   "cl100k_base": {
+    "nat": 18,
+    "pk1": 45,
+    "pk2": 34
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 18,
+    "pk1": 45,
+    "pk2": 34
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 17,
+    "pk1": 37,
+    "pk2": 28
+   }
+  },
+  {
+   "id": "C3",
+   "kind": "restriction",
+   "words": {
+    "nat": 8,
+    "pk1": 20,
+    "pk2": 9
+   },
+   "chars": {
+    "nat": 44,
+    "pk1": 118,
+    "pk2": 49
+   },
+   "o200k_base": {
+    "nat": 18,
+    "pk1": 43,
+    "pk2": 19
+   },
+   "cl100k_base": {
+    "nat": 20,
+    "pk1": 47,
+    "pk2": 20
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 19,
+    "pk1": 47,
+    "pk2": 20
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 15,
+    "pk1": 37,
+    "pk2": 17
+   }
+  },
+  {
+   "id": "C4",
+   "kind": "restriction",
+   "words": {
+    "nat": 5,
+    "pk1": 5,
+    "pk2": 6
+   },
+   "chars": {
+    "nat": 34,
+    "pk1": 31,
+    "pk2": 33
+   },
+   "o200k_base": {
+    "nat": 12,
+    "pk1": 11,
+    "pk2": 12
+   },
+   "cl100k_base": {
+    "nat": 14,
+    "pk1": 13,
+    "pk2": 13
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 14,
+    "pk1": 13,
+    "pk2": 13
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 10,
+    "pk1": 9,
+    "pk2": 12
+   }
+  },
+  {
+   "id": "D1",
+   "kind": "restriction",
+   "words": {
+    "nat": 4,
+    "pk1": 6,
+    "pk2": 6
+   },
+   "chars": {
+    "nat": 28,
+    "pk1": 41,
+    "pk2": 41
+   },
+   "o200k_base": {
+    "nat": 12,
+    "pk1": 16,
+    "pk2": 17
+   },
+   "cl100k_base": {
+    "nat": 13,
+    "pk1": 17,
+    "pk2": 18
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 13,
+    "pk1": 17,
+    "pk2": 18
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 12,
+    "pk1": 14,
+    "pk2": 14
+   }
+  },
+  {
+   "id": "D2a",
+   "kind": "restriction",
+   "words": {
+    "nat": 6,
+    "pk1": 9,
+    "pk2": 9
+   },
+   "chars": {
+    "nat": 35,
+    "pk1": 55,
+    "pk2": 55
+   },
+   "o200k_base": {
+    "nat": 15,
+    "pk1": 20,
+    "pk2": 20
+   },
+   "cl100k_base": {
+    "nat": 17,
+    "pk1": 23,
+    "pk2": 23
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 16,
+    "pk1": 23,
+    "pk2": 23
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 15,
+    "pk1": 19,
+    "pk2": 19
+   }
+  },
+  {
+   "id": "D2b",
+   "kind": "restriction",
+   "words": {
+    "nat": 8,
+    "pk1": 11,
+    "pk2": 14
+   },
+   "chars": {
+    "nat": 40,
+    "pk1": 67,
+    "pk2": 82
+   },
+   "o200k_base": {
+    "nat": 17,
+    "pk1": 24,
+    "pk2": 27
+   },
+   "cl100k_base": {
+    "nat": 20,
+    "pk1": 28,
+    "pk2": 34
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 19,
+    "pk1": 26,
+    "pk2": 31
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 16,
+    "pk1": 22,
+    "pk2": 26
+   }
+  },
+  {
+   "id": "D2c",
+   "kind": "restriction",
+   "words": {
+    "nat": 8,
+    "pk1": 11,
+    "pk2": 11
+   },
+   "chars": {
+    "nat": 51,
+    "pk1": 69,
+    "pk2": 68
+   },
+   "o200k_base": {
+    "nat": 19,
+    "pk1": 21,
+    "pk2": 21
+   },
+   "cl100k_base": {
+    "nat": 22,
+    "pk1": 24,
+    "pk2": 24
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 22,
+    "pk1": 24,
+    "pk2": 24
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 19,
+    "pk1": 22,
+    "pk2": 22
+   }
+  },
+  {
+   "id": "D2d",
+   "kind": "restriction",
+   "words": {
+    "nat": 10,
+    "pk1": 11,
+    "pk2": 13
+   },
+   "chars": {
+    "nat": 55,
+    "pk1": 61,
+    "pk2": 75
+   },
+   "o200k_base": {
+    "nat": 19,
+    "pk1": 22,
+    "pk2": 25
+   },
+   "cl100k_base": {
+    "nat": 22,
+    "pk1": 23,
+    "pk2": 27
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 22,
+    "pk1": 23,
+    "pk2": 27
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 20,
+    "pk1": 22,
+    "pk2": 26
+   }
+  },
+  {
+   "id": "D2e",
+   "kind": "restriction",
+   "words": {
+    "nat": 8,
+    "pk1": 15,
+    "pk2": 15
+   },
+   "chars": {
+    "nat": 44,
+    "pk1": 74,
+    "pk2": 76
+   },
+   "o200k_base": {
+    "nat": 14,
+    "pk1": 22,
+    "pk2": 23
+   },
+   "cl100k_base": {
+    "nat": 17,
+    "pk1": 26,
+    "pk2": 28
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 16,
+    "pk1": 26,
+    "pk2": 28
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 16,
+    "pk1": 24,
+    "pk2": 25
+   }
+  },
+  {
+   "id": "D3a",
+   "kind": "restriction",
+   "words": {
+    "nat": 4,
+    "pk1": 7,
+    "pk2": 4
+   },
+   "chars": {
+    "nat": 24,
+    "pk1": 50,
+    "pk2": 31
+   },
+   "o200k_base": {
+    "nat": 9,
+    "pk1": 24,
+    "pk2": 13
+   },
+   "cl100k_base": {
+    "nat": 11,
+    "pk1": 26,
+    "pk2": 14
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 11,
+    "pk1": 26,
+    "pk2": 14
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 8,
+    "pk1": 30,
+    "pk2": 17
+   }
+  },
+  {
+   "id": "D3b",
+   "kind": "restriction",
+   "words": {
+    "nat": 3,
+    "pk1": 3,
+    "pk2": 3
+   },
+   "chars": {
+    "nat": 25,
+    "pk1": 30,
+    "pk2": 30
+   },
+   "o200k_base": {
+    "nat": 9,
+    "pk1": 14,
+    "pk2": 14
+   },
+   "cl100k_base": {
+    "nat": 11,
+    "pk1": 15,
+    "pk2": 15
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 10,
+    "pk1": 14,
+    "pk2": 14
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 9,
+    "pk1": 18,
+    "pk2": 18
+   }
+  },
+  {
+   "id": "D3c",
+   "kind": "restriction",
+   "words": {
+    "nat": 6,
+    "pk1": 4,
+    "pk2": 4
+   },
+   "chars": {
+    "nat": 41,
+    "pk1": 34,
+    "pk2": 34
+   },
+   "o200k_base": {
+    "nat": 12,
+    "pk1": 13,
+    "pk2": 13
+   },
+   "cl100k_base": {
+    "nat": 16,
+    "pk1": 16,
+    "pk2": 16
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 16,
+    "pk1": 16,
+    "pk2": 16
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 11,
+    "pk1": 17,
+    "pk2": 17
+   }
+  },
+  {
+   "id": "D4a",
+   "kind": "restriction",
+   "words": {
+    "nat": 6,
+    "pk1": 12,
+    "pk2": 14
+   },
+   "chars": {
+    "nat": 31,
+    "pk1": 70,
+    "pk2": 78
+   },
+   "o200k_base": {
+    "nat": 13,
+    "pk1": 31,
+    "pk2": 34
+   },
+   "cl100k_base": {
+    "nat": 14,
+    "pk1": 33,
+    "pk2": 36
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 14,
+    "pk1": 33,
+    "pk2": 36
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 12,
+    "pk1": 27,
+    "pk2": 29
+   }
+  },
+  {
+   "id": "D4b",
+   "kind": "restriction",
+   "words": {
+    "nat": 5,
+    "pk1": 14,
+    "pk2": 25
+   },
+   "chars": {
+    "nat": 24,
+    "pk1": 81,
+    "pk2": 159
+   },
+   "o200k_base": {
+    "nat": 11,
+    "pk1": 30,
+    "pk2": 55
+   },
+   "cl100k_base": {
+    "nat": 12,
+    "pk1": 34,
+    "pk2": 60
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 12,
+    "pk1": 34,
+    "pk2": 60
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 10,
+    "pk1": 27,
+    "pk2": 50
+   }
+  },
+  {
+   "id": "D5",
+   "kind": "restriction",
+   "words": {
+    "nat": 8,
+    "pk1": 12,
+    "pk2": 7
+   },
+   "chars": {
+    "nat": 52,
+    "pk1": 72,
+    "pk2": 47
+   },
+   "o200k_base": {
+    "nat": 20,
+    "pk1": 25,
+    "pk2": 19
+   },
+   "cl100k_base": {
+    "nat": 22,
+    "pk1": 31,
+    "pk2": 21
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 21,
+    "pk1": 28,
+    "pk2": 20
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 19,
+    "pk1": 25,
+    "pk2": 20
+   }
+  },
+  {
+   "id": "D6",
+   "kind": "restriction",
+   "words": {
+    "nat": 8,
+    "pk1": 8,
+    "pk2": 8
+   },
+   "chars": {
+    "nat": 56,
+    "pk1": 55,
+    "pk2": 51
+   },
+   "o200k_base": {
+    "nat": 17,
+    "pk1": 19,
+    "pk2": 16
+   },
+   "cl100k_base": {
+    "nat": 21,
+    "pk1": 23,
+    "pk2": 20
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 20,
+    "pk1": 22,
+    "pk2": 19
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 18,
+    "pk1": 22,
+    "pk2": 17
+   }
+  },
+  {
+   "id": "D6b",
+   "kind": "restriction",
+   "words": {
+    "nat": 7,
+    "pk1": 8,
+    "pk2": 8
+   },
+   "chars": {
+    "nat": 43,
+    "pk1": 43,
+    "pk2": 44
+   },
+   "o200k_base": {
+    "nat": 14,
+    "pk1": 17,
+    "pk2": 17
+   },
+   "cl100k_base": {
+    "nat": 19,
+    "pk1": 20,
+    "pk2": 20
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 19,
+    "pk1": 20,
+    "pk2": 20
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 14,
+    "pk1": 17,
+    "pk2": 18
+   }
+  },
+  {
+   "id": "K1",
+   "kind": "restriction",
+   "words": {
+    "nat": 6,
+    "pk1": 7,
+    "pk2": 10
+   },
+   "chars": {
+    "nat": 32,
+    "pk1": 42,
+    "pk2": 57
+   },
+   "o200k_base": {
+    "nat": 11,
+    "pk1": 16,
+    "pk2": 20
+   },
+   "cl100k_base": {
+    "nat": 12,
+    "pk1": 17,
+    "pk2": 22
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 12,
+    "pk1": 17,
+    "pk2": 22
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 10,
+    "pk1": 14,
+    "pk2": 16
+   }
+  },
+  {
+   "id": "K2",
+   "kind": "restriction",
+   "words": {
+    "nat": 5,
+    "pk1": 5,
+    "pk2": 5
+   },
+   "chars": {
+    "nat": 28,
+    "pk1": 31,
+    "pk2": 36
+   },
+   "o200k_base": {
+    "nat": 12,
+    "pk1": 11,
+    "pk2": 15
+   },
+   "cl100k_base": {
+    "nat": 14,
+    "pk1": 13,
+    "pk2": 17
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 14,
+    "pk1": 13,
+    "pk2": 17
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 9,
+    "pk1": 11,
+    "pk2": 12
+   }
+  },
+  {
+   "id": "G1",
+   "kind": "gap",
+   "words": {
+    "nat": 9,
+    "pk1": 12,
+    "pk2": 13
+   },
+   "chars": {
+    "nat": 50,
+    "pk1": 79,
+    "pk2": 69
+   },
+   "o200k_base": {
+    "nat": 19,
+    "pk1": 28,
+    "pk2": 24
+   },
+   "cl100k_base": {
+    "nat": 21,
+    "pk1": 32,
+    "pk2": 27
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 21,
+    "pk1": 32,
+    "pk2": 27
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 17,
+    "pk1": 24,
+    "pk2": 21
+   }
+  },
+  {
+   "id": "G2",
+   "kind": "gap",
+   "words": {
+    "nat": 6,
+    "pk1": 13,
+    "pk2": 11
+   },
+   "chars": {
+    "nat": 43,
+    "pk1": 87,
+    "pk2": 76
+   },
+   "o200k_base": {
+    "nat": 15,
+    "pk1": 32,
+    "pk2": 26
+   },
+   "cl100k_base": {
+    "nat": 16,
+    "pk1": 36,
+    "pk2": 27
+   },
+   "unsloth/Llama-3.2-3B-Instruct": {
+    "nat": 16,
+    "pk1": 36,
+    "pk2": 27
+   },
+   "unsloth/gemma-3-4b-it": {
+    "nat": 12,
+    "pk1": 28,
+    "pk2": 22
+   }
+  }
+ ],
+ "legends": [
+  {
+   "text": "Konwencja tekstu: pierwszy rzeczownik w zdaniu jest podmiotem, czyli wykonawcą działania.",
+   "words": 11,
+   "chars": 89,
+   "o200k_base": 24,
+   "cl100k_base": 30,
+   "unsloth/Llama-3.2-3B-Instruct": 30,
+   "unsloth/gemma-3-4b-it": 23
+  },
+  {
+   "text": "Konwencja tekstu: „lub” znaczy co najmniej 1 z członów; „albo” znaczy dokładnie 1 z członów.",
+   "words": 15,
+   "chars": 92,
+   "o200k_base": 37,
+   "cl100k_base": 44,
+   "unsloth/Llama-3.2-3B-Instruct": 43,
+   "unsloth/gemma-3-4b-it": 33
+  }
+ ]
+}

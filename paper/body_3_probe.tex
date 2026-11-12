@@ -1,0 +1,133 @@
+\subsection{P4: sonda strefy szarej}
+\label{sec:probe}
+
+Pomiar objął \pkProbeModels{} modeli: \pkProbeLocal{} modele toru lokalnego
+i \pkProbeClaude{} modele toru Claude. Modele lokalne mają od \pkLocalParamMin{} do \pkLocalParamMax{} mld parametrów włącznie;
+modele Bielik opisuje raport techniczny \cite{ociepa2025}. Sprawozdanie z pomiarów podaje
+listę biegów. Tabela \ref{tab:probe} podaje wynik każdego modelu,
+a rysunek \ref{fig:probe} pokazuje odpowiedzi dla każdej pozycji.
+
+\begin{table}[tp]
+\centering
+\caption{P4: wynik sondy. L: tor lokalny, C: tor Claude. $n$: liczba pozycji typu
+przeredagowanie. $H$: mediana niepewności w bitach. Znaki: liczba pozycji z niepewnością
+wyższą dla zdania zwykłego i liczba pozycji z niepewnością wyższą dla zdań PK; $p$: test
+znaków. Sterowalność: średnia. Kotwice: trafność w procentach; próg kontroli wynosi 80 \%.}
+\label{tab:probe}
+\small
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}lrrrrrrrrr@{}}
+\toprule
+ & & \multicolumn{2}{c}{$H$ (bity)} & \multicolumn{2}{c}{test znaków} & & trafność & \multicolumn{2}{c}{kotwice (\%)}\\
+Model & $n$ & zwykłe & PK & znaki & $p$ & sterow. & PK (\%) & zwykłe & PK\\
+\midrule
+\wiersze{data/table_probe.tex}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Kontrola kotwic.}
+Trafność kotwic modeli lokalnych wynosi od \pkAnchorMin{} \% do \pkAnchorMax{} \% włącznie.
+Kontroli nie przeszło \pkProbeFailed{} z \pkProbeLocal{} modeli lokalnych. Model, który
+myli się w kotwicach, odpowiada błędnie także tam, gdzie zdanie ma 1 odczytanie. Wynik
+takiego modelu w strefie szarej nie mówi więc nic o PK. Praca podaje ten wynik w tabeli
+i pomija wynik takiego modelu w miarach zgodności.
+
+\paragraph{Teza B: efekt rejestru.}
+Zdania PK sterują odczytaniem modeli toru Claude. Trafność PK wynosi w tym torze
+od \pkAccPkClaudeMin{} \% do \pkAccPkClaudeMax{} \% włącznie, a sterowalność
+od \pkSteerClaudeMin{} do \pkSteerClaudeMax{} włącznie. Modele toru lokalnego mają
+trafność PK od \pkAccPkLocalMin{} \% do \pkAccPkLocalMax{} \% włącznie i sterowalność
+od \pkSteerLocalMin{} do \pkSteerLocalMax{} włącznie. Teza B zachodzi więc dla modeli
+toru Claude. Efekt rejestru jest w modelach lokalnych słabszy niż w modelach toru Claude.
+
+Niepewność $H$ w torze lokalnym ma medianę od \pkHNatLocalMin{} do \pkHNatLocalMax{} bita
+włącznie dla zdań zwykłych. Dla zdań PK mediana wynosi od \pkHPkLocalMin{} do \pkHPkLocalMax{} bita włącznie. Test znaków
+wykazał niższą niepewność zdań PK w \pkSignWinsLocal{} z \pkProbeLocal{} modeli lokalnych.
+Pomiar nie potwierdza więc, że PK zmniejsza niepewność modeli lokalnych. W torze Claude
+2 próby dały różne odpowiedzi dla \pkUnstableNat{} \% zdań zwykłych i dla \pkUnstablePk{} \%
+zdań PK.
+
+\paragraph{Rozbieżność czytelników.}
+Miarę liczą modele, które przeszły kontrolę kotwic, oraz modele toru Claude: razem
+\pkProbeQualified{} modeli. Modele te wybierają różne odczytania zdania zwykłego
+w \pkNatSplitCount{} z \pkAgreeItems{} pozycji, czyli w \pkNatSplit{} \% pozycji. Zdanie
+zwykłe dzieli więc czytelników tak, jak przewiduje model: zbiór odczytań ma więcej niż
+1 element i czytelnicy wybierają różne elementy. Oba zdania PK odczytuje zgodnie z kluczem
+każdy z tych modeli w \pkPkAllCorrectCount{} z \pkAgreeItems{} pozycji.
+
+Para modeli toru Claude daje obraz ostrzejszy. Modele Haiku i Sonnet wybierają różne
+odczytania zdania zwykłego w \pkClaudeSplitCount{} z \pkClaudeItems{} pozycji i to samo
+odczytanie w \pkClaudeAgreeCount{} pozycjach. W \pkClaudeUnsureCount{} pozycjach co najmniej
+1 model dał 2 różne odpowiedzi w 2 próbach. Oba zdania PK odczytują zgodnie z kluczem oba
+modele w \pkClaudePkBothCount{} z \pkClaudeItems{} pozycji.
+
+\paragraph{Teza C: konwencja i legenda.}
+Tabela \ref{tab:conv} podaje wynik pozycji typu konwencja. Reguła B2 ustala, że pierwszy
+rzeczownik jest podmiotem. Bez legendy modele odczytują zgodnie z kluczem \pkConvOrderPlain{}
+z \pkConvOrderAll{} zdań tej reguły, a z legendą \pkConvOrderLegend{} zdań. Reguła C1
+rozdziela słowa \pkq{lub} i \pkq{albo}. Bez legendy modele odczytują zgodnie z kluczem
+\pkConvOrPlain{} z \pkConvOrAll{} zdań tej reguły, a z legendą \pkConvOrLegend{} zdań.
+
+Wynik odróżnia 2 konwencje. Konwencja B2 potwierdza nawyk: szyk podmiot,
+orzeczenie, dopełnienie jest w polszczyźnie szykiem domyślnym. Konwencja C1 zmienia nawyk:
+zwykła polszczyzna nie rozdziela słów \pkq{lub} i \pkq{albo} konsekwentnie. Konwencja
+zgodna z nawykiem działa bez legendy. Konwencja niezgodna z nawykiem wymaga legendy.
+Legendy wymaga także zdanie, w którym wiedza o świecie podpowiada inny podmiot. Model
+Sonnet odczytał zdanie \pkq{Napięcie wyłącza zabezpieczenie.} wbrew szykowi, a z legendą
+zgodnie z szykiem. Wniosek opiera się na \pkItemsConv{} pozycjach i jest opisem przypadków.
+
+\begin{table}[tp]
+\centering
+\caption{P4: pozycje typu konwencja (\pkItemsConv{} pozycje, reguły B2 i C1). Trafność
+w procentach i średnia sterowalność bez legendy oraz z legendą.}
+\label{tab:conv}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Model & trafność & trafność & sterowalność & sterowalność\\
+ & bez legendy & z legendą & bez legendy & z legendą\\
+\midrule
+\wiersze{data/table_conv.tex}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Luki standardu.}
+Zdanie G1, \pkq{Operatorowi NIE WOLNO włączyć pompy P1 i pompy P2.}, spełnia numerowane
+reguły PK. Odczytanie 1, czyli zakaz dla każdej pompy, wybiera \pkGapOneReadingOne{}
+z \pkProbeQualified{} modeli; pozostałe modele wybierają zakaz włączenia 2 pomp naraz.
+Zdanie G2, \pkq{Każdy operator obsługuje dokładnie 1 pompę.}, odczytuje jako zdanie
+o różnych pompach \pkGapTwoReadingOne{} z \pkProbeQualified{} modeli. Liczba modeli, które
+odczytują oba zdania PK zgodnie z kluczem, wynosi \pkGapOnePkOk{} dla luki G1
+i \pkGapTwoPkOk{} dla luki G2. Luka jest groźna dla autora. Jeżeli autor zdania G1 zamierzył zakaz dla każdej pompy, to
+każdy model, który wybrał odczytanie 2, odczytał zdanie wbrew zamiarowi. Wynik potwierdza uwagę \ref{rem:gap}: zgodność
+z regułami numerowanymi nie gwarantuje 1 odczytania.
+
+\paragraph{Pozycja ze spornym kluczem.}
+Pozycja K2 ma zdanie PK \pkq{Zawór Z1 jest zamknięty [założenie].} i pytanie, czy tekst
+stwierdza fakt. Klucz podaje odpowiedź \pkq{Tak}. Oba modele toru Claude odpowiedziały
+\pkq{Nie}. Odpowiedź modeli jest uzasadniona: znacznik źródła mówi, że zdanie jest
+założeniem. Praca zostawia pozycję w wyniku jako błąd modeli, więc trafność toru Claude
+jest zaniżona o 1 pozycję. Obserwacja pokazuje przy okazji, że znacznik z modułu F zmienia
+odczytanie zdania przez model.
+
+\rysunek{probe}{Teoria informacji: prawdopodobieństwo odczytania 1 w strefie szarej dla
+zdania zwykłego i dla 2 zdań PK, osobno dla każdego modelu.}{fig:probe}
+
+\subsection{Próg opłacalności}
+\label{sec:breakeven}
+
+Rysunek \ref{fig:breakeven} łączy pomiary P3 i P4 wzorem \eqref{eq:breakeven}. Mediana
+narzutu wynosi $\delta=\text{\pkTokDeltaMedian}$. Dla czytelnika, który odczytuje każde
+zdanie PK poprawnie, próg wynosi \pkTokBreakEven{} \%. Modele po kontroli odczytują zdania
+PK błędnie w \pkErrPk{} \% przypadków; próg wynosi wtedy \pkBreakEvenStar{} \%. PK jest
+tańsza w modelu kosztu, gdy błąd odczytania zdania zwykłego przekracza próg.
+
+Zdanie ze strefy szarej i z 2 równie prawdopodobnymi odczytaniami daje błąd 50 \%.
+Zdanie poza strefą szarą takiego błędu nie daje, a kontekst rozstrzyga część
+niejednoznaczności. Błąd odczytania całego tekstu jest więc niższy niż 50 \%. Praca tej
+wielkości nie mierzy. Wzór wskazuje, gdzie PK się opłaca: w zdaniach, od których zależy
+działanie, i w tekstach, które czytelnik czyta bez kontekstu.
+
+\rysunek{breakeven}{Model kosztu: próg opłacalności PK w funkcji narzutu długości.}{fig:breakeven}

@@ -1,0 +1,9 @@
+id,register,title,source
+konstytucja,akt prawny,Konstytucja Rzeczypospolitej Polskiej (Dz.U. 1997 nr 78 poz. 483),https://api.sejm.gov.pl/eli/acts/DU/1997/483/text.pdf
+kc,akt prawny,Kodeks cywilny (tekst jednolity: Dz.U. 2026 poz. 795),https://api.sejm.gov.pl/eli/acts/DU/2026/795/text.pdf
+kp,akt prawny,Kodeks pracy (tekst jednolity: Dz.U. 2026 poz. 1245),https://api.sejm.gov.pl/eli/acts/DU/2026/1245/text.pdf
+prd,akt prawny,Prawo o ruchu drogowym (tekst jednolity: Dz.U. 2024 poz. 1251),https://api.sejm.gov.pl/eli/acts/DU/2024/1251/text.pdf
+ztp,akt prawny,Zasady techniki prawodawczej (tekst jednolity: Dz.U. 2026 poz. 300),https://api.sejm.gov.pl/eli/acts/DU/2026/300/text.pdf
+pk-standard,tekst w PK,Standard PK 0.1 (SKILL.md),skills/polszczyzna-kontrolowana/SKILL.md
+pk-paper2,tekst w PK,Praca „Rachunek generatorów”,https://raw.githubusercontent.com/maciejszulia/function-generated-arithmetics/6c9ad63/paper/generator_calculus_pl.tex
+pk-paper3,tekst w PK,Niniejsza praca,paper/pk_complexity_pl.tex

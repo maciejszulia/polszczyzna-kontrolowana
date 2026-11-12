@@ -1,0 +1,61 @@
+\section{Wnioski}
+\label{sec:conclusions}
+
+Praca odpowiada na 4 pytania z wprowadzenia.
+
+\paragraph{Pytanie (i): model.}
+Język jest parą: zbiór zdań i relacja interpretacji. Reguła PK jest ograniczeniem albo
+konwencją; obie operacje są przecięciem z ustalonym zbiorem, więc reguły są przemienne.
+PK dąży do tego, żeby relacja interpretacji była funkcją. Numerowane reguły PK 0.1 tego
+celu nie gwarantują: praca wskazuje 2 zdania zgodne z regułami, które mają 2 odczytania.
+
+\paragraph{Pytanie (ii): koszty.}
+Teza z tytułu zachodzi w 3 znaczeniach i nie zachodzi w 1 znaczeniu.
+\begin{itemize}[leftmargin=1.6em,itemsep=1pt]
+  \item PK zmniejsza zbiór odczytań. Zdanie z 8 frazami przyimkowymi ma \pkAttachEight{}
+  odczytania; zdanie PK ma 1 odczytanie. Brak informacji w zdaniu PK wynosi 0 bitów.
+  \item PK zmniejsza koszt parsowania w modelu gramatyki: zmierzony wykładnik spada
+  z \pkParseExpNat{} do \pkParseExpPk.
+  \item PK wyznacza granicę kosztu wnioskowania. Zbiór wymagań bez przeczeń ma kontrolę
+  spójności w czasie liniowym. Zbiór wymagań z 1 przeczeniem w zdaniu ma kontrolę spójności
+  NP-zupełną.
+  \item PK nie zmniejsza kosztu przejścia tekstu przez model językowy. Tekst PK jest
+  dłuższy: mediana narzutu wynosi \pkTokMedian{} \% tokenów.
+\end{itemize}
+
+\paragraph{Pytanie (iii): pomiar.}
+Modele toru Claude odczytują zdania PK zgodnie z kluczem w co najmniej
+\pkAccPkClaudeMin{} \% przypadków. Modele lokalne osiągają od \pkAccPkLocalMin{} \%
+do \pkAccPkLocalMax{} \% włącznie przy poziomie przypadku 50 \%. Zdanie zwykłe dzieli
+modele po kontroli w \pkNatSplit{} \% pozycji. Korzyść z PK zależy więc od czytelnika:
+PK pomaga modelowi, który czyta polskie zdanie poprawnie, i nie zastępuje tej zdolności.
+Próg opłacalności w modelu kosztu wynosi \pkBreakEvenStar{} \% błędnych odczytań zdania
+zwykłego.
+
+\paragraph{Pytanie (iv): hipoteza Sapira-Whorfa.}
+PK zmienia listę kategorii, które autor wyraża obowiązkowo: wykonawca, ilość, granica,
+chwila, źródło wiedzy. Dla człowieka praca stawia hipotezę: pisanie w PK ujawnia autorowi braki
+w wiedzy o opisywanej czynności. Dla modelu językowego praca rozdziela hipotezę na 3 tezy.
+Zależność odpowiedzi od tekstu zachodzi z budowy modelu. Efekt rejestru zachodzi dla
+modeli toru Claude. Efekt nawyku widać w pozycjach typu konwencja: konwencja niezgodna
+z nawykiem działa dopiero z legendą.
+
+\paragraph{Zalecenia dla standardu.}
+Wyniki dają 4 zalecenia dla kolejnej wersji PK.
+\begin{enumerate}[leftmargin=1.8em,itemsep=1pt]
+  \item Dodać regułę o zasięgu zakazu nad spójnikiem \pkq{i} (luka G1).
+  \item Dodać regułę o zasięgu 2 kwantyfikatorów w 1 zdaniu (luka G2).
+  \item Poprawić \pkCorpusStdCfive{} zdania standardu, które mają 2 przeczenia.
+  \item Zalecić legendę przy każdym tekście dla modelu językowego, który zawiera słowo
+  \pkq{lub} albo słowo \pkq{albo}.
+\end{enumerate}
+
+\paragraph{Dalsze prace.}
+Praca zostawia 5 zadań.
+\begin{itemize}[leftmargin=1.6em,itemsep=1pt]
+  \item Gramatyka formalna dla rdzenia PK.
+  \item Sprawdzarka z analizą składni.
+  \item Pomiar na modelach o większej liczbie parametrów.
+  \item Pomiar na tekstach z kontekstem.
+  \item Badanie z udziałem ludzi, które sprawdzi hipotezę o ujawnianiu braków wiedzy.
+\end{itemize}

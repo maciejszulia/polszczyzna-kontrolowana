@@ -1,0 +1,30 @@
+START haiku 18:01:42
+claude haiku: 140 probes, 0 cached, 136 to ask
+progress 25/136  8.6 s/call  eta 16 min
+END haiku rc=1 18:06:32
+START sonnet 18:06:32
+claude sonnet: 140 probes, 0 cached, 136 to ask
+END sonnet rc=1 18:06:32
+CHAIN-FINISHED
+START haiku 18:07:39
+claude haiku: 140 probes, 34 cached, 102 to ask
+progress 25/102  9.5 s/call  eta 12 min
+progress 50/102  9.3 s/call  eta 8 min
+progress 75/102  9.3 s/call  eta 4 min
+progress 100/102  9.2 s/call  eta 0 min
+FINISHED claude haiku: 102 new calls in 15.6 min
+END haiku rc=0 18:23:18
+START sonnet 18:23:18
+claude sonnet: 140 probes, 0 cached, 136 to ask
+progress 25/136  10.1 s/call  eta 19 min
+progress 50/136  10.0 s/call  eta 14 min
+progress 75/136  10.2 s/call  eta 10 min
+progress 100/136  10.0 s/call  eta 6 min
+progress 125/136  9.8 s/call  eta 2 min
+FINISHED claude sonnet: 136 new calls in 21.8 min
+END sonnet rc=0 18:45:09
+CHAIN-FINISHED
+claude haiku: 140 probes, 135 cached, 1 to ask
+FINISHED claude haiku: 1 new calls in 0.2 min
+claude sonnet: 140 probes, 133 cached, 3 to ask
+FINISHED claude sonnet: 3 new calls in 0.7 min

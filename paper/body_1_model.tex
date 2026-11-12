@@ -1,0 +1,451 @@
+\section{Wprowadzenie}
+
+Tekst, według którego ktoś działa, ma mieć 1 znaczenie. Polska gramatyka zostawia
+czytelnikowi wybór w stałych miejscach: brak rodzajników, swobodny szyk, dopełniacz,
+spójniki, granice przedziałów. Zdanie \pkq{Dzieci do 3 lat wchodzą bezpłatnie.} ma
+2 odczytania: jedno obejmuje dziecko, które ma mniej niż 3 lata; drugie obejmuje dziecko,
+które ma mniej niż 4 lata.
+
+Polszczyzna Kontrolowana, w skrócie PK, zamyka te miejsca wyboru \cite{pk}. PK w wersji 0.1
+to zwykła polszczyzna oraz \pkRules{} numerowanych reguł w 5 grupach. Standard ma także
+moduł F dla raportów i listę słów kluczowych wymagań. Wzorami PK są angielski standard
+ASD-STE100 \cite{ste}, słowa kluczowe RFC 2119 \cite{rfc2119}, notacja EARS \cite{ears}
+i polskie \pkq{Zasady techniki prawodawczej} \cite{ztp}.
+
+Czytelnikiem tekstu bywa model językowy. Model wykonuje instrukcję, streszcza
+regulamin i sprawdza wymaganie. Praca bada tezę z tytułu: PK zmniejsza złożoność
+obliczeniową pracy z tekstem. Praca rozdziela tę tezę na 4 pytania.
+\begin{enumerate}[label=(\roman*),leftmargin=2.4em]
+  \item Jak zapisać PK w języku logiki i teorii mnogości?
+  \item Które koszty obliczeniowe PK zmniejsza, a które koszty PK zwiększa?
+  \item Ile wynosi narzut długości PK i jak modele językowe odczytują zdania PK?
+  \item Co PK mówi o hipotezie Sapira-Whorfa dla człowieka i dla modelu językowego?
+\end{enumerate}
+
+\paragraph{Odpowiedzi w skrócie.}
+Język jest parą: zbiór zdań i relacja interpretacji. Reguła PK jest operatorem, który usuwa
+zdania albo usuwa odczytania (sekcja \ref{sec:model}). PK zmniejsza koszt 3 mechanizmami:
+zwija zbiór odczytań, ogranicza rozmiar zdania i daje zdaniu lokalność
+(sekcja \ref{sec:complexity}). PK ma 1 koszt: tekst rośnie. Mediana narzutu wynosi
+\pkTokMedian{} \% tokenów (sekcja \ref{sec:results}). Spójność zbioru wymagań bez przeczeń
+jest rozstrzygalna w czasie liniowym. Reguła C5 dopuszcza 1 przeczenie w zdaniu, a 1
+przeczenie wystarcza do NP-zupełności (twierdzenie \ref{thm:np}). Wynik pomiaru na
+modelach językowych podaje sekcja \ref{sec:probe}. Refleksję filozoficzną zawiera
+sekcja \ref{sec:philosophy}.
+
+\paragraph{Status wyniku.}
+Twierdzenia o parsowaniu, o kodowaniu i o klauzulach Horna są znane; praca przywołuje
+źródła. Wkładem pracy są: model mnogościowy reguł PK, klasyfikacja \pkRules{} reguł,
+twierdzenie graniczne o 1 przeczeniu, zbiór \pkItems{} pozycji testowych, sprawdzarka reguł
+oraz 5 pomiarów. Pomiary mają ograniczony zasięg; sekcja \ref{sec:threats} wymienia
+zagrożenia dla trafności. Praca opisuje PK 0.1 i nie ocenia innych standardów.
+
+\paragraph{Konwencje tekstu.}
+Autor napisał tę pracę w PK. Legenda: \pkq{lub} znaczy co najmniej 1 z członów;
+\pkq{albo} znaczy dokładnie 1 z członów. Część dziesiętną liczby oddziela przecinek.
+Cytat, przykład zdania zwykłego i tytuł stoją w cudzysłowie; taki fragment leży poza PK.
+Każda liczba w tekście pochodzi ze skryptu \texttt{scripts/measure.py}. Sprawdzarka
+z sekcji \ref{sec:check} skontrolowała tekst pracy; wynik podaje tabela \ref{tab:corpus}.
+
+\section{Stan wiedzy}
+\label{sec:related}
+
+\paragraph{Języki kontrolowane.}
+Język kontrolowany to podzbiór języka naturalnego z ograniczoną gramatyką i ograniczonym
+słownictwem. Kuhn opisał 100 języków kontrolowanych opartych na angielskim i zaproponował
+klasyfikację PENS \cite{kuhn2014}. Klasyfikacja PENS ocenia 4 cechy: precyzję,
+ekspresywność, naturalność i prostotę. Kuhn stwierdza o językach klasy P$^1$, czyli
+o językach naturalnych, że automatyczna interpretacja jest problemem \pkq{AI-zupełnym}.
+Precyzja języka decyduje więc o koszcie interpretacji.
+
+Języki kontrolowane mają 2 rodowody. Pierwszy rodowód to czytelność dla człowieka:
+\pkq{Basic English} Ogdena \cite{ogden1930} i przewodnik AECMA z roku 1986, z którego
+powstał standard ASD-STE100 \cite{ste}. Drugi rodowód to interpretacja przez maszynę:
+Attempto Controlled English ma gramatykę formalną i tłumaczenie na logikę pierwszego rzędu
+\cite{fuchs2008}. PK 0.1 należy do pierwszego rodowodu. Standard PK 0.1 składa się z reguł
+zapisanych słowami i nie zawiera gramatyki formalnej. W klasyfikacji PENS autor umieszcza
+PK 0.1 w klasie P$^2$: język ma mniej niejednoznaczności niż język naturalny i nie ma
+podstawy formalnej.
+
+\paragraph{Kontekst polski.}
+Polska tradycja zna reguły redagowania tekstów prawnych \cite{ztp} i ruch prostego języka;
+norma ISO 24495-1 opisuje prosty język \cite{iso24495}. Prosty język służy łatwemu
+zrozumieniu, a PK służy jednemu znaczeniu. Ziembiński opisuje amfibolię, czyli wieloznaczność
+składniową zdania \cite{ziembinski2002}. Przybyszewski zbadał zdania przeczące z kwantyfikatorem
+ogólnym \cite{przybyszewski2020}. Kapłański opisał kontrolowaną angielszczyznę
+jako interfejs baz wiedzy \cite{kaplanski2011}. Autor nie znalazł opublikowanego standardu
+kontrolowanej polszczyzny ogólnego przeznaczenia. Przegląd objął wyszukiwarki naukowe
+w listopadzie 2026 r. i ma ograniczony zasięg.
+
+\paragraph{Złożoność a kształt języka.}
+Church i Patil pokazali, że liczba rozbiorów zdania z ciągiem fraz przyimkowych rośnie jak
+liczby Catalana \cite{church1982}. Earley podał algorytm parsowania gramatyk bezkontekstowych
+w czasie rzędu $n^3$, a dla gramatyk jednoznacznych w czasie rzędu $n^2$ \cite{earley1970}.
+Knuth zdefiniował gramatyki LR($k$), które parser czyta w czasie liniowym \cite{knuth1965};
+Leo rozszerzył algorytm Earleya na czas liniowy dla każdej gramatyki LR($k$) \cite{leo1991}.
+Barton wykazał, że parsowanie gramatyk ID/LP, które opisują swobodny szyk, jest NP-zupełne
+\cite{barton1985}. Pratt-Hartmann i Third zbadali fragmenty języka angielskiego: problem
+spełnialności przechodzi od czasu wielomianowego do nierozstrzygalności, gdy fragment
+dostaje kolejne konstrukcje \cite{pratt2004,pratt2006}. Wyniki te pokazują wspólną zasadę:
+zakres dopuszczonych konstrukcji wyznacza klasę złożoności.
+
+\paragraph{Niejednoznaczność a modele językowe.}
+Zbiór AmbigQA zawiera pytania z więcej niż 1 odpowiedzią \cite{min2020}. Liu i współautorzy
+zbudowali zbiór AmbiEnt i stwierdzili, że rozpoznanie niejednoznaczności jest dla modeli
+trudne \cite{liu2023}. Farquhar i współautorzy mierzą niepewność modelu entropią liczoną
+na poziomie znaczeń \cite{farquhar2024}. Piantadosi, Tily i Gibson bronią
+niejednoznaczności: kontekst rozstrzyga znaczenie, więc język zyskuje krótsze formy
+\cite{piantadosi2012}. Wynik Piantadosiego wyznacza cenę PK: tekst bez oparcia w kontekście
+jest dłuższy.
+
+\section{Model logiczno-mnogościowy}
+\label{sec:model}
+
+\subsection{Język jako para}
+
+\begin{definition}
+Niech $W$ oznacza zbiór sytuacji. \emph{Znaczenie} to podzbiór zbioru $W$. Zbiór znaczeń to
+$M=\mathcal{P}(W)$. \emph{Język} to para $(L,R)$: $L$ jest zbiorem zdań, a
+$R\subseteq L\times M$ jest \emph{relacją interpretacji}.
+\end{definition}
+
+\begin{definition}
+\emph{Zbiór odczytań} zdania $s$ to $\sem{s}=\{m\in M:(s,m)\in R\}$. \emph{Stopień
+niejednoznaczności} zdania $s$ to liczba $a(s)=|\sem{s}|$. Zdanie $s$ jest
+\emph{jednoznaczne}, gdy $a(s)=1$.
+\end{definition}
+
+Język $(L,R)$ jest jednoznaczny dokładnie wtedy, gdy relacja $R$ jest funkcją z $L$ do $M$.
+Zwykła polszczyzna jest relacją, która nie jest funkcją. Rysunek \ref{fig:relation}
+pokazuje 2 zdania zwykłe z 4 odczytaniami i 4 zdania PK, z których każde ma 1 odczytanie.
+
+\rysunek{relation}{Teoria mnogości: relacja interpretacji zwykłej polszczyzny i funkcja,
+do której dąży PK.}{fig:relation}
+
+\subsection{Reguła jako operator}
+
+Standard PK zawiera reguły 2 rodzajów. Reguła pierwszego rodzaju zabrania konstrukcji:
+reguła A3 zabrania zaimka, reguła B5 zabrania imiesłowu. Reguła drugiego rodzaju zostawia
+zdanie i ustala odczytanie. Według reguły B2 pierwszy rzeczownik jest podmiotem. Według
+reguły C1 słowo \pkq{lub} znaczy co najmniej 1 człon.
+
+\begin{definition}
+\emph{Ograniczenie} to operator $\rho_\varphi(L,R)=(L\cap\varphi,\;R\cap(\varphi\times M))$
+dla zbioru zdań $\varphi$. \emph{Konwencja} to operator $\kappa_K(L,R)=(L,\;R\cap K)$ dla
+relacji $K\subseteq L\times M$.
+\end{definition}
+
+\begin{proposition}
+\label{prop:kernel}
+Każde ograniczenie i każda konwencja zmniejsza język, zachowuje zawieranie i jest
+idempotentna. Każde 2 operatory są przemienne. Złożenie reguł $r_1,\dots,r_n$ daje język
+\[
+L'=L\cap\bigcap_i\varphi_i,\qquad R'=R\cap\bigcap_j K_j\cap(L'\times M).
+\]
+\end{proposition}
+
+\begin{proof}
+Oba operatory są przecięciem z ustalonym zbiorem. Przecięcie zbiorów jest przemienne,
+łączne i idempotentne.
+\end{proof}
+
+Stwierdzenie \ref{prop:kernel} ma 2 skutki praktyczne. Kolejność stosowania reguł PK nie
+zmienia wyniku. Sprawdzenie tekstu rozkłada się na niezależne kontrole: 1 kontrola
+dla 1 reguły.
+
+Cel standardu ma w modelu 2 warunki. Warunek spójności: $\sem{s}'\neq\emptyset$ dla
+każdego $s\in L'$, czyli konwencje zostawiają zdaniu co najmniej 1 odczytanie. Warunek
+jednoznaczności: $|\sem{s}'|\le 1$ dla każdego $s\in L'$. Przy obu warunkach relacja $R'$
+jest funkcją.
+
+\begin{remark}[status celu]
+\label{rem:gap}
+Standard PK 0.1 formułuje cel słowami: czytelnik, który zna konwencję, odczytuje każde
+zdanie w 1 sposób. Cel jest hipotezą standardu. Numerowane reguły PK 0.1 celu nie
+gwarantują. Zdanie \pkq{Operatorowi NIE WOLNO włączyć pompy P1 i pompy P2.} spełnia każdą
+regułę numerowaną. Zdanie ma 2 odczytania: zakaz dotyczy każdej z 2 pomp albo zakaz dotyczy
+włączenia 2 pomp naraz. Zdanie \pkq{Każdy operator obsługuje dokładnie 1 pompę.} także
+spełnia reguły i ma 2 odczytania zasięgu. Standard zamyka takie przypadki krokiem 7
+kontroli, czyli testem 2 znaczeń. Test 2 znaczeń wymaga oceny znaczenia przez człowieka.
+Pozycje G1 i G2 zbioru testowego mierzą te 2 luki (sekcja \ref{sec:probe}).
+\end{remark}
+
+\subsection{Miejsca wyboru}
+
+\begin{definition}
+\emph{Miejsce wyboru} zdania $s$ to konstrukcja, która dopuszcza co najmniej 2 odczytania
+przy ustalonych odczytaniach reszty zdania. Miejsce wyboru $i$ ma zbiór wariantów $C_i$.
+Miejsca wyboru są \emph{niezależne}, gdy każda kombinacja wariantów daje inne odczytanie.
+\end{definition}
+
+\begin{theorem}
+\label{thm:product}
+Jeżeli zdanie $s$ ma $k$ niezależnych miejsc wyboru, to
+$a(s)=\prod_{i=1}^{k}|C_i|$ oraz $\log_2 a(s)=\sum_{i=1}^{k}\log_2|C_i|$.
+Zamknięcie miejsca wyboru $i$ zmniejsza $\log_2 a(s)$ o $\log_2|C_i|$ bitów.
+\end{theorem}
+
+\begin{proof}
+Zbiór odczytań jest w bijekcji z iloczynem kartezjańskim $C_1\times\dots\times C_k$.
+\end{proof}
+
+Twierdzenie \ref{thm:product} tłumaczy, dlaczego reguły PK działają osobno. Każda reguła
+zamyka 1 typ miejsca wyboru i odejmuje stałą liczbę bitów. Miejsca wyboru bywają zależne;
+wtedy liczba odczytań jest mniejsza niż iloczyn. Pomiar P1 liczy odczytania dokładnie dla
+4 konstrukcji (tabela \ref{tab:counts}, rysunek \ref{fig:growth}).
+
+Według reguły B8 zdanie opisu ma co najwyżej 25 słów. Samo ograniczenie długości nie usuwa
+niejednoznaczności. Liczba nawiasowań binarnych ciągu 25 słów to liczba Catalana
+$C_{24}=\text{\pkCatalanTwentyFour}$. Zbiór odczytań jest więc skończony, a górna granica liczby odczytań
+ma rząd $10^{12}$. Jednoznaczność dają dopiero pozostałe reguły.
+
+\subsection{Strefa szara}
+
+\begin{definition}
+\emph{Strefa szara} zdania $s$ to zbiór
+$G(s)=\bigcup\sem{s}\setminus\bigcap\sem{s}$.
+\end{definition}
+
+Strefa szara zawiera sytuacje, w których odczytania dają różną wartość logiczną. Poza
+strefą szarą odczytania są zgodne. Strefa szara jest pusta dokładnie wtedy, gdy każde
+2 odczytania zdania są równe; dla zdania jednoznacznego $G(s)=\emptyset$.
+
+\begin{example}
+Zdanie \pkq{Dzieci do 3 lat wchodzą bezpłatnie.} ma odczytania $m_1=\{w:\text{wiek}<3\}$
+i $m_2=\{w:\text{wiek}<4\}$. Strefa szara to $\{w:3\le\text{wiek}<4\}$. Dziecko, które ma
+3 lata i 5 miesięcy, leży w strefie szarej.
+\end{example}
+
+Model strefy szarej odpowiada nadwartościowaniu Fine'a \cite{fine1975}: zdanie jest
+nadprawdziwe w $\bigcap\sem{s}$ i nadfałszywe poza $\bigcup\sem{s}$. Rysunek
+\ref{fig:gray} pokazuje strefy szare 5 pozycji testowych, a rysunek \ref{fig:truth}
+pokazuje ten sam obiekt w tablicach prawdy. Pomiar P4 opiera się na strefie szarej: sonda
+pyta model o sytuację, w której odczytania się różnią.
+
+\rysunek{gray_zone}{Semantyka: 2 odczytania jako zbiory na osi liczbowej i strefa szara,
+w której odczytania się różnią.}{fig:gray}
+
+\rysunek{truth_tables}{Logika: tablice prawdy 2 odczytań dla reguł C2, C1 i C4.}{fig:truth}
+
+\subsection{Moc zbioru odczytań}
+
+Zbiór odczytań ma w modelu 3 możliwe moce.
+\begin{itemize}[leftmargin=1.6em]
+  \item \textbf{Moc 1.} Zdanie jest jednoznaczne. Taki stan jest celem PK.
+  \item \textbf{Moc skończona większa niż 1.} Źródłem jest składnia albo słownik: zasięg
+  określenia, zaimek, spójnik, granica przedziału. Lista zakończona skrótem \pkq{itp.}
+  oznacza nadzbiór zbioru wymienionych elementów; zdanie nie wskazuje, który nadzbiór. Dla dziedziny o $u$ elementach i listy
+  o $k$ elementach zdanie ma $2^{u-k}$ odczytań; dla $u=10$ i $k=2$ zdanie ma \pkOpenList{} odczytań.
+  \item \textbf{Moc continuum.} Słowo nieostre, na przykład \pkq{regularnie}, dopuszcza
+  każdy próg z przedziału liczb rzeczywistych. Zbiór dopuszczalnych uściśleń jest
+  nieprzeliczalny \cite{fine1975}. Reguła A5 każe wybrać 1 próg i zapisać próg liczbą
+  z jednostką.
+\end{itemize}
+
+Osobną klasę tworzy deiksa. Znaczenie słowa \pkq{jutro} jest funkcją kontekstu; Kaplan
+nazywa taką funkcję charakterem wyrażenia \cite{kaplan1989}. Reguła D3 wymaga daty.
+Zdanie z datą ma stały charakter: znaczenie zdania jest takie samo w każdym dniu czytania.
+
+\subsection{Klasyfikacja reguł}
+\label{sec:rules}
+
+Autor przypisał każdej z \pkRules{} reguł 3 cechy: rodzaj operatora, klasę sprawdzarki
+i mechanizm redukcji kosztu. Klasyfikację zawiera plik \texttt{data/rules.csv};
+rysunek \ref{fig:rules} pokazuje wynik. Ograniczeniem jest \pkRulesR{} reguł.
+Ograniczenie i konwencję łączy \pkRulesRK{} reguł. Samą konwencją jest \pkRulesK{} reguła:
+reguła E6, która każe ujawnić konwencje w legendzie. Klasyfikacja jest oceną autora
+i nie ma drugiego oceniającego.
+
+\rysunek{rules}{Klasyfikacja reguł PK 0.1 według rodzaju operatora, klasy sprawdzarki
+i mechanizmu redukcji kosztu.}{fig:rules}
+
+\section{Złożoność obliczeniowa}
+\label{sec:complexity}
+
+\subsection{Zadania czytelnika i mechanizmy PK}
+
+Czytelnik tekstu wykonuje 4 zadania. Zadanie PARSUJ wyznacza zbiór odczytań zdania.
+Zadanie WYBIERZ wskazuje odczytanie, które zamierzył autor. Zadanie SPRAWDŹ rozstrzyga,
+czy tekst spełnia reguły. Zadanie WNIOSKUJ rozstrzyga, czy zbiór zdań jest spójny i co ze
+zbioru wynika. PK zmienia koszt tych zadań 3 mechanizmami.
+\begin{itemize}[leftmargin=1.6em]
+  \item \textbf{M1, zwinięcie zbioru odczytań.} Reguła zmniejsza liczbę $a(s)$ do wartości 1. Zadanie
+  WYBIERZ znika.
+  \item \textbf{M2, ograniczenie rozmiaru.} Reguły B8, B4, C2 i C5 ograniczają liczbę słów,
+  liczbę rzeczowników w ciągu, mieszanie spójników i liczbę przeczeń. Koszt zadania
+  PARSUJ dla 1 zdania ma stałą górną granicę, więc koszt dla tekstu rośnie liniowo
+  z liczbą zdań.
+  \item \textbf{M3, lokalność.} Reguły A2, A3, D3 i E4 usuwają zaimek, deiksę i odesłanie
+  bez numeru. Czytelnik interpretuje zdanie bez przeszukiwania reszty tekstu. Tekst jest
+  koniunkcją zdań ze wspólnym słownikiem nazw.
+\end{itemize}
+Kosztem PK jest długość: nazwa zastępuje zaimek, liczba z jednostką zastępuje słowo
+nieostre, a 2 zdania zastępują imiesłów.
+
+\subsection{Zadanie PARSUJ}
+\label{sec:parse}
+
+Dla gramatyki bezkontekstowej algorytm Earleya działa w czasie rzędu $n^3$; dla gramatyki
+jednoznacznej w czasie rzędu $n^2$ \cite{earley1970}. Dla gramatyki LR($k$) istnieje parser
+liniowy \cite{knuth1965,leo1991}. Swobodny szyk podnosi koszt: problem rozpoznawania dla
+gramatyk ID/LP jest NP-zupełny \cite{barton1985}. Reguła B2 ustala szyk: podmiot,
+orzeczenie, dopełnienie. Reguła B6 stawia określenie przy słowie określanym.
+
+Pomiar P2 porównuje 2 gramatyki modelowe. Gramatyka pierwsza pozwala przyłączyć frazę
+przyimkową do czasownika albo do rzeczownika, który stoi wcześniej. Gramatyka druga,
+zgodna z regułą B6, przyłącza frazę do rzeczownika bezpośrednio przed frazą. Obie gramatyki
+generują te same ciągi słów. Wynik podaje sekcja \ref{sec:resparse}. Gramatyki są modelami
+1 konstrukcji i nie opisują całej polszczyzny.
+
+\subsection{Zadanie WYBIERZ}
+
+\begin{theorem}
+\label{thm:questions}
+Niech $Z$ oznacza zamierzone odczytanie zdania $s$, czyli zmienną losową o rozkładzie $P$
+na zbiorze $\sem{s}$. Każda strategia pytań z odpowiedzią \pkq{Tak} albo \pkq{Nie}, która zawsze
+wskazuje $Z$, zadaje średnio co najmniej $H(Z)=-\sum_m P(m)\log_2P(m)$ pytań. Istnieje
+strategia, która zadaje średnio mniej niż $H(Z)+1$ pytań.
+\end{theorem}
+
+\begin{proof}
+Strategia pytań jest drzewem binarnym, czyli kodem prefiksowym dla zbioru $\sem{s}$.
+Oba oszacowania wynikają z twierdzenia Shannona o kodowaniu bez szumu \cite{shannon1948}.
+\end{proof}
+
+Wielkość $H(Z)$ jest brakiem informacji w zdaniu. Czytelnik pobiera brakujące bity
+z kontekstu, z pytania do autora albo z własnego domysłu. Dla zdania PK brak wynosi 0 bitów.
+Dla zdania z 2 równie prawdopodobnymi odczytaniami brak wynosi 1 bit. Czytelnik, który
+zgaduje, myli się wtedy w 50 \% przypadków przy każdej strategii zgadywania.
+
+\subsection{Zadanie WNIOSKUJ}
+\label{sec:horn}
+
+Praca definiuje rdzeń zdaniowy PK dla wymagań. Rdzeń obejmuje wzór \pkq{Jeżeli W, to D.}
+z reguły C3, zakaz mieszania spójników z reguły C2 i limit przeczeń z reguły C5.
+
+\begin{definition}
+Niech $A$ oznacza zbiór zdań prostych twierdzących, czyli \emph{atomów}. \emph{Literał} to
+atom albo atom z przeczeniem. Język \PKz{} zawiera zdania 2 postaci:
+\begin{center}
+\pkq{Jeżeli $l_1$ i \dots{} i $l_k$, to $a$.}\qquad
+\pkq{Jeżeli $l_1$ i \dots{} i $l_k$, to konflikt.}
+\end{center}
+gdzie $k\ge0$, każde $l_i$ jest literałem, a $a$ jest atomem. Zdanie drugiej postaci
+zapisuje 2 wymagania dla 1 działania: \pkq{MUSI} oraz \pkq{NIE WOLNO}. Język \PKzj{j}
+zawiera zdania, w których poprzednik ma co najwyżej $j$ przeczeń. Zbiór zdań $\Gamma$ jest
+\emph{spójny}, gdy co najmniej 1 wartościowanie atomów spełnia każde zdanie zbioru $\Gamma$;
+zdanie drugiej postaci jest spełnione, gdy poprzednik jest fałszywy.
+\end{definition}
+
+\begin{theorem}
+\label{thm:horn}
+Spójność zbioru zdań języka \PKzj{0} jest rozstrzygalna w czasie liniowym względem
+łącznej długości zdań.
+\end{theorem}
+
+\begin{proof}
+Zdanie \pkq{Jeżeli $a_1$ i \dots{} i $a_k$, to $a$.} jest klauzulą
+$\neg a_1\lor\dots\lor\neg a_k\lor a$. Zdanie z konfliktem jest klauzulą
+$\neg a_1\lor\dots\lor\neg a_k$. Każda klauzula ma co najwyżej 1 literał dodatni, czyli
+jest klauzulą Horna. Algorytm Dowlinga i Galliera rozstrzyga spełnialność formuły Horna
+w czasie liniowym \cite{dowling1984}.
+\end{proof}
+
+\begin{theorem}
+\label{thm:np}
+Spójność zbioru zdań języka \PKzj{1} jest problemem NP-zupełnym.
+\end{theorem}
+
+\begin{proof}
+Problem należy do klasy NP: świadkiem jest wartościowanie. NP-trudność wynika z redukcji
+problemu 3-SAT \cite{cook1971}. Niech $C$ będzie klauzulą o 3 literałach nad atomami
+$x$, $y$, $z$. Redukcja zależy od liczby literałów dodatnich w klauzuli $C$.
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Klauzula $C$ & Zdania języka \PKzj{1}\\
+\midrule
+$\neg x\lor\neg y\lor\neg z$ & Jeżeli $x$ i $y$ i $z$, to konflikt.\\
+$\neg x\lor\neg y\lor z$ & Jeżeli $x$ i $y$, to $z$.\\
+$\neg x\lor y\lor z$ & Jeżeli $x$ i nie $y$, to $z$.\\
+$x\lor y\lor z$ & Jeżeli nie $x$, to $u$. Jeżeli $u$ i nie $y$, to $z$.\\
+\bottomrule
+\end{tabular}
+\end{center}
+W 3 pierwszych wierszach zdanie jest równoważne klauzuli. W wierszu czwartym $u$ jest
+nowym atomem, a zdania dają klauzule $x\lor u$ oraz $\neg u\lor y\lor z$. Jeżeli
+wartościowanie spełnia $x\lor y\lor z$, to rozszerzenie $u=\neg x$ spełnia obie klauzule.
+W drugą stronę rezolucja względem $u$ daje $x\lor y\lor z$. Każde zdanie ma co najwyżej
+1 przeczenie, a liczba zdań jest co najwyżej 2 razy większa niż liczba klauzul.
+\end{proof}
+
+Skrypt sprawdził redukcję na \pkRedInstances{} losowych formułach, z których każda ma
+co najwyżej 6 zmiennych: pełne wyliczenie wartościowań dało zgodną odpowiedź w każdym
+przypadku. Twierdzenie \ref{thm:np} zgadza się z dychotomią Schaefera \cite{schaefer1978}:
+zbiór klauzul Horna z klauzulą $x\lor u$ leży poza każdą klasą łatwą.
+
+\begin{remark}[znaczenie dla standardu]
+Reguła C5 dopuszcza 1 przeczenie w zdaniu, a reguła C3 zaleca wzór \pkq{Jeżeli nie W,
+to D2.} dla przypadku przeciwnego. Zbiór wymagań zgodny z PK 0.1 jest więc zbiorem zdań
+języka \PKzj{1}. Zbiór bez przeczeń w poprzednikach leży po stronie czasu liniowego.
+Zbiór z 1 przeczeniem w poprzedniku leży po stronie NP-zupełności. NP-zupełność opisuje przypadek najgorszy; programy
+rozstrzygające spełnialność radzą sobie z praktycznymi zbiorami wymagań. Pełna PK 0.1
+nie ogranicza ekspresywności polszczyzny, więc wnioskowanie w pełnej PK jest
+nierozstrzygalne tak samo jak w logice pierwszego rzędu. Rysunek \ref{fig:classes}
+zestawia wyniki z fragmentami języka angielskiego \cite{pratt2006}.
+\end{remark}
+
+\rysunek{classes}{Teoria złożoności: położenie problemów związanych z PK wśród klas
+złożoności.}{fig:classes}
+
+\subsection{Zadanie SPRAWDŹ}
+\label{sec:check}
+
+Reguły PK różnią się kosztem kontroli. Autor wyróżnił 3 klasy sprawdzarek
+(rysunek \ref{fig:rules}). Automat skończony nad ciągiem słów rozstrzyga \pkRulesRegular{}
+z \pkRules{} reguł: listę słów zakazanych, długość zdania, liczbę przeczeń, zapis granicy.
+Analizy składni wymaga \pkRulesSyntactic{} reguł, na przykład szyk z reguły B2 i zasięg
+z reguły B6. Oceny znaczenia wymaga \pkRulesSemantic{} reguł, na przykład reguła A1:
+1 termin dla 1 pojęcia.
+
+Plik \texttt{src/pklint.py} zawiera sprawdzarkę z \pkLintChecks{} kontrolami. Każda
+kontrola jest wyrażeniem regularnym nad słowami 1 zdania, więc sprawdzarka działa
+w czasie liniowym. Sprawdzarka wskazuje kandydatów; ocenę kończy człowiek. Na zbiorze
+testowym sprawdzarka wykrywa \pkLintDetected{} z \pkItems{} zdań zwykłych i nie zgłasza
+żadnego z \pkItemsPkSentences{} zdań PK. Pozostałe \pkLintUndetected{} zdań zwykłych wymaga analizy składni
+albo znaczenia.
+
+\subsection{Koszt w modelu językowym}
+\label{sec:cost}
+
+Koszt przejścia tekstu przez transformator zależy od liczby tokenów $n$: warstwa uwagi
+wykonuje pracę rzędu $n^2$ \cite{vaswani2017}. Rozstrzygnięcie niejednoznaczności tej pracy
+nie zmienia. Merrill i Sabharwal wykazali, że transformator o precyzji logarytmicznej
+liczy tylko funkcje z klasy TC$^0$ \cite{merrill2023}. Model przenosi więc trudniejsze
+obliczenia do kolejnych generowanych tokenów. Zdanie, które wymaga wyboru odczytania,
+dokłada modelowi pracy; zdanie jednoznaczne tej pracy nie dokłada. Praca nie mierzy tego
+efektu wewnątrz modelu; pomiar P4 mierzy zachowanie modelu na wyjściu.
+
+\begin{theorem}
+\label{thm:breakeven}
+Niech tekst zwykły ma $n$ tokenów, a tekst PK ma $(1+\delta)n$ tokenów. Niech czytelnik
+odczytuje tekst zwykły błędnie z prawdopodobieństwem $p$, a tekst PK z prawdopodobieństwem
+$e$. Niech po błędnym odczytaniu zadanie wraca do autora i czytelnik czyta tekst od nowa,
+a próby są niezależne. Oczekiwany koszt odczytania w tokenach wynosi $n/(1-p)$ dla tekstu
+zwykłego i $(1+\delta)n/(1-e)$ dla tekstu PK. Tekst PK jest tańszy dokładnie wtedy, gdy
+\begin{equation}
+\label{eq:breakeven}
+p>1-\frac{1-e}{1+\delta}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Liczba prób ma rozkład geometryczny o wartości oczekiwanej $1/(1-p)$ albo $1/(1-e)$.
+Nierówność \eqref{eq:breakeven} wynika z porównania 2 kosztów.
+\end{proof}
+
+Dla $e=0$ warunek \eqref{eq:breakeven} ma postać $p>\delta/(1+\delta)$. Model pomija koszt
+wykrycia błędu i koszt szkody; oba koszty przesuwają próg na korzyść PK. Model pomija
+także pracę autora. Autor pisze tekst 1 raz, a czytelnicy czytają tekst $k$ razy, więc
+dodatkowa praca autora rozkłada się na $k$ odczytów. Model językowy czyta instrukcję
+systemową przy każdym wywołaniu.

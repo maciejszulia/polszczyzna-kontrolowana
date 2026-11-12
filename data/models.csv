@@ -1,0 +1,5 @@
+model,parameters_billion,quantization,digest
+llama3.2:3b,3.2,Q4_K_M,a80c4f17acd5
+SpeakLeash/bielik-1.5b-v3.0-instruct:Q8_0,1.6,Q8_0,db43c178a735
+gemma3:4b,3.9,Q4_K_M,68ceab7e468a
+SpeakLeash/bielik-4.5b-v3.0-instruct:Q8_0,4.8,Q8_0,4c6ed09ba6be

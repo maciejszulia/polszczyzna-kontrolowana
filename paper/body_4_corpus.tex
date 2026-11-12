@@ -1,0 +1,45 @@
+\subsection{P5: miejsca wyboru w aktach prawnych}
+\label{sec:rescorpus}
+
+Tabela \ref{tab:corpus} i rysunek \ref{fig:corpus} podają wynik sprawdzarki na korpusie.
+Akty prawne mają od \pkCorpusActMin{} do \pkCorpusActMax{} trafień na 1000 słów włącznie.
+Teksty pisane w PK mają od \pkCorpusPkMin{} do \pkCorpusPkMax{} trafień na 1000 słów
+włącznie. Korpus aktów liczy \pkCorpusActWords{} słów.
+
+W aktach prawnych przeważają 4 kontrole. Kontrola A3 zgłasza zaimki. Kontrola KW zgłasza
+słowa \pkq{może} i \pkq{musi} poza zapisem słów kluczowych. Kontrola B8 zgłasza zdania
+dłuższe niż 25 słów. Kontrola A5 zgłasza słowa nieostre. Udział zdań dłuższych niż 25 słów wynosi w aktach
+od \pkCorpusOverMin{} \% do \pkCorpusOverMax{} \% włącznie. Podział aktu na zdania jest
+przybliżony, bo akt składa się z jednostek redakcyjnych, a nie ze zdań.
+
+Ręczna ocena próby potwierdza trafność wskazań: \pkPrecValid{} z \pkPrecN{} trafień
+wskazuje konstrukcję objętą regułą. Precyzja wynosi \pkPrec{} \%, a przedział Wilsona 95 \%
+to od \pkPrecLo{} \% do \pkPrecHi{} \% włącznie. Czułości sprawdzarki praca nie mierzy.
+
+Wynik wymaga 3 zastrzeżeń. Po pierwsze, trafienie wskazuje miejsce wyboru, a nie błąd
+aktu. Język prawny ma własne konwencje i własne procedury wykładni. Po drugie, nieostrość
+tekstu prawnego bywa celowa: słowo \pkq{niezwłocznie} zostawia sądowi ocenę przypadku
+(sekcja \ref{sec:limits}). Po trzecie, teksty pisane w PK także mają trafienia. Standard
+PK 0.1 zawiera \pkCorpusStdCfive{} zdania z 2 przeczeniami, czyli narusza własną regułę C5.
+Część trafień w tekstach PK jest fałszywa: sprawdzarka zgłasza przymiotnik w nazwie
+\pkq{małe litery} jako słowo nieostre.
+
+\begin{table}[tp]
+\centering
+\caption{P5: wynik sprawdzarki na korpusie. Mediana: mediana długości zdania w słowach.
+Kolumna 4: udział zdań dłuższych niż 25 słów w procentach. Trafienia: trafienia
+\pkLintChecks{} kontroli na 1000 słów. Kolumna końcowa: liczba wystąpień słowa \pkq{się}
+na 1000 słów; słowo \pkq{się} jest kandydatem do oceny, a nie naruszeniem.}
+\label{tab:corpus}
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Tekst & słowa & mediana & ponad 25 (\%) & trafienia & \pkq{się}\\
+\midrule
+\wiersze{data/table_corpus.tex}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\rysunek{corpus}{Lingwistyka korpusowa: liczba trafień sprawdzarki na 1000 słów w aktach
+prawnych i w tekstach pisanych w PK.}{fig:corpus}
