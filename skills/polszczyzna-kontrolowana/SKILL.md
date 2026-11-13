@@ -3,7 +3,7 @@ name: "polszczyzna-kontrolowana"
 description: "Polszczyzna Kontrolowana (PK) — controlled Polish that leaves every sentence exactly one meaning. Use whenever you write, rewrite or audit Polish text that people will act on (instrukcje, procedury, regulaminy, wymagania, specyfikacje, umowy, raporty techniczne, komunikaty z terminem lub kwotą) and whenever the user says \"napisz precyzyjnie\", \"jednoznacznie\", \"usuń niejednoznaczności\", \"sprawdź, czy to jest jednoznaczne\", \"polszczyzna kontrolowana\", \"napisz w PK\", \"sprawdź w PK\" or \"/pk\". Not for fiction, marketing copy or casual chat, and not when PK means primary key."
 ---
 
-# Polszczyzna Kontrolowana (PK) 0.1
+# Polszczyzna Kontrolowana (PK) 0.2
 
 PK to zwykły polski plus zbiór reguł. Każda reguła usuwa jedno źródło zdań, które mają więcej niż 1 znaczenie.
 
@@ -24,7 +24,7 @@ Ustal tryb na podstawie prośby użytkownika.
 W każdym trybie obowiązują 3 zasady.
 
 1. **Nie zgaduj faktów.** Jeżeli brakuje liczby, granicy, wykonawcy, obiektu lub daty, to wstaw znacznik `[DO USTALENIA: czego brakuje]`. Zdanie z wymyśloną liczbą szkodzi bardziej niż zdanie nieostre, bo czytelnik ufa liczbie.
-2. **Nie wybieraj znaczenia po cichu.** Jeżeli zdanie źródłowe ma 2 znaczenia, to zapisz oba znaczenia w tabeli „Decyzje i braki”. Jeżeli wybór zmienia obowiązek, kwotę, termin lub bezpieczeństwo, to wstaw znacznik zamiast wyboru. Jeżeli wybór nie zmienia żadnej z tych 4 rzeczy, to wybierz znaczenie, które zgadza się z resztą tekstu. Zapisz wybór w tabeli.
+2. **Nie wybieraj znaczenia po cichu.** Jeżeli zdanie źródłowe ma 2 znaczenia, to zapisz oba znaczenia w tabeli „Decyzje i braki”. Jeżeli wybór zmienia obowiązek, kwotę, datę lub bezpieczeństwo, to wstaw znacznik zamiast wyboru. Jeżeli wybór nie zmienia żadnej z tych 4 rzeczy, to wybierz znaczenie, które zgadza się z resztą tekstu. Zapisz wybór w tabeli.
 3. **Sprawdź wynik.** Po napisaniu tekstu wykonaj kroki z sekcji „Kontrola”. Policz słowa. Nie zastępuj liczenia szacunkiem.
 
 ## Słowa kluczowe wymagań
@@ -41,7 +41,7 @@ Używaj tych słów w regulaminie, wymaganiu, specyfikacji i umowie. Wzorem są 
 
 - Pisz te słowa wielkimi literami. Odmieniaj te słowa zwyczajnie: MUSZĄ, POWINNA, MOGĄ.
 - Znaczenie z tabeli ma tylko zapis wielkimi literami. W PK nie pisz tych słów małymi literami.
-- Nie twórz zakazu przez negację słowa MUSI. „Nie musi” znaczy brak wymogu, a nie zakaz.
+- Nie twórz zakazu przez przeczenie słowa MUSI. „Nie musi” znaczy brak wymogu, a nie zakaz.
 - Brak wymogu zapisz słowem MOŻE: „Operator MOŻE pominąć krok 3.”
 - Możliwość zdarzenia zapisz jako warunek: „Jeżeli pompa P1 pracuje bez wody, to pompa P1 przegrzewa się.”
 - Zdolność urządzenia zapisz liczbą: „Pompa P1 podaje co najwyżej 40 l/min.”
@@ -55,6 +55,11 @@ Każda reguła ma numer. Podawaj numer reguły w tabeli naruszeń i w tabeli „
 ### A. Słowa
 
 **A1. Jeden termin, jedno znaczenie.** Nazwij jedno pojęcie jednym terminem w całym tekście. Nie używaj jednego terminu dla 2 pojęć. Czytelnik traktuje nowe słowo jako nowy obiekt.
+Synonim terminu to dla czytelnika nowy termin. Wyszukaj każdy termin w słowniku synonimów. Jeżeli tekst zawiera synonim terminu, to wybierz dokładnie 1 opcję:
+- zastąp synonim terminem;
+- zdefiniuj synonim jako osobny termin.
+
+Zapisz synonimy terminu w kolumnie 3 sekcji „Słownik”.
 - Źle: „Zamknij zawór. Sprawdź, czy kurek jest szczelny.”
 - Dobrze: „Zamknij zawór Z1. Sprawdź, czy zawór Z1 jest szczelny.”
 
@@ -66,12 +71,12 @@ Każda reguła ma numer. Podawaj numer reguły w tabeli naruszeń i w tabeli „
 - Źle: „Jan powiedział Piotrowi, że jego pompa przecieka.”
 - Dobrze: „Jan powiedział Piotrowi, że pompa Piotra przecieka.”
 
-**A4. Definicje.** Używaj słowa w znaczeniu podstawowym i powszechnie przyjętym. Jeżeli zachodzi co najmniej 1 z 3 przypadków, to zdefiniuj termin przed pierwszym użyciem:
-- termin ma więcej niż 1 znaczenie;
-- termin nie ma mierzalnej granicy;
-- termin pochodzi z języka specjalistycznego.
+**A4. Definicje.** Używaj słowa w znaczeniu podstawowym i powszechnie przyjętym. Jeżeli zachodzi co najmniej 1 z 3 przypadków, to zdefiniuj słowo jako termin przed pierwszym użyciem:
+- słowo ma w słowniku języka polskiego co najmniej 2 znaczenia, które pasują do co najmniej 1 zdania tekstu;
+- słowo nie ma mierzalnej granicy;
+- słowo pochodzi z języka specjalistycznego.
 
-Wzór definicji: `[termin] oznacza [rodzaj], który [cecha odróżniająca]`. Nie używaj zdefiniowanego terminu w innym znaczeniu.
+Wzór definicji: `[termin] oznacza [rodzaj], który [cecha odróżniająca]`. Rodzaj to nazwa szersza niż termin: „zawór” to rodzaj dla terminu „zawór kulowy”. Definicja terminu T1 nie zawiera terminu T1. Jeżeli definicja terminu T1 zawiera termin T2, to definicja terminu T2 nie zawiera terminu T1. Nie używaj zdefiniowanego terminu w innym znaczeniu.
 
 **A5. Słowa nieostre.** Zastąp słowo nieostre liczbą z jednostką albo warunkiem, który czytelnik potrafi sprawdzić. Listę słów nieostrych zawiera sekcja „Słowa zakazane”.
 - Źle: „Regularnie sprawdzaj ciśnienie.”
@@ -94,11 +99,11 @@ Wzór definicji: `[termin] oznacza [rodzaj], który [cecha odróżniająca]`. Ni
 - działanie jednorazowe, czasownik dokonany: „Zamknij zawór Z1.”
 - działanie powtarzane, czasownik niedokonany i czas: „Sprawdzaj ciśnienie co 15 min przez 2 h.”
 
-**B4. Czynność jako czasownik.** Nazwij czynność czasownikiem, a nie rzeczownikiem z dopełniaczem. Nie łącz więcej niż 3 rzeczowników w jeden ciąg.
+**B4. Działanie jako czasownik.** Nazwij działanie czasownikiem, a nie rzeczownikiem z dopełniaczem. Nie łącz więcej niż 3 rzeczowników w jeden ciąg.
 - Źle: „kontrola pracownika” (2 znaczenia: pracownik kontroluje coś; ktoś kontroluje pracownika)
 - Dobrze: „Kierownik kontroluje pracownika.”
 
-**B5. Imiesłowy.** Nie używaj imiesłowów z końcówką „-ąc”, „-wszy”, „-łszy”. Napisz pełne zdanie. Imiesłów nie nazywa relacji czasu między działaniami i nie nazywa wykonawcy.
+**B5. Imiesłowy.** Nie używaj imiesłowów z końcówką „-ąc”, „-wszy”, „-łszy”. Napisz pełne zdanie. Imiesłów ukrywa relację czasu między działaniami. Imiesłów ukrywa wykonawcę.
 - Źle: „Otwierając zawór, obserwuj manometr.”
 - Dobrze: „Otwieraj zawór Z1. W tym samym czasie obserwuj manometr M1.”
 
@@ -110,13 +115,13 @@ Wzór definicji: `[termin] oznacza [rodzaj], który [cecha odróżniająca]`. Ni
 - „Tylko operator otwiera zawór Z1.” (inna osoba nie otwiera zaworu Z1)
 - „Operator otwiera tylko zawór Z1.” (operator nie otwiera innego zaworu)
 
-**B8. Długość.** Instrukcja ma co najwyżej 20 słów. Opis ma co najwyżej 25 słów. Akapit ma co najwyżej 6 zdań i 1 temat. Słowo to ciąg znaków między spacjami, który zawiera co najmniej 1 literę lub cyfrę. Każde zdanie opisu ma podmiot i orzeczenie.
+**B8. Długość.** Zdanie instrukcji ma co najwyżej 20 słów. Zdanie opisu ma co najwyżej 25 słów. Akapit ma co najwyżej 6 zdań i 1 temat. Słowo to ciąg znaków między spacjami, który zawiera co najmniej 1 literę lub cyfrę. Każde zdanie opisu ma podmiot i orzeczenie.
 
 ### C. Logika
 
 **C1. „Lub” i „albo”.** „Lub” znaczy: co najmniej 1 człon. „Albo” znaczy: dokładnie 1 człon. Nie używaj w tej roli słów „bądź”, „czy”, „względnie”, „ewentualnie”, „i/lub” ani ukośnika.
 - „Zapłać kartą lub gotówką.” (klient MOŻE użyć obu form w 1 płatności)
-- „Wybierz termin A albo termin B.” (klient wybiera dokładnie 1 termin)
+- „Wybierz datę A albo datę B.” (klient wybiera dokładnie 1 datę)
 
 **C2. „I” razem z „lub”.** Nie łącz słowa „i” ze słowem „lub” ani ze słowem „albo” w 1 zdaniu. Zapis „A i B lub C” ma 2 znaczenia: „(A i B) lub C” oraz „A i (B lub C)”. Użyj listy z reguły E2.
 
@@ -127,7 +132,7 @@ Wzór definicji: `[termin] oznacza [rodzaj], który [cecha odróżniająca]`. Ni
 | „Jeżeli W, to D.” | Spełniony warunek W wystarcza, żeby D obowiązywało. |
 | „Gdy Z, D.” | D zaczyna się w chwili zdarzenia Z. |
 | „Dopóki S, D.” | D obowiązuje przez cały czas trwania stanu S. |
-| „Tylko jeżeli W, D.” | D jest dozwolone wyłącznie przy spełnionym warunku W. |
+| „Tylko jeżeli W, D.” | D jest dozwolone tylko przy spełnionym warunku W. |
 
 Kolejność części zdania: stan, zdarzenie, wykonawca, słowo kluczowe, działanie. Wzorem kolejności jest notacja EARS.
 - Dobrze: „Dopóki pompa P1 pracuje, gdy ciśnienie p1 przekroczy 6,0 bar, sterownik MUSI wyłączyć pompę P1.”
@@ -173,7 +178,7 @@ Jeżeli przypadek przeciwny wymaga działania, to opisz przypadek przeciwny osob
 - Źle: „Wyślij raport do piątku.”
 - Dobrze: „Wyślij raport najpóźniej 2026-11-13 o godz. 16:00.”
 
-**D4. Terminy i częstość.** Dla terminu w dniach podaj 3 dane: zdarzenie początkowe, liczbę dni, dzień numer 1. Częstość zapisz jako „co N jednostek” albo „N razy na okres”. Słowo „dzień” znaczy w PK dzień kalendarzowy. Okres 24 h nazwij słowem „doba”.
+**D4. Okresy i częstość.** Dla okresu w dniach podaj 3 dane: zdarzenie początkowe, liczbę dni, dzień numer 1. Częstość zapisz jako „co N jednostek” albo „N razy na okres”. Słowo „dzień” znaczy w PK dzień kalendarzowy. Okres 24 h nazwij słowem „doba”.
 - Źle: „Złóż reklamację w ciągu 14 dni.”
 - Dobrze: „Złóż reklamację najpóźniej w dniu 14. Dzień 1 to dzień po dniu odbioru towaru.”
 
@@ -186,7 +191,7 @@ Jeżeli przypadek przeciwny wymaga działania, to opisz przypadek przeciwny osob
 
 ### E. Struktura tekstu
 
-**E1. Kroki.** Jedno polecenie zajmuje 1 zdanie i 1 krok. Jeżeli kolejność ma znaczenie, to ponumeruj kroki. Oczekiwany wynik kroku zapisz jako fakt po kroku: „Wynik: lampka L1 świeci.”
+**E1. Kroki.** Jedno polecenie zajmuje 1 zdanie i 1 krok. Jeżeli zmiana kolejności kroków zmienia wynik, to ponumeruj kroki. Oczekiwany wynik kroku zapisz jako fakt po kroku: „Wynik: lampka L1 świeci.”
 
 **E2. Listy.** Dla co najmniej 3 członów użyj listy pionowej. Nagłówek listy nazywa logikę:
 - „Wykonaj każdy krok w tej kolejności:”
@@ -225,24 +230,26 @@ Nie używaj słów „podobno”, „chyba”, „raczej”, „prawdopodobnie�
 
 | Nie pisz | Powód | Napisz |
 |---|---|---|
-| odpowiedni, właściwy, stosowny, należyty | brak kryterium | warunek, który czytelnik potrafi sprawdzić |
-| niezwłocznie, wkrótce, szybko, na bieżąco | brak czasu | „w czasie krótszym niż N” albo data z godziną |
-| regularnie, okresowo, często, rzadko, zwykle | brak częstości | „co N jednostek” |
-| kilka, kilkanaście, parę, wiele, większość | brak liczby („kilkanaście” obejmuje wartości od 11 do 19) | liczba |
-| duży, mały, wysoki, niski, długi, krótki | brak miary | liczba z jednostką |
-| około, mniej więcej, prawie | brak tolerancji | wartość ± tolerancja |
+| odpowiedni, właściwy, stosowny, należyty, adekwatny, trafny, słuszny | brak kryterium | warunek, który czytelnik potrafi sprawdzić |
+| niezwłocznie, bezzwłocznie, natychmiast, zaraz, wkrótce, niebawem, niedługo, pilnie, szybko, wolno (jako tempo), na bieżąco | brak czasu | „w czasie krótszym niż N” albo data z godziną |
+| regularnie, okresowo, często, rzadko, zwykle, zazwyczaj, przeważnie, najczęściej, nierzadko, sporadycznie, okazjonalnie | brak częstości | „co N jednostek” |
+| kilka, kilkanaście, parę, paręnaście, wiele, dużo, sporo, mnóstwo, szereg, mało, niewiele, trochę, nieco, większość, mniejszość | brak liczby („kilkanaście” obejmuje wartości od 11 do 19) | liczba |
+| duży, mały, wysoki, niski, długi, krótki, niewielki, nieduży, drobny, znaczny, obszerny | brak miary | liczba z jednostką |
+| około, mniej więcej, prawie, niemal, niemalże, circa, ok., rzędu, koło (przed liczbą), blisko (przed liczbą) | brak tolerancji | wartość ± tolerancja |
 | do, powyżej, poniżej, ponad, między, minimum, maksimum (jako granica) | granica włączona albo wyłączona | zapis z reguły D2 |
-| dziś, jutro, wczoraj, obecnie, ostatnio, następny, przyszły, zeszły | znaczenie zależy od dnia czytania | data |
+| dziś, dzisiaj, jutro, wczoraj, teraz, obecnie, aktualnie, współcześnie, ostatnio, niedawno, następny, kolejny, przyszły, poprzedni, zeszły, ubiegły, miniony | znaczenie zależy od dnia czytania | data |
 | ostatni | 2 znaczenia: końcowy; najnowszy | „końcowy” albo nazwa z datą |
 | bądź, czy (jako spójnik), względnie, ewentualnie, i/lub, ukośnik | 2 znaczenia | „lub” albo „albo” |
-| jeśli, o ile, w razie, chyba że, pod warunkiem że | więcej niż 1 słowo dla 1 relacji | wzór z reguły C3 |
+| jeśli, o ile, w razie, chyba że, pod warunkiem że, gdyby, skoro, kiedy (jako warunek), jak (jako warunek) | więcej niż 1 słowo dla 1 relacji | wzór z reguły C3 |
 | należy, trzeba, powinno się, wymaga się | brak wykonawcy | wykonawca i słowo kluczowe |
 | musi, powinien, może (małymi literami) | 2 znaczenia | słowo kluczowe albo warunek |
 | itp., itd., i inne, m.in. | lista otwarta | pełna lista albo „Przykłady (lista niepełna):” |
-| dowolny, niektóre, pewien, jakiś | brak ilości | „każdy”, „dokładnie 1”, „co najmniej 1” |
-| podobno, chyba, raczej, prawdopodobnie | brak źródła | znacznik z modułu F |
+| dowolny, niektóre, pewien, jakiś, jakikolwiek, którykolwiek, niejaki | brak ilości | „każdy”, „dokładnie 1”, „co najmniej 1” |
+| podobno, ponoć, rzekomo, jakoby, chyba, bodaj, raczej, pewnie, prawdopodobnie, przypuszczalnie | brak źródła | znacznik z modułu F |
 | on, ona, go, jej, jego, ich, swój, ten, to (zamiast nazwy) | odniesienie do 2 obiektów | nazwa obiektu |
 | imiesłów z końcówką -ąc, -wszy, -łszy | ukryta relacja czasu | pełne zdanie |
+
+Istnieją słowa zakazane, których tabela nie wymienia. Przed użyciem synonimu słowa z kolumny 1 przeczytaj powód z kolumny 2. Jeżeli powód dotyczy synonimu, to synonim jest zakazany.
 
 ## Słownik terminów PK
 
@@ -252,9 +259,9 @@ Nie używaj słów „podobno”, „chyba”, „raczej”, „prawdopodobnie�
 | wykonawca | Osoba lub urządzenie, które wykonuje działanie. |
 | obiekt | Rzecz, o której mówi zdanie. |
 | termin | Słowo lub wyrażenie, które ma w tekście 1 zdefiniowane znaczenie. |
-| znaczenie | Jeden sposób odczytania zdania. |
-| instrukcja | Zdanie, które każe czytelnikowi wykonać działanie. |
-| opis | Zdanie, które stwierdza fakt lub wymóg. |
+| znaczenie | Jeden sposób odczytania słowa albo zdania. |
+| zdanie instrukcji | Zdanie, które każe czytelnikowi wykonać działanie. |
+| zdanie opisu | Zdanie, które stwierdza fakt lub wymóg. |
 | słowo nieostre | Słowo bez mierzalnej granicy. |
 
 Jeżeli tekst ma co najmniej 3 terminy, to dodaj przed treścią sekcję „Słownik”. Sekcja „Słownik” ma 3 kolumny: termin, definicja, słowa zakazane dla tego pojęcia.
@@ -268,7 +275,7 @@ Po napisaniu tekstu wykonaj każdy krok w tej kolejności:
 3. Wskaż wykonawcę w każdym zdaniu o działaniu.
 4. Sprawdź każdą liczbę: jednostka, warunki odniesienia, zapis granicy z reguły D2.
 5. Sprawdź każdą datę i każdą godzinę: format z reguły D3.
-6. Sprawdź każdy termin: 1 nazwa w całym tekście i definicja w sekcji „Słownik”.
+6. Sprawdź każdy termin: 1 nazwa w całym tekście i definicja w sekcji „Słownik”. Wyszukaj w tekście synonimy każdego terminu.
 7. Wykonaj test 2 znaczeń. Dla każdego zdania poszukaj drugiego znaczenia. Przeredaguj każde zdanie, które ma drugie znaczenie.
 
 Jeżeli masz narzędzie do uruchamiania kodu, to policz słowa skryptem. Liczenie w pamięci daje błędy.
@@ -283,7 +290,7 @@ for line in sys.stdin:
             print(n, s)
 ```
 
-Skrypt wypisuje każde zdanie, które ma więcej niż 20 słów. Opis, który ma od 21 do 25 słów włącznie, spełnia regułę B8. Skrót z kropką dzieli zdanie w złym miejscu. Zdanie ze skrótem policz ręcznie.
+Skrypt wypisuje każde zdanie, które ma więcej niż 20 słów. Zdanie opisu, które ma od 21 do 25 słów włącznie, spełnia regułę B8. Skrót z kropką dzieli zdanie w złym miejscu. Zdanie ze skrótem policz ręcznie.
 
 ## Format wyniku
 
@@ -313,7 +320,7 @@ Decyzje i braki:
 |---|---|---|---|---|
 | 1 | „należy”, „trzeba”, „wysłać” | B1 | Brak wykonawcy. | Wykonawcą jest czytelnik instrukcji. Tryb rozkazujący. |
 | 2 | „regularnie” | A5 | Brak częstości. | `[DO USTALENIA]` |
-| 3 | „do piątku” | D2, D3 | 2 znaczenia: termin obejmuje piątek; termin kończy się przed piątkiem. Brak daty. | `[DO USTALENIA]` |
+| 3 | „do piątku” | D2, D3 | 2 znaczenia: okres obejmuje piątek; okres kończy się przed piątkiem. Brak daty. | `[DO USTALENIA]` |
 | 4 | „wysłać” | B1 | Brak odbiorcy. | `[DO USTALENIA]` |
 
 ## Granice standardu

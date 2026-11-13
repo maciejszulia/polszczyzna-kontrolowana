@@ -4,7 +4,7 @@ PK to ulepszenie języka polskiego dla tekstów, według których ktoś działa.
 polski plus zbiór reguł. Każda reguła usuwa jedno źródło zdań, które mają więcej niż
 jedno znaczenie. Czytelnik, który zna konwencję, odczytuje każde zdanie w jeden sposób.
 
-Wersja 0.1. Autor: Maciej Szulia. Pełny standard: [`SKILL.md`](skills/polszczyzna-kontrolowana/SKILL.md).
+Wersja 0.2. Autor: Maciej Szulia. Pełny standard: [`SKILL.md`](skills/polszczyzna-kontrolowana/SKILL.md).
 
 ## Po co
 
@@ -16,7 +16,7 @@ konwencją.
 |---|---|---|
 | „Dzieci do 3 lat wchodzą bezpłatnie.” | mniej niż 3 lata; mniej niż 4 lata | „Dziecko, które ma mniej niż 4 lata, wchodzi bezpłatnie.” |
 | „Zawór zamyka się po pracy.” | ktoś zamyka zawór; zawór zamyka się sam; czytelnik ma zamknąć zawór | „Operator zamyka zawór Z1 po zakończeniu pracy.” |
-| „Wyślij raport do piątku.” | termin obejmuje piątek; termin kończy się przed piątkiem | „Wyślij raport najpóźniej 2026-11-13 o godz. 16:00.” |
+| „Wyślij raport do piątku.” | okres obejmuje piątek; okres kończy się przed piątkiem | „Wyślij raport najpóźniej 2026-11-13 o godz. 16:00.” |
 | „Wszystkie zawory nie są zamknięte.” | żaden nie jest zamknięty; nie każdy jest zamknięty | „Żaden zawór nie jest zamknięty.” albo „Co najmniej 1 zawór jest otwarty.” |
 
 ## Co zawiera standard
