@@ -1,0 +1,71 @@
+{
+  "day": "2026-11-13",
+  "measured_at": "2026-11-13 14:20",
+  "summary": {
+    "sessions": 4,
+    "skill_sessions": 4,
+    "calls": 138,
+    "out": 448583,
+    "cache_write": 1684347,
+    "cache_read": 48282094,
+    "windows_by_active_sessions": {
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 1
+    },
+    "max_parallel": 4,
+    "minutes_at_max": 5,
+    "orders": 6,
+    "order_words": 140,
+    "order_lint_per_1000_words": 21.428571428571427,
+    "out_per_order_median": 49367.0,
+    "skill_tokens": 8283,
+    "skill_cache_read": 985677,
+    "tokenizer": "o200k_base",
+    "pk_context_cost_out_equiv": 19714,
+    "reruns_to_break_even": 0.3993262705856139
+  },
+  "trial": {
+    "haiku": {
+      "ordinary": {
+        "n": 176,
+        "ok": 0.2727272727272727,
+        "ask": 0.45454545454545453,
+        "wrong": 0.2727272727272727,
+        "in_mean": 766.5681818181819,
+        "out_mean": 198.23863636363637,
+        "tokens_to_correct": 1603.0464876033059
+      },
+      "pk": {
+        "n": 176,
+        "ok": 0.8636363636363636,
+        "ask": 0.06818181818181818,
+        "wrong": 0.06818181818181818,
+        "in_mean": 780.0056818181819,
+        "out_mean": 97.57386363636364,
+        "tokens_to_correct": 997.2494834710744
+      }
+    },
+    "sonnet": {
+      "ordinary": {
+        "n": 176,
+        "ok": 0.125,
+        "ask": 0.75,
+        "wrong": 0.125,
+        "in_mean": 745.8068181818181,
+        "out_mean": 157.3181818181818,
+        "tokens_to_correct": 1639.3132102272727
+      },
+      "pk": {
+        "n": 176,
+        "ok": 0.8806818181818182,
+        "ask": 0.10795454545454546,
+        "wrong": 0.011363636363636364,
+        "in_mean": 758.9147727272727,
+        "out_mean": 82.44318181818181,
+        "tokens_to_correct": 941.7472559400826
+      }
+    }
+  }
+}

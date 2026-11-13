@@ -1,0 +1,264 @@
+{"pid": "A1:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 765, "out_tokens": 5}
+{"pid": "A1:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy „kurek” w tekście oznacza ten sam element, który operator przed chwilą zamknął jako „zawór”?", "in_tokens": 763, "out_tokens": 310}
+{"pid": "A1:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 771, "out_tokens": 112}
+{"pid": "A1:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 772, "out_tokens": 5}
+{"pid": "A1:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 770, "out_tokens": 122}
+{"pid": "A1:pk2", "sample": 1, "model": "haiku", "answer": "Nie.", "in_tokens": 770, "out_tokens": 143}
+{"pid": "A2:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy polecenie „Wymień filtr” dotyczy wszystkich filtrów w urządzeniu (F1 i F2), czy tylko jednego, konkretnego filtru?", "in_tokens": 765, "out_tokens": 346}
+{"pid": "A2:nat", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 764, "out_tokens": 5}
+{"pid": "A2:pk1", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy polecenie „Wymień co najmniej 1 filtr” oznacza wymianę filtra, czy tylko podanie jego nazwy?", "in_tokens": 774, "out_tokens": 412}
+{"pid": "A2:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 773, "out_tokens": 499}
+{"pid": "A2:pk2", "sample": 0, "model": "haiku", "answer": "Nie.", "in_tokens": 770, "out_tokens": 6}
+{"pid": "A2:pk2", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 768, "out_tokens": 403}
+{"pid": "A2b:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 807, "out_tokens": 254}
+{"pid": "A2b:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 806, "out_tokens": 261}
+{"pid": "A2b:pk1", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 812, "out_tokens": 5}
+{"pid": "A2b:pk1", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 811, "out_tokens": 5}
+{"pid": "A2b:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 815, "out_tokens": 5}
+{"pid": "A2b:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 816, "out_tokens": 5}
+{"pid": "A3:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy zaimek „jego” odnosi się do Jana, czy do Piotra?", "in_tokens": 744, "out_tokens": 170}
+{"pid": "A3:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy słowo „jego” odnosi się do pompy Jana, czy do pompy Piotra?", "in_tokens": 744, "out_tokens": 133}
+{"pid": "A3:pk1", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 745, "out_tokens": 281}
+{"pid": "A3:pk1", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy pompa, o której mowa w tekście, należy do Piotra?", "in_tokens": 744, "out_tokens": 139}
+{"pid": "A3:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 746, "out_tokens": 344}
+{"pid": "A3:pk2", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy w tekście jest podane, że pompa Piotra faktycznie przecieka, czy tylko że Jan tak powiedział?", "in_tokens": 744, "out_tokens": 482}
+{"pid": "A3b:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy słowo „swoje” odnosi się do operatora, czy do kierownika?", "in_tokens": 754, "out_tokens": 398}
+{"pid": "A3b:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 754, "out_tokens": 770}
+{"pid": "A3b:pk1", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 756, "out_tokens": 153}
+{"pid": "A3b:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 756, "out_tokens": 5}
+{"pid": "A3b:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 754, "out_tokens": 5}
+{"pid": "A3b:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 754, "out_tokens": 5}
+{"pid": "A3c:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy słowo „go” w zdaniu „Wymień go” odnosi się do zaworu Z1, czy do filtra F1?", "in_tokens": 746, "out_tokens": 303}
+{"pid": "A3c:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy słowo „go” w zdaniu „Wymień go” odnosi się do zaworu Z1, czy do filtra F1?", "in_tokens": 748, "out_tokens": 293}
+{"pid": "A3c:pk1", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 754, "out_tokens": 263}
+{"pid": "A3c:pk1", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 752, "out_tokens": 5}
+{"pid": "A3c:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 752, "out_tokens": 5}
+{"pid": "A3c:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 752, "out_tokens": 5}
+{"pid": "A4:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy słowo „ostatni” w poleceniu oznacza raport nr 5 (ostatni w kolejności, czyli końcowy), czy raport nr 3 (najnowszy gotowy)?", "in_tokens": 812, "out_tokens": 300}
+{"pid": "A4:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy „ostatni raport” oznacza raport końcowy (nr 5), a nie najnowszy gotowy raport (nr 3)?", "in_tokens": 812, "out_tokens": 197}
+{"pid": "A4:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 818, "out_tokens": 5}
+{"pid": "A4:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 817, "out_tokens": 190}
+{"pid": "A4:pk2", "sample": 0, "model": "haiku", "answer": "Tak. Nie. Tekst mówi tylko „raport końcowy”, a w opisie raportem końcowym jest raport nr 5, nie raport nr 3. Raport nr 3 jest tylko najnowszym z gotowych. Zatem polecenie dotyczy raportu nr 5, a nie nr 3. Poprawna odpowiedź na pytanie: **Nie.**", "in_tokens": 812, "out_tokens": 137}
+{"pid": "A4:pk2", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 812, "out_tokens": 237}
+{"pid": "A5a:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Jak często dokładnie należy sprawdzać ciśnienie, żeby sprawdzanie uznać za wystarczająco regularne?", "in_tokens": 777, "out_tokens": 225}
+{"pid": "A5a:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Jak często dokładnie należy sprawdzać ciśnienie, np. ile razy dziennie lub co ile godzin?", "in_tokens": 776, "out_tokens": 256}
+{"pid": "A5a:pk1", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 782, "out_tokens": 5}
+{"pid": "A5a:pk1", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 781, "out_tokens": 5}
+{"pid": "A5a:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 782, "out_tokens": 5}
+{"pid": "A5a:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 780, "out_tokens": 136}
+{"pid": "A5b:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Jak długi czas od wykrycia awarii mieści się w słowie „niezwłocznie” w tym tekście?", "in_tokens": 789, "out_tokens": 310}
+{"pid": "A5b:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Jaki maksymalny czas od wykrycia awarii do jej zgłoszenia uznajecie za „niezwłoczny”?", "in_tokens": 789, "out_tokens": 283}
+{"pid": "A5b:pk1", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 804, "out_tokens": 5}
+{"pid": "A5b:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 806, "out_tokens": 5}
+{"pid": "A5b:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 805, "out_tokens": 5}
+{"pid": "A5b:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 806, "out_tokens": 5}
+{"pid": "A5c:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Ile dokładnie kropli oleju miałeś(-aś) na myśli, pisząc „kilka”?", "in_tokens": 749, "out_tokens": 366}
+{"pid": "A5c:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Ile dokładnie kropli oleju miałeś na myśli, pisząc „kilka”?", "in_tokens": 747, "out_tokens": 266}
+{"pid": "A5c:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 756, "out_tokens": 5}
+{"pid": "A5c:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 756, "out_tokens": 5}
+{"pid": "A5c:pk2", "sample": 0, "model": "haiku", "answer": "Nie.", "in_tokens": 756, "out_tokens": 6}
+{"pid": "A5c:pk2", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 756, "out_tokens": 5}
+{"pid": "A6:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy zakaz obejmuje także śrubokręty, czyli przedmioty niewymienione w tekście, a które nie są ostrzami ani nożycami?", "in_tokens": 753, "out_tokens": 248}
+{"pid": "A6:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy słowo „itp.” w zakazie obejmuje także śrubokręty, czyli czy śrubokręt należy do przedmiotów zakazanych?", "in_tokens": 755, "out_tokens": 315}
+{"pid": "A6:pk1", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy lista „noży; nożyczek” jest zamkniętą listą wszystkich zakazanych przedmiotów, czy tylko przykładami?", "in_tokens": 759, "out_tokens": 283}
+{"pid": "A6:pk1", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy lista zakazanych przedmiotów („noży”, „nożyczek”) jest zamknięta, czy też śrubokręt jest objęty zakazem w inny sposób?", "in_tokens": 758, "out_tokens": 291}
+{"pid": "A6:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 771, "out_tokens": 5}
+{"pid": "A6:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 770, "out_tokens": 5}
+{"pid": "B1:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy zawór zamyka się sam po pracy, czy ktoś go zamyka i kto to jest?", "in_tokens": 733, "out_tokens": 166}
+{"pid": "B1:nat", "sample": 1, "model": "haiku", "answer": "Tekst mówi, że zawór zamyka się po pracy, ale nie wskazuje, kto go zamyka. Tekst nie rozstrzyga pytania. PYTANIE Kto dokładnie zamyka zawór po pracy: człowiek, czy urządzenie działające automatycznie?", "in_tokens": 734, "out_tokens": 107}
+{"pid": "B1:pk1", "sample": 0, "model": "haiku", "answer": "Tak? Nie. Tekst mówi, że zawór Z1 zamyka sterownik, a nie człowiek, więc odpowiedź brzmi: Nie.", "in_tokens": 747, "out_tokens": 60}
+{"pid": "B1:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 745, "out_tokens": 5}
+{"pid": "B1:pk2", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy słowo „operator” w tym tekście oznacza człowieka, czy może urządzenie lub system automatyczny?", "in_tokens": 743, "out_tokens": 387}
+{"pid": "B1:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 745, "out_tokens": 223}
+{"pid": "B2:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 752, "out_tokens": 5}
+{"pid": "B2:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 754, "out_tokens": 5}
+{"pid": "B2:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 801, "out_tokens": 151}
+{"pid": "B2:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 801, "out_tokens": 126}
+{"pid": "B2:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 802, "out_tokens": 149}
+{"pid": "B2:pk2", "sample": 1, "model": "haiku", "answer": "Nie.", "in_tokens": 800, "out_tokens": 164}
+{"pid": "B2b:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 751, "out_tokens": 5}
+{"pid": "B2b:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 750, "out_tokens": 5}
+{"pid": "B2b:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 798, "out_tokens": 157}
+{"pid": "B2b:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 798, "out_tokens": 161}
+{"pid": "B2b:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 799, "out_tokens": 148}
+{"pid": "B2b:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 800, "out_tokens": 5}
+{"pid": "B4:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 742, "out_tokens": 5}
+{"pid": "B4:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 742, "out_tokens": 5}
+{"pid": "B4:pk1", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 743, "out_tokens": 61}
+{"pid": "B4:pk1", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 745, "out_tokens": 79}
+{"pid": "B4:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 744, "out_tokens": 79}
+{"pid": "B4:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 745, "out_tokens": 5}
+{"pid": "B4b:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 741, "out_tokens": 158}
+{"pid": "B4b:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 740, "out_tokens": 5}
+{"pid": "B4b:pk1", "sample": 0, "model": "haiku", "answer": "Nie.", "in_tokens": 742, "out_tokens": 105}
+{"pid": "B4b:pk1", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 743, "out_tokens": 102}
+{"pid": "B4b:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 745, "out_tokens": 153}
+{"pid": "B4b:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 744, "out_tokens": 125}
+{"pid": "B5:nat", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 740, "out_tokens": 465}
+{"pid": "B5:nat", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 738, "out_tokens": 455}
+{"pid": "B5:pk1", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy operator również wychodził z hali?", "in_tokens": 750, "out_tokens": 229}
+{"pid": "B5:pk1", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy w tekście operator również wychodził z hali, czy tylko kierownik?", "in_tokens": 748, "out_tokens": 194}
+{"pid": "B5:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 749, "out_tokens": 5}
+{"pid": "B5:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 747, "out_tokens": 5}
+{"pid": "B6a:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 791, "out_tokens": 166}
+{"pid": "B6a:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 791, "out_tokens": 153}
+{"pid": "B6a:pk1", "sample": 0, "model": "haiku", "answer": "Nie.", "in_tokens": 794, "out_tokens": 354}
+{"pid": "B6a:pk1", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 795, "out_tokens": 424}
+{"pid": "B6a:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 792, "out_tokens": 5}
+{"pid": "B6a:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 794, "out_tokens": 158}
+{"pid": "B6b:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 748, "out_tokens": 5}
+{"pid": "B6b:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 748, "out_tokens": 90}
+{"pid": "B6b:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 760, "out_tokens": 125}
+{"pid": "B6b:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 758, "out_tokens": 5}
+{"pid": "B6b:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 767, "out_tokens": 236}
+{"pid": "B6b:pk2", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy awaria wystąpiła w biurze, w którym odbyło się spotkanie, czy w innym miejscu?", "in_tokens": 767, "out_tokens": 186}
+{"pid": "B6c:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy polecenie „pompy” obejmuje wszystkie 5 pomp w instalacji, czy tylko określoną ich liczbę?", "in_tokens": 778, "out_tokens": 308}
+{"pid": "B6c:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy polecenie „Sprawdź 3 zawory i pompy” oznacza wszystkie pompy w instalacji (czyli 5), czy określoną, podaną przez Pana/Panią liczbę pomp?", "in_tokens": 780, "out_tokens": 357}
+{"pid": "B6c:pk1", "sample": 0, "model": "haiku", "answer": "Nie.", "in_tokens": 782, "out_tokens": 124}
+{"pid": "B6c:pk1", "sample": 1, "model": "haiku", "answer": "Nie.", "in_tokens": 785, "out_tokens": 103}
+{"pid": "B6c:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 784, "out_tokens": 5}
+{"pid": "B6c:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 785, "out_tokens": 5}
+{"pid": "B7:nat", "sample": 0, "model": "haiku", "answer": "Nie.", "in_tokens": 765, "out_tokens": 182}
+{"pid": "B7:nat", "sample": 1, "model": "haiku", "answer": "Nie.", "in_tokens": 765, "out_tokens": 194}
+{"pid": "B7:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 784, "out_tokens": 348}
+{"pid": "B7:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 786, "out_tokens": 194}
+{"pid": "B7:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 764, "out_tokens": 124}
+{"pid": "B7:pk2", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 766, "out_tokens": 5}
+{"pid": "C1:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy zdanie „Zapłać kartą lub gotówką” wyklucza płatność częściowo kartą i częściowo gotówką?", "in_tokens": 763, "out_tokens": 189}
+{"pid": "C1:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy tekst „Zapłać kartą lub gotówką” dopuszcza łączenie obu form płatności w ramach jednej transakcji?", "in_tokens": 761, "out_tokens": 186}
+{"pid": "C1:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 815, "out_tokens": 144}
+{"pid": "C1:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 813, "out_tokens": 134}
+{"pid": "C1:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 815, "out_tokens": 169}
+{"pid": "C1:pk2", "sample": 1, "model": "haiku", "answer": "Nie.", "in_tokens": 813, "out_tokens": 239}
+{"pid": "C1b:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 813, "out_tokens": 5}
+{"pid": "C1b:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 813, "out_tokens": 5}
+{"pid": "C1b:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 864, "out_tokens": 5}
+{"pid": "C1b:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 865, "out_tokens": 5}
+{"pid": "C1b:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 864, "out_tokens": 246}
+{"pid": "C1b:pk2", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 866, "out_tokens": 413}
+{"pid": "C2:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy polecenie oznacza „(P1 i P2) lub P3”, czy „P1 i (P2 lub P3)”?", "in_tokens": 757, "out_tokens": 494}
+{"pid": "C2:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy spójnik „lub” w zdaniu ma wiązać się z całym wyrażeniem „pompę P1 i pompę P2”, czyli oznaczać „(P1 i P2) lub P3”, czy tylko z „pompę P2”, czyli oznaczać „P1 i (P2 lub P3)”?", "in_tokens": 757, "out_tokens": 332}
+{"pid": "C2:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 787, "out_tokens": 77}
+{"pid": "C2:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 787, "out_tokens": 115}
+{"pid": "C2:pk2", "sample": 0, "model": "haiku", "answer": "Nie.", "in_tokens": 775, "out_tokens": 159}
+{"pid": "C2:pk2", "sample": 1, "model": "haiku", "answer": "Nie.", "in_tokens": 775, "out_tokens": 174}
+{"pid": "C3:nat", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 769, "out_tokens": 405}
+{"pid": "C3:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 769, "out_tokens": 461}
+{"pid": "C3:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 817, "out_tokens": 5}
+{"pid": "C3:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 817, "out_tokens": 5}
+{"pid": "C3:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 771, "out_tokens": 297}
+{"pid": "C3:pk2", "sample": 1, "model": "haiku", "answer": "Nie.", "in_tokens": 775, "out_tokens": 179}
+{"pid": "C4:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 779, "out_tokens": 5}
+{"pid": "C4:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 781, "out_tokens": 5}
+{"pid": "C4:pk1", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 780, "out_tokens": 80}
+{"pid": "C4:pk1", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 780, "out_tokens": 5}
+{"pid": "C4:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 782, "out_tokens": 5}
+{"pid": "C4:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 781, "out_tokens": 113}
+{"pid": "D1:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 763, "out_tokens": 5}
+{"pid": "D1:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy wartość „2,5” w tekście oznacza 2,5 bar nadciśnienia (a nie ciśnienie bezwzględne albo inną jednostkę)?", "in_tokens": 762, "out_tokens": 395}
+{"pid": "D1:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 769, "out_tokens": 5}
+{"pid": "D1:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 770, "out_tokens": 5}
+{"pid": "D1:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 770, "out_tokens": 248}
+{"pid": "D1:pk2", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 771, "out_tokens": 76}
+{"pid": "D2a:nat", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 765, "out_tokens": 5}
+{"pid": "D2a:nat", "sample": 1, "model": "haiku", "answer": "Tak? Nie — tekst mówi o dzieciach „do 3 lat”, a Ola ma 3 lata i 5 miesięcy, więc nie mieści się w tym przedziale. Odpowiedź: **Nie**.", "in_tokens": 767, "out_tokens": 82}
+{"pid": "D2a:pk1", "sample": 0, "model": "haiku", "answer": "Tak? Nie — tekst rozstrzyga pytanie: Ola ma 3 lata i 5 miesięcy, czyli nie jest młodsza niż 3 lata, więc warunek „mniej niż 3 lata\" nie jest spełniony. Odpowiedź: **Nie.**", "in_tokens": 777, "out_tokens": 105}
+{"pid": "D2a:pk1", "sample": 1, "model": "haiku", "answer": "Nie.", "in_tokens": 776, "out_tokens": 53}
+{"pid": "D2a:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 776, "out_tokens": 57}
+{"pid": "D2a:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 777, "out_tokens": 5}
+{"pid": "D2b:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 764, "out_tokens": 5}
+{"pid": "D2b:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 765, "out_tokens": 5}
+{"pid": "D2b:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 777, "out_tokens": 5}
+{"pid": "D2b:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 778, "out_tokens": 5}
+{"pid": "D2b:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 786, "out_tokens": 5}
+{"pid": "D2b:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 786, "out_tokens": 5}
+{"pid": "D2c:nat", "sample": 0, "model": "haiku", "answer": "Tak, tekst rozstrzyga pytanie. Według niego dostawa jest bezpłatna dla zamówień *powyżej* 100 zł, a zamówienie ma wartość dokładnie 100 zł, czyli nie jest powyżej tej kwoty. Odpowiedź: **Nie**", "in_tokens": 775, "out_tokens": 109}
+{"pid": "D2c:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 774, "out_tokens": 5}
+{"pid": "D2c:pk1", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 781, "out_tokens": 82}
+{"pid": "D2c:pk1", "sample": 1, "model": "haiku", "answer": "Tekst podaje warunek „wartość większa niż 100 zł\". Zamówienie ma wartość dokładnie 100 zł, a więc nie jest większa niż 100 zł. Tekst rozstrzyga pytanie. Nie", "in_tokens": 782, "out_tokens": 85}
+{"pid": "D2c:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 781, "out_tokens": 5}
+{"pid": "D2c:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 781, "out_tokens": 5}
+{"pid": "D2d:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy zakres „między 10 °C a 30 °C” obejmuje wartości graniczne 10 °C i 30 °C?", "in_tokens": 782, "out_tokens": 230}
+{"pid": "D2d:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy wartość 30 °C należy do zakresu pracy urządzenia, czyli czy górna granica „30 °C” jest wliczona w zakres?", "in_tokens": 783, "out_tokens": 281}
+{"pid": "D2d:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 786, "out_tokens": 5}
+{"pid": "D2d:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 785, "out_tokens": 5}
+{"pid": "D2d:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 792, "out_tokens": 65}
+{"pid": "D2d:pk2", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 792, "out_tokens": 58}
+{"pid": "D2e:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy przedział „18–25 lat” obejmuje osoby, które ukończyły 25 lat, ale nie ukończyły jeszcze 26 lat, czyli czy Adam, mający 25 lat i 6 miesięcy, mieści się w tym przedziale?", "in_tokens": 762, "out_tokens": 608}
+{"pid": "D2e:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy w tekście wiek „18–25 lat” oznacza, że osoba, która ukończyła 25 lat i jest już w kolejnym roku życia (np. 25 lat i 6 miesięcy), jest już poza tym przedziałem?", "in_tokens": 758, "out_tokens": 352}
+{"pid": "D2e:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 776, "out_tokens": 62}
+{"pid": "D2e:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 775, "out_tokens": 5}
+{"pid": "D2e:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 778, "out_tokens": 69}
+{"pid": "D2e:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 775, "out_tokens": 5}
+{"pid": "D3a:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 774, "out_tokens": 5}
+{"pid": "D3a:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 772, "out_tokens": 5}
+{"pid": "D3a:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 792, "out_tokens": 5}
+{"pid": "D3a:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 791, "out_tokens": 5}
+{"pid": "D3a:pk2", "sample": 0, "model": "haiku", "answer": "Nie.", "in_tokens": 778, "out_tokens": 152}
+{"pid": "D3a:pk2", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 779, "out_tokens": 288}
+{"pid": "D3b:nat", "sample": 0, "model": "haiku", "answer": "Nie.", "in_tokens": 778, "out_tokens": 185}
+{"pid": "D3b:nat", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 777, "out_tokens": 210}
+{"pid": "D3b:pk1", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 783, "out_tokens": 141}
+{"pid": "D3b:pk1", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 781, "out_tokens": 142}
+{"pid": "D3b:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 782, "out_tokens": 5}
+{"pid": "D3b:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 782, "out_tokens": 116}
+{"pid": "D3c:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy „następny piątek” oznacza piątek 2026-11-13, czy piątek 2026-11-20?", "in_tokens": 782, "out_tokens": 332}
+{"pid": "D3c:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy „następny piątek” oznacza piątek 13 listopada 2026, czy piątek 20 listopada 2026?", "in_tokens": 782, "out_tokens": 271}
+{"pid": "D3c:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 785, "out_tokens": 5}
+{"pid": "D3c:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 783, "out_tokens": 162}
+{"pid": "D3c:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 782, "out_tokens": 98}
+{"pid": "D3c:pk2", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 784, "out_tokens": 111}
+{"pid": "D4a:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Od kiedy liczy się 14 dni: od daty odbioru towaru (2026-11-02), czy od innego zdarzenia?", "in_tokens": 772, "out_tokens": 247}
+{"pid": "D4a:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Od którego zdarzenia liczy się 14-dniowy termin: od odebrania towaru przez klienta (2026-11-02), czy od innej daty?", "in_tokens": 774, "out_tokens": 445}
+{"pid": "D4a:pk1", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 794, "out_tokens": 110}
+{"pid": "D4a:pk1", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 794, "out_tokens": 181}
+{"pid": "D4a:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 798, "out_tokens": 176}
+{"pid": "D4a:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 798, "out_tokens": 144}
+{"pid": "D4b:nat", "sample": 0, "model": "haiku", "answer": "Nie.", "in_tokens": 782, "out_tokens": 131}
+{"pid": "D4b:nat", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 782, "out_tokens": 208}
+{"pid": "D4b:pk1", "sample": 0, "model": "haiku", "answer": "Nie.", "in_tokens": 809, "out_tokens": 177}
+{"pid": "D4b:pk1", "sample": 1, "model": "haiku", "answer": "Nie.", "in_tokens": 808, "out_tokens": 134}
+{"pid": "D4b:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 847, "out_tokens": 119}
+{"pid": "D4b:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 846, "out_tokens": 126}
+{"pid": "D5:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy wzrost o 1 % oznacza wzrost o 1 punkt procentowy (do 5 %), czy o 1 % wartości wyjściowej (do 4,04 %)?", "in_tokens": 763, "out_tokens": 253}
+{"pid": "D5:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Czy wzrost o 1 % oznacza wzrost o 1 punkt procentowy (do 5 %), czy o 1 % wartości wyjściowej (do 4,04 %)?", "in_tokens": 762, "out_tokens": 197}
+{"pid": "D5:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 773, "out_tokens": 5}
+{"pid": "D5:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 773, "out_tokens": 5}
+{"pid": "D5:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 760, "out_tokens": 5}
+{"pid": "D5:pk2", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 760, "out_tokens": 5}
+{"pid": "D6:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 758, "out_tokens": 5}
+{"pid": "D6:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 759, "out_tokens": 5}
+{"pid": "D6:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 761, "out_tokens": 5}
+{"pid": "D6:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 759, "out_tokens": 5}
+{"pid": "D6:pk2", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 757, "out_tokens": 5}
+{"pid": "D6:pk2", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 757, "out_tokens": 5}
+{"pid": "D6b:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Jaki maksymalny odchył od 50 m uważacie za mieszczący się w określeniu „około 50 m”?", "in_tokens": 757, "out_tokens": 365}
+{"pid": "D6b:nat", "sample": 1, "model": "haiku", "answer": "PYTANIE Jaka dopuszczalna odchyłka jest przyjęta w tekście przy określeniu „około 50 m”?", "in_tokens": 758, "out_tokens": 252}
+{"pid": "D6b:pk1", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 763, "out_tokens": 73}
+{"pid": "D6b:pk1", "sample": 1, "model": "haiku", "answer": "Nie.", "in_tokens": 761, "out_tokens": 77}
+{"pid": "D6b:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 761, "out_tokens": 5}
+{"pid": "D6b:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 761, "out_tokens": 97}
+{"pid": "K1:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 738, "out_tokens": 5}
+{"pid": "K1:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 739, "out_tokens": 5}
+{"pid": "K1:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 748, "out_tokens": 5}
+{"pid": "K1:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 749, "out_tokens": 5}
+{"pid": "K1:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 758, "out_tokens": 5}
+{"pid": "K1:pk2", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 758, "out_tokens": 5}
+{"pid": "K2:nat", "sample": 0, "model": "haiku", "answer": "PYTANIE Czy zawór Z1 jest obecnie zamknięty?", "in_tokens": 754, "out_tokens": 170}
+{"pid": "K2:nat", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 755, "out_tokens": 5}
+{"pid": "K2:pk1", "sample": 0, "model": "haiku", "answer": "Nie", "in_tokens": 758, "out_tokens": 5}
+{"pid": "K2:pk1", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 756, "out_tokens": 113}
+{"pid": "K2:pk2", "sample": 0, "model": "haiku", "answer": "Nie.", "in_tokens": 759, "out_tokens": 150}
+{"pid": "K2:pk2", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 757, "out_tokens": 160}
+{"pid": "G1:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 762, "out_tokens": 432}
+{"pid": "G1:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 763, "out_tokens": 678}
+{"pid": "G1:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 780, "out_tokens": 5}
+{"pid": "G1:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 780, "out_tokens": 5}
+{"pid": "G1:pk2", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 772, "out_tokens": 5}
+{"pid": "G1:pk2", "sample": 1, "model": "haiku", "answer": "Tak. Hmm, zakaz dotyczy włączenia obu pomp jednocześnie, a operator włączył tylko P1. Tekst nie mówi jednak, czy operator złamał zakaz, więc odpowiedź powinna być: Nie. Poprawna odpowiedź: **Nie.**", "in_tokens": 773, "out_tokens": 110}
+{"pid": "G2:nat", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 816, "out_tokens": 5}
+{"pid": "G2:nat", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 815, "out_tokens": 5}
+{"pid": "G2:pk1", "sample": 0, "model": "haiku", "answer": "Tak", "in_tokens": 844, "out_tokens": 5}
+{"pid": "G2:pk1", "sample": 1, "model": "haiku", "answer": "Tak", "in_tokens": 845, "out_tokens": 5}
+{"pid": "G2:pk2", "sample": 0, "model": "haiku", "answer": "Nie.", "in_tokens": 829, "out_tokens": 121}
+{"pid": "G2:pk2", "sample": 1, "model": "haiku", "answer": "Nie", "in_tokens": 829, "out_tokens": 148}

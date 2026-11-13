@@ -1,0 +1,264 @@
+{"pid": "A1:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy w tym tekście „kurek” oznacza ten sam element co „zawór”, który operator przed chwilą zamknął, czy jest to inny element instalacji?", "in_tokens": 742, "out_tokens": 66}
+{"pid": "A1:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy „zawór\" i „kurek\" w tym tekście oznaczają ten sam element, czy dwa różne elementy?", "in_tokens": 744, "out_tokens": 51}
+{"pid": "A1:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 751, "out_tokens": 5}
+{"pid": "A1:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 749, "out_tokens": 5}
+{"pid": "A1:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 749, "out_tokens": 5}
+{"pid": "A1:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 748, "out_tokens": 5}
+{"pid": "A2:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy w poleceniu „Wymień filtr” chodziło o jeden konkretny filtr (a jeśli tak, to który), czy o wszystkie filtry w urządzeniu?", "in_tokens": 746, "out_tokens": 73}
+{"pid": "A2:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy polecenie „Wymień filtr” dotyczyło jednego konkretnego filtru (którego?), czy wszystkich filtrów w urządzeniu?", "in_tokens": 744, "out_tokens": 66}
+{"pid": "A2:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 752, "out_tokens": 5}
+{"pid": "A2:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 752, "out_tokens": 5}
+{"pid": "A2:pk2", "sample": 0, "model": "sonnet", "answer": "Nie.", "in_tokens": 748, "out_tokens": 208}
+{"pid": "A2:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 748, "out_tokens": 5}
+{"pid": "A2b:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy w tekście „zawór” oznacza jeden konkretny zawór, który operator ma sprawdzić przed uruchomieniem pompy (i który to zawór), czy też wszystkie zawory w instalacji?", "in_tokens": 785, "out_tokens": 84}
+{"pid": "A2b:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Operator sprawdza zawór przed uruchomieniem pompy” chodzi o jeden konkretny zawór (np. ten przypisany do pompy P1, a jeśli tak, to który), czy o każdy zawór w instalacji, który ma wpływ na pracę pompy?", "in_tokens": 785, "out_tokens": 115}
+{"pid": "A2b:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 791, "out_tokens": 103}
+{"pid": "A2b:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 791, "out_tokens": 5}
+{"pid": "A2b:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 795, "out_tokens": 5}
+{"pid": "A2b:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 797, "out_tokens": 5}
+{"pid": "A3:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Jan powiedział Piotrowi, że jego pompa przecieka” zaimek „jego” odnosi się do Piotra, czy do Jana (a może do kogoś trzeciego)?", "in_tokens": 722, "out_tokens": 84}
+{"pid": "A3:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Jan powiedział Piotrowi, że jego pompa przecieka” zaimek „jego” odnosi się do Piotra, czy do Jana (a może do kogoś trzeciego)?", "in_tokens": 722, "out_tokens": 84}
+{"pid": "A3:pk1", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy z tekstu wynika cokolwiek o stanie pompy Piotra (np. czy Piotr w ogóle ma pompę i czy też przecieka), skoro tekst mówi tylko, że pompa Jana przecieka?", "in_tokens": 725, "out_tokens": 90}
+{"pid": "A3:pk1", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy pompa Piotra przecieka lub nie przecieka, skoro tekst mówi wyłącznie o pompie Jana?", "in_tokens": 725, "out_tokens": 538}
+{"pid": "A3:pk2", "sample": 0, "model": "sonnet", "answer": "PYTANIE Czy Jan miał rację, mówiąc Piotrowi, że jego pompa przecieka, czyli czy pompa faktycznie przecieka, a nie tylko Jan tak twierdził?", "in_tokens": 723, "out_tokens": 302}
+{"pid": "A3:pk2", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy pompa Piotra rzeczywiście przecieka, czy tylko Jan tak twierdzi, a narrator tego nie potwierdza?", "in_tokens": 725, "out_tokens": 290}
+{"pid": "A3b:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Kierownik polecił operatorowi sprawdzić swoje stanowisko” zaimek „swoje” odnosi się do kierownika (jego stanowisko), czy do operatora (stanowisko operatora)?", "in_tokens": 733, "out_tokens": 92}
+{"pid": "A3b:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Kierownik polecił operatorowi sprawdzić swoje stanowisko” słowo „swoje” odnosi się do kierownika (jego stanowisko), czy do operatora (stanowisko operatora)?", "in_tokens": 732, "out_tokens": 91}
+{"pid": "A3b:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 733, "out_tokens": 231}
+{"pid": "A3b:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 732, "out_tokens": 313}
+{"pid": "A3b:pk2", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Kierownik polecił operatorowi sprawdzić stanowisko operatora” chodzi o stanowisko tego samego operatora, któremu kierownik wydał polecenie, czy o stanowisko innego operatora?", "in_tokens": 733, "out_tokens": 266}
+{"pid": "A3b:pk2", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „stanowisko operatora” oznacza własne stanowisko tego operatora, któremu kierownik wydał polecenie, czy stanowisko innego operatora?", "in_tokens": 733, "out_tokens": 306}
+{"pid": "A3c:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Do którego elementu odnosi się słowo „go” w zdaniu „Wymień go” – do zaworu Z1 czy do filtra F1?", "in_tokens": 727, "out_tokens": 59}
+{"pid": "A3c:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Do którego elementu odnosi się zaimek „go” w zdaniu „Wymień go” — do zaworu Z1 czy do filtra F1?", "in_tokens": 727, "out_tokens": 60}
+{"pid": "A3c:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 731, "out_tokens": 5}
+{"pid": "A3c:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 732, "out_tokens": 5}
+{"pid": "A3c:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 732, "out_tokens": 5}
+{"pid": "A3c:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 732, "out_tokens": 5}
+{"pid": "A4:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy słowo „ostatni” w poleceniu „Wyślij ostatni raport” oznacza raport najnowszy (aktualnie ostatni z gotowych, czyli nr 3), czy raport końcowy projektu (ostatni w kolejności, czyli nr 5)?", "in_tokens": 792, "out_tokens": 106}
+{"pid": "A4:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy przez „ostatni raport” rozumiesz raport najnowszy spośród już gotowych (nr 3), czy raport końcowy projektu (nr 5)?", "in_tokens": 790, "out_tokens": 67}
+{"pid": "A4:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 797, "out_tokens": 5}
+{"pid": "A4:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 796, "out_tokens": 5}
+{"pid": "A4:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 792, "out_tokens": 5}
+{"pid": "A4:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 791, "out_tokens": 5}
+{"pid": "A5a:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Jak często według Ciebie oznacza słowo „regularnie” w zdaniu „Regularnie sprawdzaj ciśnienie” (np. co godzinę, raz na dobę, raz w tygodniu)?", "in_tokens": 755, "out_tokens": 84}
+{"pid": "A5a:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Jak często według Ciebie oznacza słowo „regularnie” w tym poleceniu (np. co ile godzin lub razy na dobę ma być sprawdzane ciśnienie)?", "in_tokens": 755, "out_tokens": 74}
+{"pid": "A5a:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 759, "out_tokens": 5}
+{"pid": "A5a:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 761, "out_tokens": 5}
+{"pid": "A5a:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 761, "out_tokens": 5}
+{"pid": "A5a:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 760, "out_tokens": 5}
+{"pid": "A5b:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Co autor rozumie przez „niezwłocznie” – jaki maksymalny czas (np. liczony w godzinach) może minąć od wykrycia awarii do jej zgłoszenia?", "in_tokens": 769, "out_tokens": 75}
+{"pid": "A5b:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Ile czasu według autora tekstu oznacza „niezwłocznie” – czy 3 godziny zwłoki od wykrycia awarii mieszczą się w tym pojęciu?", "in_tokens": 770, "out_tokens": 73}
+{"pid": "A5b:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 785, "out_tokens": 5}
+{"pid": "A5b:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 786, "out_tokens": 5}
+{"pid": "A5b:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 786, "out_tokens": 5}
+{"pid": "A5b:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 785, "out_tokens": 5}
+{"pid": "A5c:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Ile kropli oznacza w tym tekście określenie „kilka” – czy od jakiej liczby kropli (np. od 2, od 3) uznajesz, że wykonano polecenie „kilka kropli”?", "in_tokens": 727, "out_tokens": 82}
+{"pid": "A5c:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Ile kropli oznacza w tym tekście określenie „kilka” (jaki jest minimalny i maksymalny dopuszczalny zakres), czy 2 krople to już „kilka”?", "in_tokens": 725, "out_tokens": 75}
+{"pid": "A5c:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 736, "out_tokens": 5}
+{"pid": "A5c:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 736, "out_tokens": 5}
+{"pid": "A5c:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 736, "out_tokens": 5}
+{"pid": "A5c:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 736, "out_tokens": 5}
+{"pid": "A6:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy zakaz z tekstu („noży, nożyczek itp.”) obejmuje także inne ostre lub niebezpieczne narzędzia, takie jak śrubokręt, czy dotyczy wyłącznie przedmiotów do cięcia?", "in_tokens": 734, "out_tokens": 97}
+{"pid": "A6:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy zakaz „noży, nożyczek itp.” obejmuje wszystkie ostre lub niebezpieczne narzędzia (np. śrubokręt), czy tylko przedmioty do cięcia, takie jak noże i nożyczki?", "in_tokens": 734, "out_tokens": 95}
+{"pid": "A6:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 736, "out_tokens": 110}
+{"pid": "A6:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 737, "out_tokens": 244}
+{"pid": "A6:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 750, "out_tokens": 5}
+{"pid": "A6:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 749, "out_tokens": 5}
+{"pid": "B1:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Zawór zamyka się po pracy” chodzi o to, że zawór zamyka ktoś (np. człowiek) po zakończeniu pracy, czy o to, że zawór zamyka się sam (automatycznie) po pracy?", "in_tokens": 713, "out_tokens": 99}
+{"pid": "B1:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w tekście „Zawór zamyka się po pracy” zwrot „zamyka się” oznacza, że ktoś (np. człowiek) zamyka zawór, czy że zawór zamyka się sam (np. automatycznie)?", "in_tokens": 713, "out_tokens": 91}
+{"pid": "B1:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 725, "out_tokens": 210}
+{"pid": "B1:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 725, "out_tokens": 282}
+{"pid": "B1:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 722, "out_tokens": 150}
+{"pid": "B1:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 722, "out_tokens": 182}
+{"pid": "B2:nat", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 729, "out_tokens": 5}
+{"pid": "B2:nat", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 732, "out_tokens": 5}
+{"pid": "B2:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 781, "out_tokens": 5}
+{"pid": "B2:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 780, "out_tokens": 5}
+{"pid": "B2:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 779, "out_tokens": 5}
+{"pid": "B2:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 781, "out_tokens": 5}
+{"pid": "B2b:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Napięcie wyłącza zabezpieczenie” to napięcie wyłącza zabezpieczenie, czy zabezpieczenie wyłącza napięcie, skoro oba rzeczowniki mają tę samą formę w mianowniku i bierniku?", "in_tokens": 729, "out_tokens": 311}
+{"pid": "B2b:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Napięcie wyłącza zabezpieczenie” podmiotem jest napięcie (napięcie wyłącza zabezpieczenie), czy zabezpieczenie (zabezpieczenie wyłącza napięcie), skoro oba rzeczowniki mają w tej formie identyczną postać w mianowniku i bierniku?", "in_tokens": 729, "out_tokens": 297}
+{"pid": "B2b:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 777, "out_tokens": 5}
+{"pid": "B2b:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 777, "out_tokens": 5}
+{"pid": "B2b:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 779, "out_tokens": 5}
+{"pid": "B2b:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 778, "out_tokens": 5}
+{"pid": "B4:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Kontrola pracownika trwała 2 godziny” słowo „pracownika” oznacza osobę kontrolowaną (kontrola dotycząca pracownika, np. sprawdzanie jego pracy), czy osobę kontrolującą (kontrola przeprowadzana przez pracownika)?", "in_tokens": 721, "out_tokens": 122}
+{"pid": "B4:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Kontrola pracownika trwała 2 godziny” słowo „pracownika” oznacza osobę kontrolowaną (kontrola dotycząca pracownika, np. sprawdzanie jego pracy), czy osobę kontrolującą (kontrola przeprowadzana przez pracownika)?", "in_tokens": 720, "out_tokens": 122}
+{"pid": "B4:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 722, "out_tokens": 168}
+{"pid": "B4:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 723, "out_tokens": 5}
+{"pid": "B4:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 720, "out_tokens": 5}
+{"pid": "B4:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 722, "out_tokens": 5}
+{"pid": "B4b:nat", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 718, "out_tokens": 248}
+{"pid": "B4b:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Ocena dostawcy” chodzi o ocenę, której poddawany jest dostawca (dostawca jest oceniany), czy o ocenę, którą dostawca sam przeprowadza (dostawca ocenia kogoś innego)?", "in_tokens": 720, "out_tokens": 101}
+{"pid": "B4b:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 719, "out_tokens": 5}
+{"pid": "B4b:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 721, "out_tokens": 5}
+{"pid": "B4b:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 724, "out_tokens": 5}
+{"pid": "B4b:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 724, "out_tokens": 5}
+{"pid": "B5:nat", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 718, "out_tokens": 380}
+{"pid": "B5:nat", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 717, "out_tokens": 215}
+{"pid": "B5:pk1", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy w tekście operator również wychodził z hali, czy tylko kierownik wychodził, a operator został przez niego zauważony w innym miejscu lub w innej sytuacji?", "in_tokens": 730, "out_tokens": 71}
+{"pid": "B5:pk1", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „W tym samym czasie kierownik zauważył operatora” chodzi o to, że operator również wychodził z hali, czy tylko o to, że kierownik go zauważył (bez informacji, co operator robił)?", "in_tokens": 728, "out_tokens": 90}
+{"pid": "B5:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 728, "out_tokens": 5}
+{"pid": "B5:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 728, "out_tokens": 5}
+{"pid": "B6a:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy w poleceniu „Wymień stare kable i przewody” słowo „stare” odnosi się tylko do kabli, czy do kabli i przewodów (czyli czy nowe przewody też miały zostać wymienione)?", "in_tokens": 770, "out_tokens": 205}
+{"pid": "B6a:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w poleceniu „Wymień stare kable i przewody” słowo „stare” odnosi się zarówno do kabli, jak i do przewodów („stare kable i stare przewody”), czy tylko do kabli („stare kable oraz wszystkie przewody”)?", "in_tokens": 770, "out_tokens": 223}
+{"pid": "B6a:pk1", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy słowo „stare” w poleceniu „Wymień stare kable i każdy przewód” odnosi się także do przewodów (czyli wymienić tylko stare przewody), czy „każdy przewód” oznacza wszystkie przewody, także nowe?", "in_tokens": 773, "out_tokens": 317}
+{"pid": "B6a:pk1", "sample": 1, "model": "sonnet", "answer": "Nie.", "in_tokens": 773, "out_tokens": 347}
+{"pid": "B6a:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 771, "out_tokens": 178}
+{"pid": "B6a:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 771, "out_tokens": 196}
+{"pid": "B6b:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE Czy fraza „w biurze” oznacza, że awaria wystąpiła w biurze, czy że tylko kierownik powiadomił operatora (np. będąc w biurze) o awarii, której miejsca tekst nie podaje?", "in_tokens": 727, "out_tokens": 88}
+{"pid": "B6b:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Kierownik powiadomił operatora o awarii w biurze” fraza „w biurze” opisuje miejsce, w którym wystąpiła awaria, czy miejsce, w którym kierownik powiadomił operatora (albo gdzie znajduje się operator)?", "in_tokens": 727, "out_tokens": 110}
+{"pid": "B6b:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 737, "out_tokens": 5}
+{"pid": "B6b:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 736, "out_tokens": 5}
+{"pid": "B6b:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 748, "out_tokens": 5}
+{"pid": "B6b:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 745, "out_tokens": 5}
+{"pid": "B6c:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy liczba „3” w poleceniu „Sprawdź 3 zawory i pompy” dotyczy tylko zaworów (a pompy mają być sprawdzone wszystkie, czyli 5), czy zarówno zaworów, jak i pomp (czyli 3 zawory i 3 pompy)?", "in_tokens": 759, "out_tokens": 213}
+{"pid": "B6c:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w poleceniu „Sprawdź 3 zawory i pompy” liczba 3 odnosi się tylko do zaworów (czyli trzeba sprawdzić 3 zawory oraz wszystkie pompy), czy do zaworów i pomp razem (czyli 3 zawory i 3 pompy)?", "in_tokens": 760, "out_tokens": 319}
+{"pid": "B6c:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 762, "out_tokens": 153}
+{"pid": "B6c:pk1", "sample": 1, "model": "sonnet", "answer": "Nie Polecenie obejmuje „3 zawory” (instalacja ma dokładnie 3) oraz „każdą pompę”, czyli wszystkie 5 pomp. Technik sprawdził tylko 3 pompy, więc nie wykonał polecenia w całości.", "in_tokens": 764, "out_tokens": 99}
+{"pid": "B6c:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 763, "out_tokens": 5}
+{"pid": "B6c:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 762, "out_tokens": 5}
+{"pid": "B7:nat", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 744, "out_tokens": 5}
+{"pid": "B7:nat", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 745, "out_tokens": 5}
+{"pid": "B7:pk1", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy uszczelka U1 jest częścią filtra F1 albo czy została wymieniona „przy filtrze F1”, czyli czy jej wymianę należy uznać za „inną czynność przy filtrze F1”?", "in_tokens": 764, "out_tokens": 328}
+{"pid": "B7:pk1", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy wymiana uszczelki U1 była wykonana przy filtrze F1 (np. uszczelka należy do filtra F1 lub znajduje się w jego obudowie), czy dotyczyła innego miejsca?", "in_tokens": 764, "out_tokens": 372}
+{"pid": "B7:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 745, "out_tokens": 5}
+{"pid": "B7:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 743, "out_tokens": 5}
+{"pid": "C1:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Zapłać kartą lub gotówką” słowo „lub” oznacza alternatywę rozłączną (tylko jedna z form płatności dla całej kwoty), czy dopuszcza także łączenie obu form płatności (część kartą, część gotówką)?", "in_tokens": 742, "out_tokens": 108}
+{"pid": "C1:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w zdaniu „Zapłać kartą lub gotówką” spójnik „lub” ma oznaczać alternatywę rozłączną (można wybrać tylko jeden sposób płatności), czy dopuszczasz także połączenie obu sposobów w jednej transakcji?", "in_tokens": 741, "out_tokens": 107}
+{"pid": "C1:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 793, "out_tokens": 155}
+{"pid": "C1:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 793, "out_tokens": 148}
+{"pid": "C1:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 793, "out_tokens": 151}
+{"pid": "C1:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 792, "out_tokens": 114}
+{"pid": "C1b:nat", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 793, "out_tokens": 5}
+{"pid": "C1b:nat", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 792, "out_tokens": 5}
+{"pid": "C1b:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 844, "out_tokens": 5}
+{"pid": "C1b:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 843, "out_tokens": 5}
+{"pid": "C1b:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 843, "out_tokens": 312}
+{"pid": "C1b:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 845, "out_tokens": 253}
+{"pid": "C2:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy polecenie „Włącz pompę P1 i pompę P2 lub pompę P3” należy rozumieć jako „(P1 i P2) lub P3”, czy jako „P1 oraz (P2 lub P3)”?", "in_tokens": 736, "out_tokens": 238}
+{"pid": "C2:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy polecenie „Włącz pompę P1 i pompę P2 lub pompę P3” oznacza, że trzeba włączyć pompę P1 oraz co najmniej jedną z pomp P2 i P3 (czyli P1 i (P2 lub P3)), czy że wystarczy włączyć albo obie pompy P1 i P2, albo samą pompę P3 (czyli (P1 i P2) lub P3)?", "in_tokens": 736, "out_tokens": 290}
+{"pid": "C2:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 766, "out_tokens": 5}
+{"pid": "C2:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 764, "out_tokens": 5}
+{"pid": "C2:pk2", "sample": 0, "model": "sonnet", "answer": "Nie Polecenie wymagało włączenia pompy P1 oraz co najmniej jednej z pomp P2 lub P3. Operator włączył tylko P3, więc drugi warunek spełnił, ale pierwszego (włączenie P1) nie wykonał.", "in_tokens": 753, "out_tokens": 95}
+{"pid": "C2:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 754, "out_tokens": 5}
+{"pid": "C3:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy zdanie „chyba że pompa P1 pracuje” oznacza tylko, że gdy P1 pracuje, nie ma obowiązku zamykania Z1 (operator może zawór zamknąć lub zostawić), czy też że wtedy zawór Z1 nie wolno zamykać?", "in_tokens": 749, "out_tokens": 385}
+{"pid": "C3:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy zapis „chyba że pompa P1 pracuje” oznacza tylko, że wtedy nie ma obowiązku zamykania zaworu Z1, czy też że wtedy zaworu Z1 nie wolno zamykać?", "in_tokens": 746, "out_tokens": 507}
+{"pid": "C3:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 797, "out_tokens": 5}
+{"pid": "C3:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 797, "out_tokens": 5}
+{"pid": "C3:pk2", "sample": 0, "model": "sonnet", "answer": "Nie Polecenie ma postać warunkową: nakazuje zamknąć zawór tylko wtedy, gdy pompa nie pracuje. Pompa pracuje, więc warunek nie jest spełniony i polecenie niczego nie nakazuje. Tekst też niczego nie zakazuje, więc zamknięcie zaworu Z1 nie jest jego złamaniem.", "in_tokens": 752, "out_tokens": 136}
+{"pid": "C3:pk2", "sample": 1, "model": "sonnet", "answer": "Nie Polecenie ma postać warunkową: nakazuje zamknąć zawór Z1 tylko wtedy, gdy pompa P1 nie pracuje. Pompa pracuje, więc warunek nie jest spełniony i polecenie nie nakłada żadnego obowiązku. Tekst nie zakazuje zamykania zaworu w innych sytuacjach, więc zamknięcie Z1 przy pracującej pompie nie łamie tego polecenia.", "in_tokens": 754, "out_tokens": 166}
+{"pid": "C4:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy zdanie „Wszystkie zawory nie są zamknięte” ma znaczyć „żaden zawór nie jest zamknięty” (każdy z zaworów jest otwarty), czy „nie wszystkie zawory są zamknięte” (przynajmniej jeden jest otwarty)?", "in_tokens": 761, "out_tokens": 301}
+{"pid": "C4:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy zdanie „Wszystkie zawory nie są zamknięte” miało znaczyć, że żaden zawór nie jest zamknięty (każdy jest otwarty), czy że nie wszystkie zawory są zamknięte (przynajmniej jeden jest otwarty)?", "in_tokens": 759, "out_tokens": 251}
+{"pid": "C4:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 759, "out_tokens": 5}
+{"pid": "C4:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 759, "out_tokens": 5}
+{"pid": "C4:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 762, "out_tokens": 5}
+{"pid": "C4:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 762, "out_tokens": 5}
+{"pid": "D1:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Jakiej jednostki ciśnienia dotyczy wartość „2,5” w tekście (np. bar, MPa, atm) i czy jest to nadciśnienie (względem atmosfery), czy ciśnienie bezwzględne?", "in_tokens": 743, "out_tokens": 91}
+{"pid": "D1:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Jakiej jednostki dotyczy podana w tekście wartość „2,5” (np. bar, MPa, kPa, atm) oraz czy jest to ciśnienie bezwzględne, czy nadciśnienie?", "in_tokens": 741, "out_tokens": 85}
+{"pid": "D1:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 747, "out_tokens": 5}
+{"pid": "D1:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 748, "out_tokens": 5}
+{"pid": "D1:pk2", "sample": 0, "model": "sonnet", "answer": "Nie 2,5 MPa = 2 500 000 Pa = 25 bar, a manometr pokazuje 2,5 bar (czyli 0,25 MPa), więc wskazanie jest 10 razy za małe.", "in_tokens": 751, "out_tokens": 78}
+{"pid": "D1:pk2", "sample": 1, "model": "sonnet", "answer": "Nie 2,5 MPa = 25 bar, a manometr pokazuje 2,5 bar (czyli 0,25 MPa), więc wskazanie się nie zgadza.", "in_tokens": 751, "out_tokens": 64}
+{"pid": "D2a:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy określenie „do 3 lat” oznacza dzieci, które nie ukończyły 3. roku życia (do 3. urodzin), czy także dzieci w wieku 3 lat, czyli do ukończenia 4. roku życia?", "in_tokens": 746, "out_tokens": 257}
+{"pid": "D2a:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy określenie „do 3 lat” obejmuje także dzieci, które skończyły 3 lata, ale nie skończyły jeszcze 4 lat (np. 3 lata i 5 miesięcy), czy tylko dzieci, które nie ukończyły 3. roku życia?", "in_tokens": 746, "out_tokens": 246}
+{"pid": "D2a:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 756, "out_tokens": 204}
+{"pid": "D2a:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 756, "out_tokens": 176}
+{"pid": "D2a:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 754, "out_tokens": 5}
+{"pid": "D2a:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 754, "out_tokens": 5}
+{"pid": "D2b:nat", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 743, "out_tokens": 223}
+{"pid": "D2b:nat", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 745, "out_tokens": 275}
+{"pid": "D2b:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 756, "out_tokens": 5}
+{"pid": "D2b:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 754, "out_tokens": 5}
+{"pid": "D2b:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 765, "out_tokens": 5}
+{"pid": "D2b:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 764, "out_tokens": 5}
+{"pid": "D2c:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy dostawa zamówienia o wartości dokładnie 100 zł jest bezpłatna, czy bezpłatna jest tylko dla zamówień powyżej 100 zł?", "in_tokens": 755, "out_tokens": 339}
+{"pid": "D2c:nat", "sample": 1, "model": "sonnet", "answer": "Nie „Powyżej 100 zł\" oznacza kwotę większą niż 100 zł, więc zamówienie za dokładnie 100 zł nie spełnia warunku. Tekst mówi tylko o bezpłatnej dostawie dla zamówień powyżej tej kwoty, a dla zamówienia równego 100 zł nie przewiduje bezpłatnej dostawy.", "in_tokens": 754, "out_tokens": 137}
+{"pid": "D2c:pk1", "sample": 0, "model": "sonnet", "answer": "PYTANIE Czy dostawa zamówienia o wartości dokładnie 100 zł (a więc nie większej niż 100 zł) jest bezpłatna, czy płatna?", "in_tokens": 760, "out_tokens": 346}
+{"pid": "D2c:pk1", "sample": 1, "model": "sonnet", "answer": "PYTANIE Czy dostawa jest bezpłatna również dla zamówienia o wartości dokładnie 100 zł, czy bezpłatna jest tylko dla zamówień powyżej 100 zł?", "in_tokens": 760, "out_tokens": 247}
+{"pid": "D2c:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 760, "out_tokens": 5}
+{"pid": "D2c:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 760, "out_tokens": 5}
+{"pid": "D2d:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy zakres „między 10 °C a 30 °C” obejmuje wartości graniczne (10 °C i 30 °C), czy tylko temperatury wyższe niż 10 °C i niższe niż 30 °C?", "in_tokens": 761, "out_tokens": 165}
+{"pid": "D2d:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy sformułowanie „między 10 °C a 30 °C” oznacza przedział domknięty (wartości graniczne, czyli 10 °C i 30 °C, należą do zakresu pracy), czy otwarty (granice są wyłączone)?", "in_tokens": 758, "out_tokens": 95}
+{"pid": "D2d:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 765, "out_tokens": 5}
+{"pid": "D2d:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 763, "out_tokens": 5}
+{"pid": "D2d:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 770, "out_tokens": 5}
+{"pid": "D2d:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 772, "out_tokens": 5}
+{"pid": "D2e:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE Czy zapis „18–25 lat” obejmuje także osoby, które ukończyły 25 lat i mają np. 25 lat i 6 miesięcy, czyli czy liczy się wiek w pełnych ukończonych latach, czy tylko do dnia 25. urodzin?", "in_tokens": 739, "out_tokens": 508}
+{"pid": "D2e:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy w zawodach mogą startować osoby, które ukończyły 25 lat, ale nie ukończyły jeszcze 26 (np. mają 25 lat i 6 miesięcy), czy dopuszczone są tylko osoby, które nie przekroczyły 25. urodzin?", "in_tokens": 739, "out_tokens": 480}
+{"pid": "D2e:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 754, "out_tokens": 250}
+{"pid": "D2e:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 755, "out_tokens": 191}
+{"pid": "D2e:pk2", "sample": 0, "model": "sonnet", "answer": "PYTANIE Czy w zawodach startują wyłącznie osoby, które mają co najmniej 18 i co najwyżej 25 lat?", "in_tokens": 756, "out_tokens": 766}
+{"pid": "D2e:pk2", "sample": 1, "model": "sonnet", "answer": "PYTANIE Czy w zawodach startują wyłącznie osoby, które spełniają ten warunek wieku (od 18 do 25 lat), czy tekst mówi tylko, że osoby w tym wieku startują, bez wykluczania innych?", "in_tokens": 756, "out_tokens": 1026}
+{"pid": "D3a:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE Czy określenie „do piątku” obejmuje sam piątek (czyli termin mija z końcem dnia 2026-11-13, albo o konkretnej godzinie, jeśli ją podano), czy raport miał być wysłany przed piątkiem?", "in_tokens": 754, "out_tokens": 280}
+{"pid": "D3a:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE Czy termin „do piątku” obejmuje cały piątek 2026-11-13 (np. do końca dnia), czy raport trzeba było wysłać przed piątkiem albo do określonej godziny w piątek?", "in_tokens": 754, "out_tokens": 440}
+{"pid": "D3a:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 771, "out_tokens": 5}
+{"pid": "D3a:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 770, "out_tokens": 5}
+{"pid": "D3a:pk2", "sample": 0, "model": "sonnet", "answer": "Nie „Przed 2026-11-13\" oznacza dzień wcześniej niż 13 listopada, a raport wysłano właśnie 13 listopada o 10:00, więc termin nie został dotrzymany.", "in_tokens": 758, "out_tokens": 76}
+{"pid": "D3a:pk2", "sample": 1, "model": "sonnet", "answer": "Nie „Przed 2026-11-13” oznacza dni wcześniejsze niż 13 listopada 2026. Raport wysłano dokładnie 13 listopada, więc nie było to „przed” tą datą.", "in_tokens": 757, "out_tokens": 77}
+{"pid": "D3b:nat", "sample": 0, "model": "sonnet", "answer": "Nie „Jutro\" odnosi się do dnia napisania tekstu, czyli 2026-11-09, więc dostawa miała przyjechać 2026-11-10, a nie 2026-11-11.", "in_tokens": 757, "out_tokens": 72}
+{"pid": "D3b:nat", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 756, "out_tokens": 85}
+{"pid": "D3b:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 759, "out_tokens": 5}
+{"pid": "D3b:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 761, "out_tokens": 5}
+{"pid": "D3b:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 759, "out_tokens": 5}
+{"pid": "D3b:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 761, "out_tokens": 5}
+{"pid": "D3c:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy przez „następny piątek” rozumie Pan/Pani najbliższy piątek po dacie napisania tekstu (2026-11-13), czy piątek w kolejnym tygodniu (2026-11-20)?", "in_tokens": 762, "out_tokens": 84}
+{"pid": "D3c:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy przez „następny piątek” miał Pan/Pani na myśli najbliższy piątek po dniu napisania tekstu (2026-11-13), czy piątek w kolejnym tygodniu (2026-11-20)?", "in_tokens": 763, "out_tokens": 86}
+{"pid": "D3c:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 763, "out_tokens": 5}
+{"pid": "D3c:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 762, "out_tokens": 5}
+{"pid": "D3c:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 762, "out_tokens": 5}
+{"pid": "D3c:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 763, "out_tokens": 5}
+{"pid": "D4a:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy do 14 dni wlicza się dzień odbioru towaru (2026-11-02), czy termin liczy się od następnego dnia, tak że ostatnim dniem na złożenie reklamacji jest 2026-11-16?", "in_tokens": 751, "out_tokens": 474}
+{"pid": "D4a:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Od jakiego zdarzenia liczy się 14 dni z tekstu: od odebrania towaru (2026-11-02), od wykrycia wady, czy od innego momentu?", "in_tokens": 751, "out_tokens": 344}
+{"pid": "D4a:pk1", "sample": 0, "model": "sonnet", "answer": "Dzień 1 = 2026-11-02, więc dzień 14 = 2026-11-15. Reklamacja złożona 2026-11-16 to dzień 15, czyli po terminie. Nie", "in_tokens": 774, "out_tokens": 71}
+{"pid": "D4a:pk1", "sample": 1, "model": "sonnet", "answer": "Dzień 1 = 2026-11-02, więc dzień 14 = 2026-11-02 + 13 dni = 2026-11-15. Reklamację złożono 2026-11-16, czyli w dniu 15, po terminie. Nie", "in_tokens": 773, "out_tokens": 85}
+{"pid": "D4a:pk2", "sample": 0, "model": "sonnet", "answer": "Dzień 1 = 2026-11-03, więc dzień 14 = 2026-11-16. Reklamacja złożona 2026-11-16 mieści się w terminie (najpóźniej w dniu 14). Tak", "in_tokens": 776, "out_tokens": 78}
+{"pid": "D4a:pk2", "sample": 1, "model": "sonnet", "answer": "Dzień 1 to 2026-11-03 (dzień po odbiorze 2026-11-02). Dzień 14 to więc 2026-11-16. Reklamacja złożona 2026-11-16 mieści się w terminie „najpóźniej w dniu 14\". Tak", "in_tokens": 777, "out_tokens": 98}
+{"pid": "D4b:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy „3 dni” w zdaniu „Odpowiemy w ciągu 3 dni” oznacza dni kalendarzowe, czy dni robocze?", "in_tokens": 761, "out_tokens": 295}
+{"pid": "D4b:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy „3 dni” w tekście oznacza dni kalendarzowe, czy dni robocze?", "in_tokens": 762, "out_tokens": 281}
+{"pid": "D4b:pk1", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy „dzień” w tym tekście oznacza dzień kalendarzowy (wtedy termin upłynął w poniedziałek 2026-11-16), czy dzień roboczy (wtedy dniem 3 jest środa 2026-11-18)?", "in_tokens": 789, "out_tokens": 394}
+{"pid": "D4b:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 787, "out_tokens": 326}
+{"pid": "D4b:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 827, "out_tokens": 295}
+{"pid": "D4b:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 827, "out_tokens": 228}
+{"pid": "D5:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy „wzrosło o 1 %” oznacza wzrost o 1 punkt procentowy (z 4 % do 5 %), czy wzrost o 1 % względem poprzedniej wartości (z 4 % do 4,04 %)?", "in_tokens": 741, "out_tokens": 92}
+{"pid": "D5:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Czy „wzrosło o 1 %” oznacza wzrost o 1 punkt procentowy (z 4 % do 5 %), czy wzrost o 1 % względem poprzedniej wartości oprocentowania (z 4 % do 4,04 %)?", "in_tokens": 742, "out_tokens": 170}
+{"pid": "D5:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 752, "out_tokens": 5}
+{"pid": "D5:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 753, "out_tokens": 5}
+{"pid": "D5:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 738, "out_tokens": 5}
+{"pid": "D5:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 738, "out_tokens": 5}
+{"pid": "D6:nat", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 738, "out_tokens": 5}
+{"pid": "D6:nat", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 737, "out_tokens": 59}
+{"pid": "D6:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 740, "out_tokens": 5}
+{"pid": "D6:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 740, "out_tokens": 5}
+{"pid": "D6:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 733, "out_tokens": 5}
+{"pid": "D6:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 736, "out_tokens": 5}
+{"pid": "D6b:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Jaką maksymalną różnicę od 50 m autor tekstu uznaje za zgodną ze słowem „około” (np. ±5 m, ±10%)?", "in_tokens": 737, "out_tokens": 65}
+{"pid": "D6b:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE: Jaką maksymalną różnicę od 50 m (czyli jaką tolerancję) autor tekstu uznaje za zgodną ze słowem „około”?", "in_tokens": 735, "out_tokens": 64}
+{"pid": "D6b:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 739, "out_tokens": 5}
+{"pid": "D6b:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 741, "out_tokens": 5}
+{"pid": "D6b:pk2", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 741, "out_tokens": 5}
+{"pid": "D6b:pk2", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 739, "out_tokens": 5}
+{"pid": "K1:nat", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 719, "out_tokens": 157}
+{"pid": "K1:nat", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 720, "out_tokens": 300}
+{"pid": "K1:pk1", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy słowo „MOŻE” w tekście oznacza zezwolenie (operator ma prawo uruchomić pompę P1 bez wody), czy raczej możliwość/ewentualność (operator jest fizycznie w stanie to zrobić albo coś takiego może się zdarzyć)?", "in_tokens": 724, "out_tokens": 111}
+{"pid": "K1:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 726, "out_tokens": 145}
+{"pid": "K1:pk2", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy zdanie „Jeżeli zbiornik jest pusty, to pompa P1 pracuje bez wody” jest przepisem (regułą dopuszczającą taki stan pracy), czy tylko opisem tego, co się faktycznie dzieje w układzie, bez oceny, czy jest to dozwolone?", "in_tokens": 736, "out_tokens": 406}
+{"pid": "K1:pk2", "sample": 1, "model": "sonnet", "answer": "PYTANIE Czy zdanie „Jeżeli zbiornik jest pusty, to pompa P1 pracuje bez wody” opisuje tylko to, co się wtedy faktycznie dzieje, czy też oznacza, że taka praca pompy jest dozwolona?", "in_tokens": 735, "out_tokens": 259}
+{"pid": "K2:nat", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 735, "out_tokens": 5}
+{"pid": "K2:nat", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 734, "out_tokens": 5}
+{"pid": "K2:pk1", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 736, "out_tokens": 5}
+{"pid": "K2:pk1", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 737, "out_tokens": 5}
+{"pid": "K2:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 738, "out_tokens": 5}
+{"pid": "K2:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 738, "out_tokens": 5}
+{"pid": "G1:nat", "sample": 0, "model": "sonnet", "answer": "PYTANIE: Czy zakaz „NIE WOLNO włączyć pompy P1 i pompy P2” oznacza zakaz włączenia każdej z tych pomp osobno (nie wolno włączyć ani P1, ani P2), czy zakaz włączenia obu pomp jednocześnie (wolno włączyć jedną, ale nie obie naraz)?", "in_tokens": 742, "out_tokens": 237}
+{"pid": "G1:nat", "sample": 1, "model": "sonnet", "answer": "PYTANIE Czy zakaz „NIE WOLNO włączyć pompy P1 i pompy P2” oznacza, że nie wolno włączyć żadnej z tych pomp (ani P1, ani P2), czy że nie wolno włączyć obu naraz (dopuszczalne jest włączenie tylko jednej)?", "in_tokens": 743, "out_tokens": 219}
+{"pid": "G1:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 759, "out_tokens": 69}
+{"pid": "G1:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 758, "out_tokens": 5}
+{"pid": "G1:pk2", "sample": 0, "model": "sonnet", "answer": "Nie", "in_tokens": 751, "out_tokens": 5}
+{"pid": "G1:pk2", "sample": 1, "model": "sonnet", "answer": "Nie", "in_tokens": 752, "out_tokens": 5}
+{"pid": "G2:nat", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 795, "out_tokens": 5}
+{"pid": "G2:nat", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 796, "out_tokens": 5}
+{"pid": "G2:pk1", "sample": 0, "model": "sonnet", "answer": "Tak", "in_tokens": 824, "out_tokens": 5}
+{"pid": "G2:pk1", "sample": 1, "model": "sonnet", "answer": "Tak", "in_tokens": 823, "out_tokens": 5}
+{"pid": "G2:pk2", "sample": 0, "model": "sonnet", "answer": "Nie Tekst mówi, że każdy operator obsługuje pompę P1, a O2 obsługuje tylko P2, więc zdanie „Każdy operator obsługuje pompę P1” jest w tej sytuacji fałszywe.", "in_tokens": 808, "out_tokens": 86}
+{"pid": "G2:pk2", "sample": 1, "model": "sonnet", "answer": "Nie Tekst mówi, że każdy operator obsługuje pompę P1. W opisanej sytuacji operator O2 obsługuje tylko pompę P2, czyli nie obsługuje P1. Pierwsze zdanie jest więc fałszywe, a tym samym tekst nie opisuje sytuacji prawdziwie.", "in_tokens": 808, "out_tokens": 119}
